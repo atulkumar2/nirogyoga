@@ -106,136 +106,27 @@
 
     .name {
         font-size: 2.2rem;
+    }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 120px 20px 60px;
-        }
+    .title {
+        font-size: 1.2rem;
+    }
 
-        .profileHeader {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-            margin-bottom: 60px;
-            background: linear-gradient(to right, #f8f9fa, #ffffff);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
+    .section {
+        padding: 20px;
+    }
+}
 
-        .imageContainer {
-            flex-shrink: 0;
-        }
+.publicationList {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-top: 20px;
+}
 
-        .profileImage {
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .headerContent {
-            flex-grow: 1;
-        }
-
-        .name {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .title {
-            font-size: 1.4rem;
-            color: #666;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
-        .intro {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #444;
-        }
-
-        .section {
-            margin-bottom: 50px;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid #eee;
-        }
-
-        .sectionTitle {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f0f0f0;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .list li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        .list li::before {
-            content: "•";
-            color: var(--primary-color);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            font-size: 1.2em;
-        }
-
-        @media (max-width: 768px) {
-            .profileHeader {
-                flex-direction: column;
-                text-align: center;
-                padding: 30px 20px;
-            }
-
-            .name {
-                font-size: 2.2rem;
-            }
-
-            .title {
-                font-size: 1.2rem;
-            }
-
-            .section {
-                padding: 20px;
-            }
-        }
-
-        .publicationList {
-            list-style-type: decimal;
-            padding-left: 20px;
-            margin-top: 20px;
-        }
-
-        .publicationList li {
-            margin-bottom: 15px;
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #555;
-            padding-left: 5px;
-        }
+.publicationList li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    padding-left: 5px;
+}

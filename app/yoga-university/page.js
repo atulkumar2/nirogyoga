@@ -26,7 +26,7 @@ export default function YogaUniversity() {
                     <section className={styles.section}>
                         <h2 className={styles.sectionTitle}>Fundamentals of Yoga</h2>
                         <ul className={styles.linkList}>
-                            <li><Link href="#" className={styles.link}>Why Yoga?</Link></li>
+                            <li><Link href="/yoga-university/why-yoga" className={styles.link}>Why Yoga?</Link></li>
                             <li><Link href="#" className={styles.link}>Introduction to Yoga</Link></li>
                             <li><Link href="#" className={styles.link}>Pranayama (Breath Regulation)</Link></li>
                             <li><Link href="#" className={styles.link}>Breathing Control Techniques</Link></li>
