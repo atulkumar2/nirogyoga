@@ -73,6 +73,12 @@ const Footer = () => {
                         ></iframe>
                     </div>
                 </div>
+
+                <div className={styles.column}>
+                    <h3>Quick Links</h3>
+                    <a href="/payment" className={styles.link}>Payment Details</a>
+                    <a href="/enrollment" className={styles.link}>Enrollment Form</a>
+                </div>
             </div>
 
             <div className={styles.copyright}>
