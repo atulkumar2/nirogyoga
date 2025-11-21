@@ -15,7 +15,7 @@ const Footer = () => {
                 <div className={styles.column}>
                     <h3>Contact Us</h3>
                     <span className={styles.text}>Phone: +91-8792873242 / +91-8123690515</span>
-                    <span className={styles.text}>Email: nirogyoga5@gmail.com</span>
+                    <span className={styles.text}>Email: nirogyoga@outlook.com</span>
 
                     <div className={styles.socials}>
                         {/* Instagram */}
@@ -77,13 +77,15 @@ const Footer = () => {
 
                 <div className={styles.column}>
                     <h3>Quick Links</h3>
+                    <a href="/yoga-university" className={styles.link}>Yoga University</a>
+                    <a href="/events" className={styles.link}>Upcoming Events</a>
                     <a href="/payment" className={styles.link}>Payment Options</a>
                     <a href="/enrollment" className={styles.link}>Enrollment Form</a>
                 </div>
             </div>
 
             <div className={styles.copyright}>
-                &copy; {new Date().getFullYear()} Parvathi Kunal Yoga. All rights reserved.
+                &copy; {new Date().getFullYear()} Nirog Yoga. All rights reserved.
             </div>
         </footer >
     );
