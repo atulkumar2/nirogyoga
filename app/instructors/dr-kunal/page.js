@@ -26,7 +26,7 @@ export default function DrKunal() {
                         />
                     </div>
                     <div className={styles.headerContent}>
-                        <h1 className={styles.name}>Dr. Kunal</h1>
+                        <h1 className={styles.name}>Prof. (Dr.) Kunal Katyayan</h1>
                         <h2 className={styles.title}>Professor of Medical Physiology & Yoga Therapy Expert</h2>
                         <p className={styles.intro}>
                             A distinguished academician, medical physiologist, researcher, and yoga expert whose career blends modern medical science with the profound wisdom of yogic traditions.
@@ -35,7 +35,7 @@ export default function DrKunal() {
                 </div>
 
                 <section className={styles.section}>
-                    <h3 className={styles.sectionTitle}>About Dr. Kunal</h3>
+                    <h3 className={styles.sectionTitle}>About Prof. (Dr.) Kunal Katyayan</h3>
                     <p className={styles.text}>
                         Dr. Kunal is a distinguished academician, medical physiologist, researcher, and yoga expert whose career blends modern medical science with the profound wisdom of yogic traditions. Born on 9 May 1981, he has steadily risen to prominence in the fields of Physiology and Yoga research through decades of committed practice, rigorous academic training, and impactful teaching. His journey—spanning over three decades of learning and practicing Yoga and more than fifteen years of teaching Physiology and Yoga—reflects a rare combination of scientific depth, pedagogical skill, and spiritual insight.
                     </p>

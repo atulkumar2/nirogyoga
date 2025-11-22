@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -77,10 +78,15 @@ const Footer = () => {
 
                 <div className={styles.column}>
                     <h3>Quick Links</h3>
-                    <a href="/yoga-university" className={styles.link}>Yoga University</a>
-                    <a href="/events" className={styles.link}>Upcoming Events</a>
-                    <a href="/payment" className={styles.link}>Payment Options</a>
-                    <a href="/enrollment" className={styles.link}>Enrollment Form</a>
+                    <Link href="/about" className={styles.link}>About</Link>
+                    <Link href="/instructors" className={styles.link}>Instructors</Link>
+                    <Link href="/therapies" className={styles.link}>Therapy</Link>
+                    <Link href="/programs" className={styles.link}>Programs</Link>
+                    <Link href="/yoga-university" className={styles.link}>Yoga University</Link>
+                    <Link href="/events" className={styles.link}>Events</Link>
+                    <Link href="/#contact" className={styles.link}>Contact</Link>
+                    <Link href="/payment" className={styles.link}>Payment</Link>
+                    <Link href="/enrollment" className={styles.link}>Enrollment</Link>
                 </div>
             </div>
 
