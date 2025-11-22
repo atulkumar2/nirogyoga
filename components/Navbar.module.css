@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 0.5rem 2rem;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     position: sticky;
@@ -25,12 +25,12 @@
 .logoImage {
     object-fit: contain;
     width: auto;
-    height: 60px;
+    height: 50px;
 }
 
 @media (max-width: 768px) {
     .logoImage {
-        height: 45px;
+        height: 40px;
     }
 }
 
