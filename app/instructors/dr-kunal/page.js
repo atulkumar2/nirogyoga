@@ -4,8 +4,8 @@ import styles from './dr-kunal.module.css';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Dr. Kunal | Nirog Yoga",
-    description: "Dr. Kunal, Professor of Medical Physiology and Yoga Therapy Expert.",
+    title: "Prof. (Dr.) Kunal Katyayan | Nirog Yoga",
+    description: "Prof. (Dr.) Kunal Katyayan, Professor of Medical Physiology and Yoga Therapy Expert.",
 };
 
 export default function DrKunal() {
@@ -18,7 +18,7 @@ export default function DrKunal() {
                     <div className={styles.imageContainer}>
                         <Image
                             src="/dr-kunal.jpg"
-                            alt="Dr. Kunal"
+                            alt="Prof. (Dr.) Kunal Katyayan"
                             width={300}
                             height={300}
                             className={styles.profileImage}
@@ -37,7 +37,7 @@ export default function DrKunal() {
                 <section className={styles.section}>
                     <h3 className={styles.sectionTitle}>About Prof. (Dr.) Kunal Katyayan</h3>
                     <p className={styles.text}>
-                        Dr. Kunal is a distinguished academician, medical physiologist, researcher, and yoga expert whose career blends modern medical science with the profound wisdom of yogic traditions. Born on 9 May 1981, he has steadily risen to prominence in the fields of Physiology and Yoga research through decades of committed practice, rigorous academic training, and impactful teaching. His journey—spanning over three decades of learning and practicing Yoga and more than fifteen years of teaching Physiology and Yoga—reflects a rare combination of scientific depth, pedagogical skill, and spiritual insight.
+                        Prof. (Dr.) Kunal Katyayan is a distinguished academician, medical physiologist, researcher, and yoga expert whose career blends modern medical science with the profound wisdom of yogic traditions. Born on 9 May 1981, he has steadily risen to prominence in the fields of Physiology and Yoga research through decades of committed practice, rigorous academic training, and impactful teaching. His journey—spanning over three decades of learning and practicing Yoga and more than fifteen years of teaching Physiology and Yoga—reflects a rare combination of scientific depth, pedagogical skill, and spiritual insight.
                     </p>
                     <p className={styles.text}>
                         His professional life stands as an inspiring example of how ancient practices like Yoga can be integrated with contemporary biomedical science to create meaningful transformations in health, learning, and wellness.
@@ -47,10 +47,10 @@ export default function DrKunal() {
                 <section className={styles.section}>
                     <h3 className={styles.sectionTitle}>Academic & Professional Journey</h3>
                     <p className={styles.text}>
-                        Currently serving as Professor and In-Charge of the Yoga Lab in the Department of Physiology at Srinivas Institute of Medical Sciences, Mangalore, Dr. Kunal assumed this role on 1 January 2025. His responsibilities are extensive, encompassing classroom teaching, hands-on practical demonstrations, research supervision, and administrative oversight.
+                        Currently serving as Professor and In-Charge of the Yoga Lab in the Department of Physiology at Srinivas Institute of Medical Sciences, Mangalore, Prof. (Dr.) Kunal Katyayan assumed this role on 1 January 2025. His responsibilities are extensive, encompassing classroom teaching, hands-on practical demonstrations, research supervision, and administrative oversight.
                     </p>
                     <p className={styles.text}>
-                        A hallmark of his career is the impressive blend of academic excellence and yogic discipline. Dr. Kunal completed his MBBS from Kasturba Medical College, Mangalore (2000–2006), followed by an MD in Physiology from Manipal Academy of Higher Education (2009–2012). His passion for Yoga led him to pursue a Post-Graduate Diploma in Yogic Sciences (PGDYS) from Mangalore University in 2018–2019, where he secured the second rank.
+                        A hallmark of his career is the impressive blend of academic excellence and yogic discipline. Prof. (Dr.) Kunal Katyayan completed his MBBS from Kasturba Medical College, Mangalore (2000–2006), followed by an MD in Physiology from Manipal Academy of Higher Education (2009–2012). His passion for Yoga led him to pursue a Post-Graduate Diploma in Yogic Sciences (PGDYS) from Mangalore University in 2018–2019, where he secured the second rank.
                     </p>
                     <p className={styles.text}>
                         Before joining Srinivas Institute of Medical Sciences, he served as a Professor of Physiology at MGM Medical College, Kishanganj, Bihar, and spent almost a decade at Kasturba Medical College, Mangalore, where he served as Associate Professor and In-Charge of the Yoga Lab.
@@ -71,7 +71,7 @@ export default function DrKunal() {
                 <section className={styles.section}>
                     <h3 className={styles.sectionTitle}>Research Contributions</h3>
                     <p className={styles.text}>
-                        Dr. Kunal’s research contributions form one of the strongest pillars of his professional identity. He has guided multiple research projects supported by the Indian Council of Medical Research (ICMR), particularly in the domain of Yoga physiology. His research focuses on understanding how practices like Om chanting, pranayama, meditation, asanas, and integrated yoga routines influence autonomic function, respiratory parameters, cardiovascular performance, cognition, psychological well-being, and metabolic health.
+                        Prof. (Dr.) Kunal Katyayan’s research contributions form one of the strongest pillars of his professional identity. He has guided multiple research projects supported by the Indian Council of Medical Research (ICMR), particularly in the domain of Yoga physiology. His research focuses on understanding how practices like Om chanting, pranayama, meditation, asanas, and integrated yoga routines influence autonomic function, respiratory parameters, cardiovascular performance, cognition, psychological well-being, and metabolic health.
                     </p>
                     <p className={styles.text}>
                         He has authored and co-authored papers in journals such as Pharmacognosy Journal, Indian Journal of Clinical Anatomy and Physiology, and Indian Journal of Public Health Research & Development. His findings on Om chanting and pranayama training have received wide appreciation, evidenced by multiple Best Paper and Best Poster Awards.
@@ -81,7 +81,7 @@ export default function DrKunal() {
                 <section className={styles.section}>
                     <h3 className={styles.sectionTitle}>Yoga Expertise & Philosophy</h3>
                     <p className={styles.text}>
-                        An important dimension of Dr. Kunal’s background is his lifelong passion for Yoga. Having begun his Yoga journey in 1995, he has practiced the discipline for nearly 30 years. He became an amateur instructor in 2006 and a formally trained Yoga teacher in 2018.
+                        An important dimension of Prof. (Dr.) Kunal Katyayan’s background is his lifelong passion for Yoga. Having begun his Yoga journey in 1995, he has practiced the discipline for nearly 30 years. He became an amateur instructor in 2006 and a formally trained Yoga teacher in 2018.
                     </p>
                     <p className={styles.text}>
                         His expertise goes beyond physical postures to include pranayama, meditation, stress physiology, autonomic regulation, and mind-body medicine. His teaching style integrates the philosophical roots of Yoga with the neurophysiological and cardiopulmonary mechanisms that underpin its effects. He describes the “Mind-Body-Soul continuum” as his favorite area of intellectual exploration.

@@ -20,7 +20,7 @@ const InstructorProfile = () => {
                                 <h3 className={styles.name}>Prof. (Dr.) Kunal Katyayan</h3>
                                 <span className={styles.title}>MBBS, MD, PGDYS (PG Diploma in Yogic Sciences)</span>
                                 <p className={styles.bio}>
-                                    A Professor of Physiology with deep expertise in Yogic Sciences. Dr. Kunal bridges the gap between modern medicine and traditional yoga to offer holistic healing solutions.
+                                    A Professor of Physiology with deep expertise in Yogic Sciences. Prof. (Dr.) Kunal Katyayan bridges the gap between modern medicine and traditional yoga to offer holistic healing solutions.
                                 </p>
                                 <span className={styles.readMore}>View Profile →</span>
                             </div>

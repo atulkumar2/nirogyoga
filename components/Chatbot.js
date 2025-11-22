@@ -22,7 +22,7 @@ const Chatbot = () => {
         // Simulate bot response
         setTimeout(() => {
             setMessages(prev => [...prev, {
-                text: "Thank you for your message. Dr. Kunal or our team will get back to you shortly. For immediate assistance, please call 8792873242.",
+                text: "Thank you for your message. Prof. (Dr.) Kunal Katyayan or our team will get back to you shortly. For immediate assistance, please call 8792873242.",
                 isBot: true
             }]);
         }, 1000);

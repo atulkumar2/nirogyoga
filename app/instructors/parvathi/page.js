@@ -52,7 +52,7 @@ export default function Parvathi() {
                     <ul className={styles.list}>
                         <li><strong>Social Service:</strong> Yoga instructor for the Brahma Kumaris at Sansthana in Urva, Mangalore.</li>
                         <li><strong>Therapy:</strong> Specializes in diabetes, hypertension, and obesity management.</li>
-                        <li><strong>Future Vision:</strong> Establishing a professional Yoga Therapy Center on a picturesque lakefront property in Kulai, Mangalore, alongside Dr. Kunal.</li>
+                        <li><strong>Future Vision:</strong> Establishing a professional Yoga Therapy Center on a picturesque lakefront property in Kulai, Mangalore, alongside Prof. (Dr.) Kunal Katyayan.</li>
                     </ul>
                 </section>
 

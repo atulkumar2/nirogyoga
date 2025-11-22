@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export const metadata = {
     title: "About Us | Nirog Yoga",
-    description: "Learn about Nirog Yoga, our mission to integrate scientific yoga with traditional wisdom, and our founders Dr. Kunal and Parvathi.",
+    description: "Learn about Nirog Yoga, our mission to integrate scientific yoga with traditional wisdom, and our founders Prof. (Dr.) Kunal Katyayan and Parvathi Katyayan.",
 };
 
 export default function About() {
@@ -58,16 +58,16 @@ export default function About() {
                             <div className={styles.founderImageContainer}>
                                 <Image
                                     src="/dr-kunal.jpg"
-                                    alt="Dr. Kunal"
+                                    alt="Prof. (Dr.) Kunal Katyayan"
                                     fill
                                     className={styles.founderImage}
                                 />
                             </div>
                             <div className={styles.founderContent}>
-                                <h3 className={styles.founderName}>Dr. Kunal</h3>
+                                <h3 className={styles.founderName}>Prof. (Dr.) Kunal Katyayan</h3>
                                 <span className={styles.founderRole}>Professor of Physiology & Yoga Expert</span>
                                 <p className={styles.founderBio}>
-                                    With an MD in Physiology and over 30 years of yoga practice, Dr. Kunal brings a unique medical perspective to yoga therapy. He specializes in the physiological effects of pranayama and meditation.
+                                    With an MD in Physiology and over 30 years of yoga practice, Prof. (Dr.) Kunal Katyayan brings a unique medical perspective to yoga therapy. He specializes in the physiological effects of pranayama and meditation.
                                 </p>
                                 <Link href="/instructors/dr-kunal" className={styles.founderLink}>
                                     View Full Profile →
@@ -80,13 +80,13 @@ export default function About() {
                             <div className={styles.founderImageContainer}>
                                 <Image
                                     src="/parvathi.jpg"
-                                    alt="Parvathi"
+                                    alt="Parvathi Katyayan"
                                     fill
                                     className={styles.founderImage}
                                 />
                             </div>
                             <div className={styles.founderContent}>
-                                <h3 className={styles.founderName}>Parvathi</h3>
+                                <h3 className={styles.founderName}>Parvathi Katyayan</h3>
                                 <span className={styles.founderRole}>Senior Yoga Instructor & Therapist</span>
                                 <p className={styles.founderBio}>
                                     A dedicated practitioner and teacher, Parvathi focuses on the therapeutic applications of yoga for women's health, chronic pain, and mental well-being. Her compassionate approach helps students find their own path to healing.
