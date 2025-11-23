@@ -43,7 +43,7 @@ const Navbar = () => {
                 <Link href="/programs" className={styles.link} onClick={closeMenu}>Programs</Link>
                 <Link href="/what-is-yoga" className={styles.link} onClick={closeMenu}>What is Yoga?</Link>
                 <Link href="/events" className={styles.link} onClick={closeMenu}>Events</Link>
-                <Link href="/#contact" className={styles.link} onClick={closeMenu}>Contact</Link>
+                <Link href="/contact" className={styles.link} onClick={closeMenu}>Contact</Link>
                 <Link href="/payment" className={styles.link} onClick={closeMenu}>Payment</Link>
                 <Link href="/enrollment" className={styles.ctaButton} onClick={closeMenu}>
                     Enrollment Details

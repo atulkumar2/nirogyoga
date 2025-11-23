@@ -34,54 +34,7 @@ export default function YogaUniversity() {
                         </ul>
                     </section>
 
-                    {/* Disease Information */}
-                    <section className={styles.section}>
-                        <h2 className={styles.sectionTitle}>Yoga Therapy for Health</h2>
-                        <p className={styles.sectionDesc}>Scientific insights into managing health conditions through Yoga.</p>
-                        <ul className={styles.linkList}>
-                            <li><Link href="/disease/anxiety-depression" className={styles.link}>Anxiety & Depression</Link></li>
-                            <li><Link href="/disease/chronic-pain" className={styles.link}>Chronic Pain Management</Link></li>
-                            <li><Link href="/disease/insomnia" className={styles.link}>Insomnia & Sleep Disorders</Link></li>
-                            <li><Link href="/disease/diabetes" className={styles.link}>Diabetes Care</Link></li>
-                            <li><Link href="/disease/hypertension" className={styles.link}>Hypertension (High BP)</Link></li>
-                            <li><Link href="/disease/asthma" className={styles.link}>Asthma & Respiratory Health</Link></li>
-                            <li><Link href="/disease/arthritis" className={styles.link}>Arthritis & Joint Care</Link></li>
-                            <li><Link href="/disease/pcos" className={styles.link}>PCOS & Women's Health</Link></li>
-                            <li><Link href="/disease/ptsd" className={styles.link}>PTSD & Trauma Recovery</Link></li>
-                        </ul>
-                    </section>
 
-                    {/* External Resources */}
-                    <section className={styles.section}>
-                        <h2 className={styles.sectionTitle}>Global Resources</h2>
-                        <ul className={styles.linkList}>
-                            <li>
-                                <a href="https://yoga.ayush.gov.in/" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                                    Ministry of AYUSH, Govt. of India
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.un.org/en/observances/yoga-day" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                                    International Day of Yoga (UN)
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://svyasa.edu.in/" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                                    S-VYASA Yoga University
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://bksiyengar.com/" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                                    Iyengar Yoga (BKS Iyengar)
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.biharyoga.net/" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                                    Bihar School of Yoga
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
                 </div>
             </div>
 
