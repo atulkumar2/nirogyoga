@@ -3,10 +3,10 @@ import styles from './TherapyList.module.css';
 const conditions = [
     { name: "Post-Traumatic Stress Disorder (PTSD)", link: "/disease/ptsd" },
     { name: "Chronic Stress, Anxiety & Depression", link: "/disease/anxiety-depression" },
-    { name: "ADHD in children", link: "https://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder" },
+    { name: "ADHD in children", link: "/disease/adhd" },
     { name: "Chronic Low Back Pain", link: "/disease/chronic-pain" },
     { name: "Fibromyalgia & Arthritis", link: "/disease/arthritis" },
-    { name: "Mobility & Balance issues (including Parkinson's)", link: "https://en.wikipedia.org/wiki/Parkinson%27s_disease" },
+    { name: "Mobility & Balance issues (including Parkinson's)", link: "/disease/mobility-balance" },
     { name: "Migraine & Chronic Headaches", link: "https://en.wikipedia.org/wiki/Migraine" },
     { name: "Insomnia & Sleep Disorders", link: "/disease/insomnia" },
     { name: "Thickening of cerebral cortex", link: "https://en.wikipedia.org/wiki/Cerebral_cortex" },

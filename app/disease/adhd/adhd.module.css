@@ -164,6 +164,24 @@
     transform: translateX(5px);
 }
 
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 1.5rem;
+    }
+
+    .resourceGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .headerImage {
+        margin-top: 1rem;
+    }
+}
+
 .reportSection {
     background: #fff;
     padding: 3rem;
@@ -188,22 +206,4 @@
     margin-bottom: 1.5rem;
     border-left: 4px solid var(--secondary-color);
     padding-left: 1rem;
-}
-
-@media (max-width: 768px) {
-    .title {
-        font-size: 2rem;
-    }
-
-    .section {
-        padding: 1.5rem;
-    }
-
-    .resourceGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .headerImage {
-        margin-top: 1rem;
-    }
 }
