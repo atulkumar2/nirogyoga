@@ -22,9 +22,12 @@ export default function YogaUniversity() {
                 </header>
 
                 <div className={styles.grid}>
-                    {/* Core Concepts */}
+                    {/* Fundamentals Section */}
                     <section className={styles.section}>
                         <h2 className={styles.sectionTitle}>Fundamentals of Yoga</h2>
+                        <p className={styles.description}>
+                            Explore the theoretical foundations, philosophy, and breathing practices of yoga.
+                        </p>
                         <ul className={styles.linkList}>
                             <li><Link href="/what-is-yoga/why-yoga" className={styles.link}>Why Yoga?</Link></li>
                             <li><Link href="/what-is-yoga/introduction" className={styles.link}>Introduction to Yoga</Link></li>
@@ -34,7 +37,16 @@ export default function YogaUniversity() {
                         </ul>
                     </section>
 
-
+                    {/* Asanas Section */}
+                    <section className={styles.section}>
+                        <h2 className={styles.sectionTitle}>Asanas & Sequences</h2>
+                        <p className={styles.description}>
+                            Learn classical yoga postures and dynamic sequences for complete practice.
+                        </p>
+                        <ul className={styles.linkList}>
+                            <li><Link href="/what-is-yoga/surya-namaskara" className={styles.link}>Surya Namaskara (Sun Salutation)</Link></li>
+                        </ul>
+                    </section>
                 </div>
             </div>
 

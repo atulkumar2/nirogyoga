@@ -53,6 +53,13 @@
     font-style: italic;
 }
 
+.description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
 .linkList {
     list-style: none;
     padding: 0;
