@@ -20,7 +20,7 @@ const Navbar = () => {
             <Link href="/" className={styles.logo} onClick={closeMenu}>
                 <div className={styles.logoContainer}>
                     <Image
-                        src="/NirogYogaSideVersionTransparent.png"
+                        src="/NirogYogaLogo.png"
                         alt="Nirog Yoga"
                         width={180}
                         height={50}
