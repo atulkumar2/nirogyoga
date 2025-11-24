@@ -162,3 +162,55 @@
         padding: 30px 20px;
     }
 }
+
+/* Permanent Banner */
+.permanentBanner {
+    background: linear-gradient(to right, #fffbeb, #fff); /* Light yellow/gold tint */
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    border-left: 8px solid #d69e2e;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.bannerMessage {
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.bannerHighlight {
+    display: block;
+    color: #d69e2e;
+    margin-top: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .bannerMessage {
+        font-size: 1.4rem;
+    }
+    .bannerHighlight {
+        font-size: 1.1rem;
+    }
+}
+
+
+.bannerLink {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
+}
+
+.bannerLink:hover {
+    color: #b7791f;
+}
+

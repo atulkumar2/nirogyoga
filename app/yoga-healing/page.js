@@ -4,18 +4,18 @@ import TherapyList from '@/components/TherapyList';
 import styles from './therapies.module.css';
 
 export const metadata = {
-    title: "Therapeutic Yoga | Nirog Yoga",
+    title: "Medically Verified Yoga Healing | Nirog Yoga",
     description: "Explore our specialized yoga therapy programs for various health conditions.",
 };
 
-export default function Therapies() {
+export default function YogaHealing() {
     return (
         <main>
             <Navbar />
 
             <div className={styles.container}>
                 <header className={styles.header}>
-                    <h1 className={styles.title}>Therapeutic Yoga</h1>
+                    <h1 className={styles.title}>Medically Verified Yoga Healing</h1>
                     <p className={styles.subtitle}>
                         Healing through specialized practices tailored to your health needs.
                     </p>

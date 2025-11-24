@@ -13,6 +13,13 @@ export default function Programs() {
         <main>
             <Navbar />
 
+            <div className={styles.permanentBanner}>
+                <h2 className={styles.bannerMessage}>
+                    Quicker Healing with Happier mind
+                    <span className={styles.bannerHighlight}>— <Link href="/contact" className={styles.bannerLink}>Contact us for Early Seekers Privilege</Link></span>
+                </h2>
+            </div>
+
             <div className={styles.container}>
                 <header className={styles.header}>
                     <h1 className={styles.title}>Programs Offered</h1>
@@ -28,7 +35,7 @@ export default function Programs() {
                             <h2 className={styles.programTitle}>Group Sessions</h2>
                             <span className={styles.timing}>Morning: 5:30 AM - 7:00 AM</span>
                         </div>
-                        
+
                         <div className={styles.details}>
                             <div className={styles.detailItem}>
                                 <span className={styles.icon}>📅</span>
@@ -48,7 +55,7 @@ export default function Programs() {
                             <thead>
                                 <tr>
                                     <th>Duration</th>
-                                    <th style={{textAlign: 'right'}}>Fee</th>
+                                    <th style={{ textAlign: 'right' }}>Fee</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -78,7 +85,7 @@ export default function Programs() {
                             <h2 className={styles.programTitle}>Personal Consultation</h2>
                             <span className={styles.timing}>Evening: 5:30 PM - 7:00 PM</span>
                         </div>
-                        
+
                         <div className={styles.details}>
                             <div className={styles.detailItem}>
                                 <span className={styles.icon}>🤝</span>
@@ -98,7 +105,7 @@ export default function Programs() {
                             <thead>
                                 <tr>
                                     <th>Sessions</th>
-                                    <th style={{textAlign: 'right'}}>Fee</th>
+                                    <th style={{ textAlign: 'right' }}>Fee</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -132,6 +139,6 @@ export default function Programs() {
             </div>
 
             <Footer />
-        </main>
+        </main >
     );
 }

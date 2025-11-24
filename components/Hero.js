@@ -4,7 +4,7 @@ const Hero = () => {
     return (
         <section className={styles.hero}>
             <div className={styles.content}>
-                <h1 className={styles.tagline}>Namaste</h1>
+                <h1 className={styles.tagline}>Namaste, Welcome to Nirog Yoga</h1>
                 <p className={styles.subhead}>
                     Yoga is far more than flexibility or fitness — in a world filled with stress, distraction, and disease, it is a pathway back to calmness, focus, and health.
                 </p>

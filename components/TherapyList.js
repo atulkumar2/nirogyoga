@@ -28,7 +28,7 @@ const TherapyList = () => {
     return (
         <section id="therapy" className={styles.section}>
             <div className={styles.container}>
-                <h2 className={styles.heading}>Therapeutic Benefits</h2>
+                <h2 className={styles.heading}>Benefits from Medically verified Yoga Healing</h2>
                 <p className={styles.subtext}>
                     Yoga is proven to be therapeutic for many cases. Our specialized programs address a wide range of physical and mental health conditions.
                 </p>
