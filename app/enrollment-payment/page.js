@@ -34,13 +34,12 @@ export default function Enrollment() {
                         <Link href="/testimonials#interest" className={styles.buttonSecondary}>
                             Register Interest
                         </Link>
-                    </div>
-                    <div className={styles.ctaInfo}>
-                        <span className={styles.totalTime}>Total Expected Time: 10–15 minutes</span>
-                        <span className={styles.separator}>|</span>
                         <Link href="/payment" className={styles.payNowButton}>
                             Pay Now
                         </Link>
+                    </div>
+                    <div className={styles.ctaInfo}>
+                        <span className={styles.totalTime}>Total Expected Time for Enrollment: 10–15 minutes. Payment is mandatory during Enrollment.</span>
                     </div>
                     <p className={styles.contactNote}>
                         Have doubts? <Link href="/contact" className={styles.contactLink}>Contact us</Link>

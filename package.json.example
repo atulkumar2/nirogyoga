@@ -1,6 +1,6 @@
 {
   "name": "nirog-yoga",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,21 +13,19 @@
     "test:links": "jest tests/link-checker.test.js"
   },
   "dependencies": {
-    "next": "16.0.3",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "next": "14.0.0",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "eslint": "^9",
-    "eslint-config-next": "16.0.3",
-    "jest": "^30.2.0",
-    "node-fetch": "^3.3.2"
+    "jest": "^29.7.0",
+    "node-fetch": "^3.3.2",
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^14.1.2"
   },
   "jest": {
     "testEnvironment": "node",
-    "testMatch": [
-      "**/tests/**/*.test.js"
-    ],
+    "testMatch": ["**/tests/**/*.test.js"],
     "collectCoverageFrom": [
       "app/**/*.{js,jsx}",
       "components/**/*.{js,jsx}",

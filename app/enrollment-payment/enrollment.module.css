@@ -1,7 +1,7 @@
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: 120px 20px 60px;
 }
 
 .header {
@@ -138,6 +138,7 @@
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .ctaInfo {
@@ -219,18 +220,19 @@
     display: inline-block;
     background-color: var(--secondary-color);
     color: white;
-    padding: 0.5rem 1.5rem;
-    font-size: 0.95rem;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
     font-weight: 600;
     border-radius: var(--radius-full);
     transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
     text-decoration: none;
 }
 
 .payNowButton:hover {
     background-color: #d97706;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
 }
 
 @media (max-width: 768px) {
@@ -271,7 +273,8 @@
     }
 
     .button,
-    .buttonSecondary {
+    .buttonSecondary,
+    .payNowButton {
         width: 100%;
     }
 }
