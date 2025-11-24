@@ -129,6 +129,13 @@
     margin-top: 40px;
 }
 
+.buttonGroup {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .ctaButton {
     display: inline-block;
     background-color: var(--primary-color);
@@ -144,6 +151,62 @@
     background-color: var(--secondary-color);
 }
 
+.earlySeekersBanner {
+    display: inline-block;
+    background: linear-gradient(to right, #fffbeb, #fff);
+    border: 1px solid #fbd38d;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #744210;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.bannerIcon {
+    margin-right: 0.5rem;
+}
+
+.bannerLink {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.secondaryButton {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 13px 38px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.secondaryButton:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.payButton {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 13px 38px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.payButton:hover {
+    background-color: #d97706;
+    transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
     .title {
         font-size: 2.2rem;
@@ -156,50 +219,15 @@
     .card {
         padding: 30px 20px;
     }
-}
-.earlySeekersBanner {
-    display: inline-block;
-    background: linear-gradient(to right, #fffbeb, #fff);
-    border: 1px solid #fbd38d;
-    padding: 0.8rem 1.5rem;
-    border-radius: 50px;
-    margin-top: 1.5rem;
-    font-size: 1rem;
-    color: #744210;
-    font-weight: 500;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
 
-.bannerIcon {
-    margin-right: 0.5rem;
-}
+    .buttonGroup {
+        flex-direction: column;
+    }
 
-
-.secondaryButton {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--primary-color);
-    padding: 13px 38px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: 2px solid var(--primary-color);
-    margin-left: 20px;
-}
-
-.secondaryButton:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-@media (max-width: 768px) {
-    .secondaryButton {
-        margin-left: 0;
-        margin-top: 15px;
-        display: block;
+    .ctaButton,
+    .secondaryButton,
+    .payButton {
         width: 100%;
         text-align: center;
     }
 }
-

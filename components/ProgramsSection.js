@@ -119,12 +119,17 @@ const ProgramsSection = () => {
                 </div>
 
                 <div className={styles.ctaSection}>
-                    <Link href="/enrollment" className={styles.ctaButton}>
-                        Enroll Now
-                    </Link>
-                    <Link href="/payment" className={styles.secondaryButton}>
-                        Payment Options
-                    </Link>
+                    <div className={styles.buttonGroup}>
+                        <Link href="/enrollment-payment" className={styles.ctaButton}>
+                            Enroll Now
+                        </Link>
+                        <Link href="/testimonials#interest" className={styles.secondaryButton}>
+                            Register Interest
+                        </Link>
+                        <Link href="/payment" className={styles.payButton}>
+                            Pay Now
+                        </Link>
+                    </div>
                 </div>
             </div>
         </section>

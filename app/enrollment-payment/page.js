@@ -22,20 +22,25 @@ export default function Enrollment() {
                 </header>
 
                 <div className={styles.ctaSection}>
-                    <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfKyn1PpqrUPOABP_zKrWz4X2orMMrm03EO9s4gJq1QiYgLdg/viewform"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.button}
-                    >
-                        Enroll Now
-                    </a>
+                    <div className={styles.buttonGroup}>
+                        <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSfKyn1PpqrUPOABP_zKrWz4X2orMMrm03EO9s4gJq1QiYgLdg/viewform"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.button}
+                        >
+                            Enroll Now
+                        </a>
+                        <Link href="/testimonials#interest" className={styles.buttonSecondary}>
+                            Register Interest
+                        </Link>
+                    </div>
                     <div className={styles.ctaInfo}>
                         <span className={styles.totalTime}>Total Expected Time: 10–15 minutes</span>
                         <span className={styles.separator}>|</span>
-                        <span className={styles.paymentNote}>
-                            <Link href="/payment" className={styles.paymentLink}>Payment Options</Link> to complete your enrollment.
-                        </span>
+                        <Link href="/payment" className={styles.payNowButton}>
+                            Pay Now
+                        </Link>
                     </div>
                     <p className={styles.contactNote}>
                         Have doubts? <Link href="/contact" className={styles.contactLink}>Contact us</Link>

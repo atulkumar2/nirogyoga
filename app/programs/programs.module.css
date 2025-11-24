@@ -134,6 +134,13 @@
     color: #444;
 }
 
+.buttonGroup {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .ctaButton {
     display: inline-block;
     background-color: var(--primary-color);
@@ -149,34 +156,54 @@
     background-color: var(--secondary-color);
 }
 
-@media (max-width: 768px) {
-    .title {
-        font-size: 2.2rem;
-    }
-    
-    .grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .card {
-        padding: 30px 20px;
-    }
+.secondaryButton {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 13px 38px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.secondaryButton:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.payButton {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 13px 38px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.payButton:hover {
+    background-color: #d97706;
+    transform: translateY(-2px);
 }
 
 /* Permanent Banner */
 .permanentBanner {
-    background: linear-gradient(to right, #fffbeb, #fff); /* Light yellow/gold tint */
+    background: linear-gradient(to right, #fffbeb, #fff);
     padding: 2.5rem 1.5rem;
     text-align: center;
-    border-bottom: 1px solid #e2e8f0;
-    border-left: 8px solid #d69e2e;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-bottom: 2px solid #fbd38d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+    top: 0;
+    z-index: 10;
 }
 
 .bannerMessage {
     font-size: 1.8rem;
-    color: #2d3748;
+    color: #744210;
     margin: 0;
     line-height: 1.4;
     font-weight: 700;
@@ -192,16 +219,6 @@
     letter-spacing: 1px;
 }
 
-@media (max-width: 768px) {
-    .bannerMessage {
-        font-size: 1.4rem;
-    }
-    .bannerHighlight {
-        font-size: 1.1rem;
-    }
-}
-
-
 .bannerLink {
     color: inherit;
     text-decoration: underline;
@@ -214,32 +231,34 @@
     color: #b7791f;
 }
 
-
-.secondaryButton {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--primary-color);
-    padding: 13px 38px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: 2px solid var(--primary-color);
-    margin-left: 20px;
-}
-
-.secondaryButton:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
 @media (max-width: 768px) {
-    .secondaryButton {
-        margin-left: 0;
-        margin-top: 15px;
-        display: block;
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+    }
+
+    .ctaButton,
+    .secondaryButton,
+    .payButton {
         width: 100%;
-        text-align: center;
+    }
+
+    .bannerMessage {
+        font-size: 1.4rem;
+    }
+
+    .bannerHighlight {
+        font-size: 1.1rem;
     }
 }
-

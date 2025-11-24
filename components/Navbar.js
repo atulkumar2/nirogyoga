@@ -44,9 +44,9 @@ const Navbar = () => {
                 <Link href="/what-is-yoga" className={styles.link} onClick={closeMenu}>What is Yoga?</Link>
                 <Link href="/events" className={styles.link} onClick={closeMenu}>Events</Link>
                 <Link href="/contact" className={styles.link} onClick={closeMenu}>Contact</Link>
-                <Link href="/payment" className={styles.link} onClick={closeMenu}>Payment</Link>
-                <Link href="/enrollment" className={styles.ctaButton} onClick={closeMenu}>
-                    Enrollment Details
+                <Link href="/testimonials" className={styles.link} onClick={closeMenu}>Testimonials</Link>
+                <Link href="/enrollment-payment" className={styles.ctaButton} onClick={closeMenu}>
+                    Enroll / Payment
                 </Link>
             </div>
         </nav>
