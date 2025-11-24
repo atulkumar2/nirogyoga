@@ -17,7 +17,7 @@ export default function Enrollment() {
                 <header className={styles.header}>
                     <h1 className={styles.title}>Begin Your Healing Journey</h1>
                     <p className={styles.subtitle}>
-                        The Healing YogaSadhana enrollment form is designed to understand your health background, lifestyle, and goals so we can tailor your healing journey.
+                        The Nirog Yoga enrollment form is designed to understand your health background, lifestyle, and goals so we can tailor your healing journey.
                     </p>
                 </header>
 

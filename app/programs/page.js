@@ -131,9 +131,12 @@ export default function Programs() {
                 </div>
 
                 <div className={styles.ctaSection}>
-                    <p className={styles.ctaText}>Ready to start your journey? Enroll now or contact us for more details.</p>
+                    <p className={styles.ctaText}>Ready to start your journey? Enroll now or <Link href="/contact" className={styles.bannerLink}>Contact Us</Link> for more details.</p>
                     <Link href="/enrollment" className={styles.ctaButton}>
                         Enroll Now
+                    </Link>
+                    <Link href="/payment" className={styles.secondaryButton}>
+                        Payment Options
                     </Link>
                 </div>
             </div>

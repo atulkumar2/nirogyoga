@@ -57,3 +57,15 @@
     font-weight: 500;
     color: var(--text-dark);
 }
+.textContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.insightLabel {
+    font-size: 0.8rem;
+    color: #718096;
+    margin-top: 4px;
+    font-style: italic;
+}
+

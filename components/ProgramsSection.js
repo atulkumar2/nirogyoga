@@ -10,6 +10,10 @@ const ProgramsSection = () => {
                     <p className={styles.subtitle}>
                         Choose the path that suits your lifestyle. Whether you prefer the energy of a group or personalized attention, we have a program for you.
                     </p>
+                    <div className={styles.earlySeekersBanner}>
+                        <span className={styles.bannerIcon}>✨</span>
+                        For limited time, Early seeker's privilege is available. <Link href="/contact" className={styles.bannerLink}>Contact Us</Link> for more details.
+                    </div>
                 </header>
 
                 <div className={styles.grid}>
@@ -117,6 +121,9 @@ const ProgramsSection = () => {
                 <div className={styles.ctaSection}>
                     <Link href="/enrollment" className={styles.ctaButton}>
                         Enroll Now
+                    </Link>
+                    <Link href="/payment" className={styles.secondaryButton}>
+                        Payment Options
                     </Link>
                 </div>
             </div>

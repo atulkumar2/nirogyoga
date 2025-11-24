@@ -54,6 +54,68 @@ export default function Resources() {
                         </li>
                     </ul>
                 </section>
+
+                <section className={styles.section}>
+                    <h2 className={styles.sectionTitle}>Other YouTube Channels</h2>
+                    <div className={styles.grid}>
+                        <a href="https://www.youtube.com/@theyogainstituteofficial" target="_blank" rel="noopener noreferrer" className={styles.card}>
+                            <span className={styles.cardIcon}>📺</span>
+                            <span className={styles.cardTitle}>The Yoga Institute</span>
+                            <span className={styles.cardDesc}>The oldest organized yoga center in the world, offering authentic teachings.</span>
+                        </a>
+                        <a href="https://www.youtube.com/user/ishafoundation" target="_blank" rel="noopener noreferrer" className={styles.card}>
+                            <span className={styles.cardIcon}>📺</span>
+                            <span className={styles.cardTitle}>Isha Foundation</span>
+                            <span className={styles.cardDesc}>Yoga, meditation, and wisdom from Sadhguru.</span>
+                        </a>
+                        <a href="https://www.youtube.com/c/BharatYoga" target="_blank" rel="noopener noreferrer" className={styles.card}>
+                            <span className={styles.cardIcon}>📺</span>
+                            <span className={styles.cardTitle}>Bharat Yoga</span>
+                            <span className={styles.cardDesc}>Authentic traditional yoga by Acharya Pratishtha.</span>
+                        </a>
+                        <a href="https://www.youtube.com/c/FitTuber" target="_blank" rel="noopener noreferrer" className={styles.card}>
+                            <span className={styles.cardIcon}>📺</span>
+                            <span className={styles.cardTitle}>Fit Tuber</span>
+                            <span className={styles.cardDesc}>Holistic health, yoga, and lifestyle tips for Indian audiences.</span>
+                        </a>
+                        <a href="https://www.youtube.com/c/SatvicMovement" target="_blank" rel="noopener noreferrer" className={styles.card}>
+                            <span className={styles.cardIcon}>📺</span>
+                            <span className={styles.cardTitle}>Satvic Movement</span>
+                            <span className={styles.cardDesc}>Yoga lifestyle, food, and natural healing wisdom.</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section className={styles.section}>
+                    <h2 className={styles.sectionTitle}>Important Yoga Literature</h2>
+                    <div className={styles.grid}>
+                        <a href="https://www.amazon.in/Yoga-Sutras-Patanjali-Swami-Satchidananda/dp/1938477073" target="_blank" rel="noopener noreferrer" className={styles.card}>
+                            <span className={styles.cardIcon}>📖</span>
+                            <span className={styles.cardTitle}>Patanjali Yoga Sutras</span>
+                            <span className={styles.cardDesc}>The foundational text of Raja Yoga, outlining the eight limbs of yoga.</span>
+                        </a>
+                        <a href="https://www.amazon.in/Hatha-Yoga-Pradipika-Swami-Muktibodhananda/dp/8185787387" target="_blank" rel="noopener noreferrer" className={styles.card}>
+                            <span className={styles.cardIcon}>📖</span>
+                            <span className={styles.cardTitle}>Hatha Yoga Pradipika</span>
+                            <span className={styles.cardDesc}>A classic 15th-century Sanskrit manual on Hatha Yoga.</span>
+                        </a>
+                        <a href="https://www.amazon.in/s?k=Shrimad+Bhagwad+Gita+Gita+Press+English" target="_blank" rel="noopener noreferrer" className={styles.card}>
+                            <span className={styles.cardIcon}>📖</span>
+                            <span className={styles.cardTitle}>Bhagavad Gita</span>
+                            <span className={styles.cardDesc}>A 700-verse Hindu scripture that is part of the epic Mahabharata.</span>
+                        </a>
+                        <a href="https://www.amazon.in/Light-Yoga-B-K-S-Iyengar/dp/8172235011" target="_blank" rel="noopener noreferrer" className={styles.card}>
+                            <span className={styles.cardIcon}>📖</span>
+                            <span className={styles.cardTitle}>Light on Yoga</span>
+                            <span className={styles.cardDesc}>By B.K.S. Iyengar. The definitive guide to yoga practice.</span>
+                        </a>
+                        <a href="https://www.amazon.in/s?k=Asana+Pranayama+Mudra+Bandha+Swami+Satyananda+Saraswati" target="_blank" rel="noopener noreferrer" className={styles.card}>
+                            <span className={styles.cardIcon}>📖</span>
+                            <span className={styles.cardTitle}>Asana Pranayama Mudra Bandha</span>
+                            <span className={styles.cardDesc}>By Swami Satyananda Saraswati. A comprehensive manual for yoga practices.</span>
+                        </a>
+                    </div>
+                </section>
             </div>
 
             <Footer />

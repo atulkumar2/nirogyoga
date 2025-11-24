@@ -80,7 +80,7 @@ const Footer = () => {
                     <h3>Quick Links</h3>
                     <Link href="/about" className={styles.link}>About</Link>
                     <Link href="/instructors" className={styles.link}>Instructors</Link>
-                    <Link href="/therapies" className={styles.link}>Therapy</Link>
+                    <Link href="/yoga-healing" className={styles.link}>Yoga Healing</Link>
                     <Link href="/programs" className={styles.link}>Programs</Link>
                     <Link href="/what-is-yoga" className={styles.link}>What is Yoga?</Link>
                     <Link href="/events" className={styles.link}>Events</Link>
