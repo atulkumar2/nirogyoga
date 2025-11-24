@@ -157,7 +157,7 @@ describe('Internal Link Checker', () => {
                     }
                 }
             }
-        });
+        }, 15000); // 15 second timeout for checking all pages
     });
 
     describe('Programs/Events Links', () => {
@@ -170,7 +170,7 @@ describe('Internal Link Checker', () => {
                 expect(html).not.toMatch(/href="\/programs"[^-]/i);
                 expect(html).not.toMatch(/href="\/events"[^-]/i);
             }
-        });
+        }, 15000); // 15 second timeout
     });
 
     describe('Anchor Links', () => {

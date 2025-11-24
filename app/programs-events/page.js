@@ -22,10 +22,10 @@ export default function ProgramsEvents() {
 
             {/* Banner */}
             <div className={styles.permanentBanner}>
-                <h2 className={styles.bannerMessage}>
+                <div className={styles.bannerMessage}>
                     Quicker Healing with Happier mind
                     <span className={styles.bannerHighlight}>— <Link href="/contact" className={styles.bannerLink}>Contact us for Early Seekers Privilege</Link></span>
-                </h2>
+                </div>
             </div>
 
             {/* PROGRAMS SECTION */}
