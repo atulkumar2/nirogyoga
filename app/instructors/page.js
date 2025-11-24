@@ -14,6 +14,12 @@ export default function Instructors() {
             <Navbar />
 
             <div className={styles.container}>
+                <header className={styles.header}>
+                    <h1 className={styles.title}>Our Instructors</h1>
+                    <p className={styles.subtitle}>
+                        Meet our experienced yoga instructors dedicated to guiding you on your wellness journey.
+                    </p>
+                </header>
                 <InstructorProfile />
             </div>
 

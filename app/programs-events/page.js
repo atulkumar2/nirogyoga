@@ -158,7 +158,7 @@ export default function ProgramsEvents() {
             {/* EVENTS SECTION */}
             <div id="events" className={styles.eventsContainer}>
                 <header className={styles.header}>
-                    <h1 className={styles.title}>Upcoming Events</h1>
+                    <h2 className={styles.title}>Upcoming Events</h2>
                     <p className={styles.subtitle}>
                         Join us for transformative sessions and begin your journey to wellness.
                     </p>

@@ -4,7 +4,6 @@ const InstructorProfile = () => {
     return (
         <section id="instructors" className={styles.section}>
             <div className={styles.container}>
-                <h2 className={styles.heading}>Our Instructors</h2>
                 <div className={styles.grid}>
                     {/* Dr. Kunal */}
                     <a href="/instructors/dr-kunal" className={styles.cardLink}>
