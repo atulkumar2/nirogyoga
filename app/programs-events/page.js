@@ -1,18 +1,26 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import styles from './programs.module.css';
+import styles from './programs-events.module.css';
 import Link from 'next/link';
 
 export const metadata = {
-    title: "Programs & Fees | Nirog Yoga",
-    description: "Explore our yoga programs, group sessions, and personal consultation packages.",
+    title: "Programs & Events | Nirog Yoga",
+    description: "Explore our yoga programs, group sessions, personal consultation packages, and upcoming events.",
 };
 
-export default function Programs() {
+export default function ProgramsEvents() {
     return (
         <main>
             <Navbar />
 
+            {/* Navigation Links */}
+            <div className={styles.quickNav}>
+                <Link href="#programs" className={styles.navLink}>Programs</Link>
+                <span className={styles.navSeparator}>|</span>
+                <Link href="#events" className={styles.navLink}>Events</Link>
+            </div>
+
+            {/* Banner */}
             <div className={styles.permanentBanner}>
                 <h2 className={styles.bannerMessage}>
                     Quicker Healing with Happier mind
@@ -20,7 +28,8 @@ export default function Programs() {
                 </h2>
             </div>
 
-            <div className={styles.container}>
+            {/* PROGRAMS SECTION */}
+            <div id="programs" className={styles.container}>
                 <header className={styles.header}>
                     <h1 className={styles.title}>Programs Offered</h1>
                     <p className={styles.subtitle}>
@@ -146,7 +155,52 @@ export default function Programs() {
                 </div>
             </div>
 
+            {/* EVENTS SECTION */}
+            <div id="events" className={styles.eventsContainer}>
+                <header className={styles.header}>
+                    <h1 className={styles.title}>Upcoming Events</h1>
+                    <p className={styles.subtitle}>
+                        Join us for transformative sessions and begin your journey to wellness.
+                    </p>
+                </header>
+
+                <div className={styles.eventsList}>
+                    {/* December 1st Event */}
+                    <div className={styles.eventCard}>
+                        <div className={styles.dateBox}>
+                            <span className={styles.month}>DEC</span>
+                            <span className={styles.day}>01</span>
+                        </div>
+                        <div className={styles.eventDetails}>
+                            <h2 className={styles.eventTitle}>New Yoga Therapy Batch Begins</h2>
+                            <div className={styles.metaInfo}>
+                                <span className={styles.metaItem}>🕒 Morning Sessions</span>
+                                <span className={styles.metaItem}>📍 Nirog Yoga Center, Mangalore</span>
+                            </div>
+                            <p className={styles.description}>
+                                We are excited to announce the start of our new yoga therapy batch starting December 1st.
+                                This comprehensive program is designed to address various health concerns including diabetes, hypertension, and stress management through specialized yoga practices.
+                            </p>
+                            <div className={styles.highlights}>
+                                <h3>Program Highlights:</h3>
+                                <ul>
+                                    <li>Personalized attention and health assessment</li>
+                                    <li>Guided Pranayama and Meditation sessions</li>
+                                    <li>Therapeutic Asanas for specific conditions</li>
+                                    <li>Lifestyle and diet counseling</li>
+                                </ul>
+                            </div>
+                            <div className={styles.actions}>
+                                <Link href="/enrollment-payment" className={styles.primaryButton}>Enroll Now</Link>
+                                <Link href="/payment" className={styles.payButton}>Pay Now</Link>
+                                <Link href="/#contact" className={styles.secondaryButton}>Contact for Details</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <Footer />
-        </main >
+        </main>
     );
 }

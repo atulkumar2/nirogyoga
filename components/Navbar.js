@@ -39,12 +39,11 @@ const Navbar = () => {
             <div className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
                 <Link href="/about" className={styles.link} onClick={closeMenu}>About</Link>
                 <Link href="/instructors" className={styles.link} onClick={closeMenu}>Instructors</Link>
-                <Link href="/yoga-healing" className={styles.link} onClick={closeMenu}>Yoga Healing</Link>
-                <Link href="/programs" className={styles.link} onClick={closeMenu}>Programs</Link>
-                <Link href="/what-is-yoga" className={styles.link} onClick={closeMenu}>What is Yoga?</Link>
-                <Link href="/events" className={styles.link} onClick={closeMenu}>Events</Link>
-                <Link href="/contact" className={styles.link} onClick={closeMenu}>Contact</Link>
+                <Link href="/programs-events" className={styles.link} onClick={closeMenu}>Programs / Events</Link>
                 <Link href="/testimonials" className={styles.link} onClick={closeMenu}>Testimonials</Link>
+                <Link href="/what-is-yoga" className={styles.link} onClick={closeMenu}>What is Yoga?</Link>
+                <Link href="/yoga-healing" className={styles.link} onClick={closeMenu}>Yoga Healing</Link>
+                <Link href="/contact" className={styles.link} onClick={closeMenu}>Contact</Link>
                 <Link href="/enrollment-payment" className={styles.ctaButton} onClick={closeMenu}>
                     Enroll / Payment
                 </Link>

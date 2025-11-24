@@ -78,16 +78,25 @@ const Footer = () => {
 
                 <div className={styles.column}>
                     <h3>Quick Links</h3>
-                    <Link href="/about" className={styles.link}>About</Link>
-                    <Link href="/instructors" className={styles.link}>Instructors</Link>
-                    <Link href="/yoga-healing" className={styles.link}>Yoga Healing</Link>
-                    <Link href="/programs" className={styles.link}>Programs</Link>
-                    <Link href="/what-is-yoga" className={styles.link}>What is Yoga?</Link>
-                    <Link href="/events" className={styles.link}>Events</Link>
-                    <Link href="/contact" className={styles.link}>Contact</Link>
-                    <Link href="/payment" className={styles.link}>Payment</Link>
-                    <Link href="/enrollment" className={styles.link}>Enrollment</Link>
-                    <Link href="/resources" className={styles.link}>Resources</Link>
+                    <div className={styles.quickLinksGrid}>
+                        <div className={styles.linkColumn}>
+                            <h4 className={styles.linkColumnTitle}>Learn</h4>
+                            <Link href="/about" className={styles.link}>About</Link>
+                            <Link href="/instructors" className={styles.link}>Instructors</Link>
+                            <Link href="/what-is-yoga" className={styles.link}>What is Yoga?</Link>
+                            <Link href="/yoga-healing" className={styles.link}>Yoga Healing</Link>
+                            <Link href="/resources" className={styles.link}>Resources</Link>
+                        </div>
+                        <div className={styles.linkColumn}>
+                            <h4 className={styles.linkColumnTitle}>Take Action</h4>
+                            <Link href="/programs-events" className={styles.link}>Programs</Link>
+                            <Link href="/programs-events#events" className={styles.link}>Events</Link>
+                            <Link href="/testimonials" className={styles.link}>Testimonials</Link>
+                            <Link href="/enrollment-payment" className={styles.link}>Enrollment</Link>
+                            <Link href="/payment" className={styles.link}>Payment</Link>
+                            <Link href="/contact" className={styles.link}>Contact</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
 
