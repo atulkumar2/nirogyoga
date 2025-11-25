@@ -20,7 +20,33 @@ export default function Arthritis() {
                     </p>
                 </header>
 
-                <section className={styles.section}>
+                {/* Table of Contents */}
+                <nav className={styles.toc}>
+                    <h2 className={styles.tocTitle}>Table of Contents</h2>
+                    <ul className={styles.tocList}>
+                        <li><a href="#understanding">Understanding Arthritis & Fibromyalgia</a></li>
+                        <li><a href="#hindi">गठिया और फाइब्रोमायल्जिया क्या है?</a></li>
+                        <li>
+                            <a href="#scientific-findings">Scientific Findings</a>
+                            <ul className={styles.tocSublist}>
+                                <li><a href="#summary">Summary</a></li>
+                                <li><a href="#overview">Overview of PubMed Literature</a></li>
+                                <li><a href="#fibromyalgia">Evidence in Fibromyalgia (FM)</a></li>
+                                <li><a href="#osteoarthritis">Evidence in Osteoarthritis (OA)</a></li>
+                                <li><a href="#rheumatoid">Evidence in Rheumatoid Arthritis (RA)</a></li>
+                                <li><a href="#safety">Safety and Adverse Events</a></li>
+                                <li><a href="#program-design">Program Design & Clinical Implementation</a></li>
+                                <li><a href="#comparisons">Comparison with Other Interventions</a></li>
+                                <li><a href="#research-gaps">Research Gaps & Future Directions</a></li>
+                                <li><a href="#conclusion">Conclusion</a></li>
+                                <li><a href="#references">Selected References</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#resources">Resources</a></li>
+                    </ul>
+                </nav>
+
+                <section id="understanding" className={styles.section}>
                     <h2 className={styles.sectionTitle}>Understanding Arthritis & Fibromyalgia</h2>
                     <p className={styles.text}>
                         Arthritis encompasses inflammation of one or more joints, causing pain and stiffness. The most common types are osteoarthritis (wear-and-tear) and rheumatoid arthritis (autoimmune). Fibromyalgia is a chronic condition characterized by widespread musculoskeletal pain, fatigue, and sleep disturbances.
@@ -48,7 +74,7 @@ export default function Arthritis() {
                     </ul>
                 </section>
 
-                <section className={styles.section}>
+                <section id="hindi" className={styles.section}>
                     <h2 className={styles.sectionTitle}>गठिया और फाइब्रोमायल्जिया क्या है?</h2>
                     <p className={styles.text}>
                         गठिया एक या अधिक जोड़ों की सूजन है, जिससे दर्द और कठोरता होती है। सबसे आम प्रकार ऑस्टियोआर्थराइटिस और रुमेटीइड गठिया हैं। फाइब्रोमायल्जिया एक दीर्घकालिक स्थिति है जिसमें व्यापक मांसपेशियों में दर्द होता है।
@@ -59,15 +85,15 @@ export default function Arthritis() {
                 </section>
 
                 {/* Extended Research Report */}
-                <section className={styles.reportSection}>
+                <section id="scientific-findings" className={styles.reportSection}>
                     <h2 className={styles.reportTitle}>Scientific Findings: Impact of Yoga for Fibromyalgia and Arthritis</h2>
 
-                    <h3 className={styles.reportSubtitle}>Summary</h3>
+                    <h3 id="summary" className={styles.reportSubtitle}>Summary</h3>
                     <p className={styles.text}>
                         For fibromyalgia (FM) and osteoarthritis (OA), yoga is a recommended, evidence-based multimodal intervention that reduces pain, improves physical function, and addresses psychological comorbidities (fatigue, mood). Evidence for rheumatoid arthritis (RA) is positive but more limited. PubMed-indexed clinical trials and systematic reviews (2015–2025) strongly support yoga as a safe, effective non-pharmacological management strategy.
                     </p>
 
-                    <h3 className={styles.reportSubtitle}>1. Overview of PubMed Literature</h3>
+                    <h3 id="overview" className={styles.reportSubtitle}>1. Overview of PubMed Literature</h3>
                     <p className={styles.text}>
                         The evidence base has matured from small pilot studies to larger randomized controlled trials (RCTs) and rigorous meta-analyses. Research includes:
                     </p>
@@ -78,7 +104,7 @@ export default function Arthritis() {
                         <li><strong>Comparative Effectiveness:</strong> Head-to-head trials comparing yoga to other treatments like aerobic exercise, strengthening programs, and medication.</li>
                     </ul>
 
-                    <h3 className={styles.reportSubtitle}>2. Evidence in Fibromyalgia (FM)</h3>
+                    <h3 id="fibromyalgia" className={styles.reportSubtitle}>2. Evidence in Fibromyalgia (FM)</h3>
 
                     <h4 className={styles.text} style={{ fontWeight: 'bold', marginTop: '1.5rem' }}>2.1 Pain and Physical Function</h4>
                     <ul className={styles.list}>
@@ -116,7 +142,7 @@ export default function Arthritis() {
                         <strong>Bottom line for FM:</strong> Yoga is a promising complementary intervention that may reduce pain and improve function, fatigue, and psychological well-being. Clinicians may reasonably offer structured, FM-adapted yoga as part of a multimodal management plan while noting limited long-term evidence.
                     </p>
 
-                    <h3 className={styles.reportSubtitle}>3. Evidence in Osteoarthritis (OA)</h3>
+                    <h3 id="osteoarthritis" className={styles.reportSubtitle}>3. Evidence in Osteoarthritis (OA)</h3>
 
                     <h4 className={styles.text} style={{ fontWeight: 'bold', marginTop: '1.5rem' }}>3.1 Knee Osteoarthritis</h4>
                     <ul className={styles.list}>
@@ -146,7 +172,7 @@ export default function Arthritis() {
                         While most research focuses on knee OA, emerging evidence suggests benefits for hand OA and hip OA as well, though the evidence base is smaller.
                     </p>
 
-                    <h3 className={styles.reportSubtitle}>4. Evidence in Rheumatoid Arthritis (RA)</h3>
+                    <h3 id="rheumatoid" className={styles.reportSubtitle}>4. Evidence in Rheumatoid Arthritis (RA)</h3>
                     <ul className={styles.list}>
                         <li><strong>Limited Evidence:</strong> There are fewer RCTs in RA. Systematic reviews conclude limited evidence: small trials suggest potential benefit for pain and function, but overall quality is low and findings are inconsistent.</li>
                         <li><strong>Safety Considerations:</strong> A 2020 systematic review summarized the limited and heterogeneous evidence base and called for better-designed RA trials. Yoga must be carefully adapted to avoid stress on inflamed joints.</li>
@@ -154,7 +180,7 @@ export default function Arthritis() {
                         <li><strong>Complementary Role:</strong> Yoga can complement medical management (DMARDs, biologics) but should not replace standard treatment.</li>
                     </ul>
 
-                    <h3 className={styles.reportSubtitle}>5. Safety and Adverse Events</h3>
+                    <h3 id="safety" className={styles.reportSubtitle}>5. Safety and Adverse Events</h3>
                     <ul className={styles.list}>
                         <li><strong>Generally Safe:</strong> Trials in FM and OA report that yoga is generally safe when adapted appropriately. Adverse events are rare and mostly mild (transient muscle soreness, temporary pain increase).</li>
                         <li><strong>Proper Instruction:</strong> Qualified instructors who understand joint limitations and can modify poses are essential.</li>
@@ -163,7 +189,7 @@ export default function Arthritis() {
                         <li><strong>No Serious Events:</strong> No serious adverse events have been reported in published studies when yoga is properly adapted.</li>
                     </ul>
 
-                    <h3 className={styles.reportSubtitle}>6. Program Design & Clinical Implementation</h3>
+                    <h3 id="program-design" className={styles.reportSubtitle}>6. Program Design & Clinical Implementation</h3>
                     <ul className={styles.list}>
                         <li><strong>Optimal Duration:</strong> Most effective programs involve 2-3 sessions per week for 8-12 weeks, with sessions lasting 45-90 minutes.</li>
                         <li><strong>Yoga Styles:</strong> Gentle Hatha yoga, Iyengar yoga (with props), restorative yoga, and chair yoga are commonly used and well-tolerated.</li>
@@ -173,7 +199,7 @@ export default function Arthritis() {
                         <li><strong>Group vs. Individual:</strong> Both formats are effective; group classes offer social support, while individual sessions allow personalized adaptation.</li>
                     </ul>
 
-                    <h3 className={styles.reportSubtitle}>7. Comparison with Other Interventions</h3>
+                    <h3 id="comparisons" className={styles.reportSubtitle}>7. Comparison with Other Interventions</h3>
                     <p className={styles.text}>
                         <strong>Medication:</strong> Yoga complements pharmacological treatment (NSAIDs, DMARDs, pain medications) and may help reduce medication dependence in some patients.
                     </p>
@@ -187,7 +213,7 @@ export default function Arthritis() {
                         <strong>Tai Chi:</strong> Some studies compare yoga to Tai Chi, showing similar benefits for both mind-body practices.
                     </p>
 
-                    <h3 className={styles.reportSubtitle}>8. Research Gaps & Future Directions</h3>
+                    <h3 id="research-gaps" className={styles.reportSubtitle}>8. Research Gaps & Future Directions</h3>
                     <ul className={styles.list}>
                         <li><strong>Larger RCTs:</strong> More adequately powered, multi-site trials with standardized protocols are needed.</li>
                         <li><strong>Long-term Follow-up:</strong> Studies tracking outcomes beyond 6-12 months to assess durability of benefits.</li>
@@ -197,12 +223,12 @@ export default function Arthritis() {
                         <li><strong>Cost-effectiveness:</strong> Economic analyses comparing yoga to other treatments.</li>
                     </ul>
 
-                    <h3 className={styles.reportSubtitle}>9. Conclusion</h3>
+                    <h3 id="conclusion" className={styles.reportSubtitle}>9. Conclusion</h3>
                     <p className={styles.text}>
                         PubMed research strongly supports yoga as a safe, effective complementary intervention for fibromyalgia and osteoarthritis, with promising but more limited evidence for rheumatoid arthritis. Yoga reduces pain, improves physical function, and enhances psychological well-being and quality of life. The evidence base has matured significantly, with multiple systematic reviews and meta-analyses confirming consistent benefits. Clinicians can confidently recommend structured, appropriately adapted yoga programs as part of a comprehensive, multimodal management plan for these chronic pain conditions. While yoga should not replace standard medical care, it offers a valuable, low-risk addition that empowers patients with self-management tools.
                     </p>
 
-                    <h3 className={styles.reportSubtitle}>Selected References</h3>
+                    <h3 id="references" className={styles.reportSubtitle}>Selected References</h3>
                     <ul className={styles.list} style={{ fontSize: '0.95rem' }}>
                         <li><strong>Lauche R, et al. (2019):</strong> Yoga for Osteoarthritis: a Systematic Review and Meta-analysis. <em>Current Rheumatology Reports.</em></li>
                         <li><strong>Cramer H, et al. (2013):</strong> Yoga for fibromyalgia: a systematic review and meta-analysis. <em>Pain.</em></li>
@@ -212,7 +238,7 @@ export default function Arthritis() {
                     </ul>
                 </section>
 
-                <section className={styles.resourcesSection}>
+                <section id="resources" className={styles.resourcesSection}>
                     <h2 className={styles.sectionTitle}>Resources</h2>
                     <div className={styles.resourceGrid}>
                         <a href="https://www.arthritis.org/" target="_blank" rel="noopener noreferrer" className={styles.resourceCard}>

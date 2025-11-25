@@ -20,7 +20,31 @@ export default function MobilityBalance() {
                     </p>
                 </header>
 
-                <section className={styles.section}>
+                {/* Table of Contents */}
+                <nav className={styles.toc}>
+                    <h2 className={styles.tocTitle}>Table of Contents</h2>
+                    <ul className={styles.tocList}>
+                        <li><a href="#understanding">Understanding Mobility, Balance & Parkinson's Disease</a></li>
+                        <li>
+                            <a href="#scientific-findings">Scientific Findings</a>
+                            <ul className={styles.tocSublist}>
+                                <li><a href="#summary">Summary</a></li>
+                                <li><a href="#overview">Overview of PubMed Literature</a></li>
+                                <li><a href="#balance">Effects on Balance in Older Adults</a></li>
+                                <li><a href="#mobility">Effects on Mobility and Gait</a></li>
+                                <li><a href="#parkinsons">Evidence in Parkinson's Disease</a></li>
+                                <li><a href="#program-design">Program Design & Clinical Implementation</a></li>
+                                <li><a href="#comparisons">Comparison with Other Interventions</a></li>
+                                <li><a href="#research-gaps">Research Gaps & Future Directions</a></li>
+                                <li><a href="#conclusion">Conclusion</a></li>
+                                <li><a href="#references">Selected References</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#resources">Resources</a></li>
+                    </ul>
+                </nav>
+
+                <section id="understanding" className={styles.section}>
                     <h2 className={styles.sectionTitle}>Understanding Mobility, Balance & Parkinson's Disease</h2>
                     <p className={styles.text}>
                         Mobility and balance challenges are common in aging adults and neurological conditions like Parkinson's disease (PD). These issues increase fall risk, reduce independence, and impact quality of life. Parkinson's disease is a progressive neurodegenerative disorder characterized by motor symptoms (tremor, rigidity, bradykinesia, postural instability) and non-motor symptoms (depression, anxiety, sleep disturbances).
@@ -50,15 +74,15 @@ export default function MobilityBalance() {
                 </section>
 
                 {/* Extended Research Report */}
-                <section className={styles.reportSection}>
+                <section id="scientific-findings" className={styles.reportSection}>
                     <h2 className={styles.reportTitle}>Scientific Findings: Impact of Yoga on Mobility, Balance, and Parkinson's Disease</h2>
 
-                    <h3 className={styles.reportSubtitle}>Summary</h3>
+                    <h3 id="summary" className={styles.reportSubtitle}>Summary</h3>
                     <p className={styles.text}>
                         PubMed-indexed systematic reviews and randomized controlled trials demonstrate that yoga improves balance, mobility, gait, and quality of life in older adults and individuals with Parkinson's disease. Evidence is strongest for balance outcomes in healthy older adults and shows promise for motor and non-motor symptoms in PD. Yoga is safe when appropriately adapted and offers a holistic approach addressing physical, cognitive, and emotional aspects of movement disorders.
                     </p>
 
-                    <h3 className={styles.reportSubtitle}>1. Overview of PubMed Literature</h3>
+                    <h3 id="overview" className={styles.reportSubtitle}>1. Overview of PubMed Literature</h3>
                     <p className={styles.text}>
                         The evidence base includes:
                     </p>
@@ -69,7 +93,7 @@ export default function MobilityBalance() {
                         <li><strong>Intervention Variety:</strong> Research examines various yoga styles (Hatha, Iyengar, chair yoga) adapted for mobility limitations.</li>
                     </ul>
 
-                    <h3 className={styles.reportSubtitle}>2. Effects on Balance in Older Adults</h3>
+                    <h3 id="balance" className={styles.reportSubtitle}>2. Effects on Balance in Older Adults</h3>
 
                     <h4 className={styles.text} style={{ fontWeight: 'bold', marginTop: '1.5rem' }}>2.1 Meta-analytic Evidence</h4>
                     <ul className={styles.list}>
@@ -95,7 +119,7 @@ export default function MobilityBalance() {
                         <li><strong>Unique Benefits:</strong> Yoga may offer additional advantages for flexibility, stress reduction, and mind-body integration.</li>
                     </ul>
 
-                    <h3 className={styles.reportSubtitle}>3. Effects on Mobility and Gait</h3>
+                    <h3 id="mobility" className={styles.reportSubtitle}>3. Effects on Mobility and Gait</h3>
 
                     <h4 className={styles.text} style={{ fontWeight: 'bold', marginTop: '1.5rem' }}>3.1 Gait Parameters</h4>
                     <ul className={styles.list}>
@@ -113,7 +137,7 @@ export default function MobilityBalance() {
                         <li><strong>Independence:</strong> Maintained or improved ability to perform daily activities independently.</li>
                     </ul>
 
-                    <h3 className={styles.reportSubtitle}>4. Evidence in Parkinson's Disease</h3>
+                    <h3 id="parkinsons" className={styles.reportSubtitle}>4. Evidence in Parkinson's Disease</h3>
 
                     <h4 className={styles.text} style={{ fontWeight: 'bold', marginTop: '1.5rem' }}>4.1 Motor Symptoms</h4>
                     <ul className={styles.list}>
@@ -151,7 +175,7 @@ export default function MobilityBalance() {
                         <li><strong>Fall Prevention:</strong> Proper instruction and environmental safety (mats, wall support) minimize fall risk during practice.</li>
                     </ul>
 
-                    <h3 className={styles.reportSubtitle}>5. Program Design & Clinical Implementation</h3>
+                    <h3 id="program-design" className={styles.reportSubtitle}>5. Program Design & Clinical Implementation</h3>
                     <ul className={styles.list}>
                         <li><strong>Optimal Duration:</strong> Most effective programs involve 2-3 sessions per week for 8-12 weeks, with ongoing practice for maintenance.</li>
                         <li><strong>Yoga Styles:</strong> Gentle Hatha yoga, Iyengar yoga (with props), chair yoga, and PD-specific adapted programs are commonly used.</li>
@@ -162,7 +186,7 @@ export default function MobilityBalance() {
                         <li><strong>Home Practice:</strong> Encouraging safe home practice (with caregiver support if needed) enhances benefits.</li>
                     </ul>
 
-                    <h3 className={styles.reportSubtitle}>6. Comparison with Other Interventions</h3>
+                    <h3 id="comparisons" className={styles.reportSubtitle}>6. Comparison with Other Interventions</h3>
                     <p className={styles.text}>
                         <strong>Physical Therapy:</strong> Yoga can complement PT or serve as a long-term maintenance strategy. Some studies show comparable benefits to conventional PT for balance.
                     </p>
@@ -176,7 +200,7 @@ export default function MobilityBalance() {
                         <strong>Medication (PD):</strong> Yoga complements pharmacological treatment (levodopa, dopamine agonists) and may help manage medication side effects and non-motor symptoms.
                     </p>
 
-                    <h3 className={styles.reportSubtitle}>7. Research Gaps & Future Directions</h3>
+                    <h3 id="research-gaps" className={styles.reportSubtitle}>7. Research Gaps & Future Directions</h3>
                     <ul className={styles.list}>
                         <li><strong>Larger PD Trials:</strong> More adequately powered RCTs in Parkinson's disease with longer follow-up periods.</li>
                         <li><strong>Fall Prevention:</strong> Direct measurement of fall rates and injuries in large prospective studies.</li>
@@ -187,12 +211,12 @@ export default function MobilityBalance() {
                         <li><strong>Implementation:</strong> Research on how to effectively integrate yoga into clinical care and community settings.</li>
                     </ul>
 
-                    <h3 className={styles.reportSubtitle}>8. Conclusion</h3>
+                    <h3 id="conclusion" className={styles.reportSubtitle}>8. Conclusion</h3>
                     <p className={styles.text}>
                         PubMed research strongly supports yoga as a safe, effective intervention for improving balance, mobility, and gait in older adults and individuals with Parkinson's disease. The evidence is strongest for balance outcomes in healthy seniors and shows consistent promise for both motor and non-motor symptoms in PD. Yoga offers a holistic approach that addresses physical, cognitive, and emotional aspects of movement disorders. Clinicians can confidently recommend appropriately adapted yoga programs as part of comprehensive care for mobility challenges and Parkinson's disease. While more research is needed, particularly larger trials in PD and fall prevention studies, the current evidence supports yoga as a valuable, low-risk intervention that empowers individuals with tools for maintaining and improving mobility, independence, and quality of life.
                     </p>
 
-                    <h3 className={styles.reportSubtitle}>Selected References</h3>
+                    <h3 id="references" className={styles.reportSubtitle}>Selected References</h3>
                     <ul className={styles.list} style={{ fontSize: '0.95rem' }}>
                         <li><strong>Kwok JYY, et al. (2019):</strong> Effects of Mindfulness Yoga vs Stretching and Resistance Training Exercises on Anxiety and Depression for People With Parkinson Disease: A Randomized Clinical Trial. <em>JAMA Neurology.</em></li>
                         <li><strong>Ni M, et al. (2014):</strong> Comparative effect of power training and high-speed yoga on motor function in older patients with Parkinson disease. <em>Archives of Physical Medicine and Rehabilitation.</em></li>
@@ -202,7 +226,7 @@ export default function MobilityBalance() {
                     </ul>
                 </section>
 
-                <section className={styles.resourcesSection}>
+                <section id="resources" className={styles.resourcesSection}>
                     <h2 className={styles.sectionTitle}>Resources</h2>
                     <div className={styles.resourceGrid}>
                         <a href="https://www.parkinson.org/" target="_blank" rel="noopener noreferrer" className={styles.resourceCard}>

@@ -25,8 +25,26 @@ export default function PTSD() {
                     />
                 </header>
 
+                {/* Table of Contents */}
+                <nav className={styles.toc}>
+                    <h2 className={styles.tocTitle}>Table of Contents</h2>
+                    <ul className={styles.tocList}>
+                        <li><a href="#what-is-ptsd">What is PTSD?</a></li>
+                        <li><a href="#ptsd-hindi">PTSD क्या है? (Hindi)</a></li>
+                        <li>
+                            <a href="#scientific-evidence">Scientific Evidence: Yoga for PTSD</a>
+                            <ul className={styles.tocSublist}>
+                                <li><a href="#research-summary">Summary of Research Findings</a></li>
+                                <li><a href="#rcts">Key Randomized Controlled Trials</a></li>
+                                <li><a href="#meta-analyses">Systematic Reviews and Meta-Analyses</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#resources">Medical & Scientific Resources</a></li>
+                    </ul>
+                </nav>
+
                 {/* English Version */}
-                <section className={styles.section}>
+                <section id="what-is-ptsd" className={styles.section}>
                     <h2 className={styles.sectionTitle}>What is PTSD?</h2>
                     <p className={styles.text}>
                         PTSD is a mental health condition that can develop after a person goes through a deeply stressful, frightening, or disturbing event. While widely discussed globally, many Indians experience PTSD quietly due to stigma, lack of awareness, or cultural pressure to "stay strong" and "move on."
@@ -82,7 +100,7 @@ export default function PTSD() {
                 </section>
 
                 {/* Hindi Version */}
-                <section className={styles.section}>
+                <section id="ptsd-hindi" className={styles.section}>
                     <h2 className={styles.sectionTitle}>PTSD क्या है?</h2>
                     <p className={styles.text}>
                         PTSD एक मानसिक स्वास्थ्य स्थिति है जो किसी व्यक्ति के अत्यधिक तनावपूर्ण, डरावनी या दर्दनाक घटना के बाद विकसित हो सकती है। भारत में बहुत से लोग PTSD का अनुभव करते हैं, लेकिन इसे अक्सर नज़रअंदाज़ कर दिया जाता है क्योंकि समाज में मानसिक स्वास्थ्य को लेकर शर्म, डर या चुप रहने की आदत है।
@@ -138,13 +156,13 @@ export default function PTSD() {
                 </section>
 
                 {/* Scientific Research on Yoga for PTSD */}
-                <section className={styles.section}>
+                <section id="scientific-evidence" className={styles.section}>
                     <h2 className={styles.sectionTitle}>Scientific Evidence: Yoga for PTSD</h2>
                     <p className={styles.text}>
                         Multiple peer-reviewed studies published in leading medical journals have demonstrated the effectiveness of yoga as a therapeutic intervention for PTSD. Below are key research findings from randomized controlled trials and systematic reviews.
                     </p>
 
-                    <div className={styles.researchCard}>
+                    <div id="research-summary" className={styles.researchCard}>
                         <h3 className={styles.researchTitle}>Summary of Research Findings</h3>
                         <p className={styles.text}>
                             Research, primarily through Randomized Controlled Trials (RCTs) and meta-analyses, strongly suggests that yoga practice is a promising and effective complementary intervention for reducing symptoms of Post-Traumatic Stress Disorder (PTSD).
@@ -178,7 +196,7 @@ export default function PTSD() {
                         </ul>
                     </div>
 
-                    <h3 className={styles.subheading}>Key Randomized Controlled Trials (RCTs)</h3>
+                    <h3 id="rcts" className={styles.subheading}>Key Randomized Controlled Trials (RCTs)</h3>
 
                     <div className={styles.researchCard}>
                         <h4 className={styles.researchTitle}>van der Kolk et al. (2014)</h4>
@@ -224,7 +242,7 @@ export default function PTSD() {
                         </a>
                     </div>
 
-                    <h3 className={styles.subheading}>Systematic Reviews and Meta-Analyses</h3>
+                    <h3 id="meta-analyses" className={styles.subheading}>Systematic Reviews and Meta-Analyses</h3>
 
                     <div className={styles.researchCard}>
                         <h4 className={styles.researchTitle}>Cramer et al. (2018)</h4>
@@ -265,7 +283,7 @@ export default function PTSD() {
                 </section>
 
                 {/* Resources Section */}
-                <section className={styles.resourcesSection}>
+                <section id="resources" className={styles.resourcesSection}>
                     <h2 className={styles.sectionTitle}>Medical & Scientific Resources</h2>
                     <p className={styles.text}>
                         For more detailed information, please refer to these trusted medical and scientific publications:

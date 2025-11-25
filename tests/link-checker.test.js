@@ -25,6 +25,10 @@ const PAGES_TO_TEST = [
     '/yoga-healing',
     '/yoga-healing/ptsd',
     '/yoga-healing/anxiety-depression',
+    '/yoga-healing/adhd',
+    '/yoga-healing/chronic-pain',
+    '/yoga-healing/arthritis',
+    '/yoga-healing/mobility-balance',
     '/yoga-healing/diabetes',
     '/resources',
 ];

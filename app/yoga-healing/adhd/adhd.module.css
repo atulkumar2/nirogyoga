@@ -29,6 +29,81 @@
     margin-top: 2rem;
 }
 
+.toc {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-lg);
+    border-left: 4px solid var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.tocTitle {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.tocList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.75rem;
+}
+
+.tocList li {
+    margin: 0;
+}
+
+.tocList a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.tocList a:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateX(5px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.tocSublist {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tocSublist li {
+    margin: 0;
+}
+
+.tocSublist a {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-left: 3px solid var(--secondary-color);
+}
+
+.tocSublist a:hover {
+    background: var(--secondary-color);
+    color: white;
+    border-left-color: var(--secondary-color);
+}
+
 .section {
     margin-bottom: var(--spacing-lg);
     padding: 2rem;
@@ -180,30 +255,12 @@
     .headerImage {
         margin-top: 1rem;
     }
-}
 
-.reportSection {
-    background: #fff;
-    padding: 3rem;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    margin-top: 4rem;
-    border-top: 5px solid var(--primary-color);
-}
+    .tocList {
+        grid-template-columns: 1fr;
+    }
 
-.reportTitle {
-    font-size: 2.2rem;
-    color: var(--text-dark);
-    margin-bottom: 2rem;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-}
-
-.reportSubtitle {
-    font-size: 1.4rem;
-    color: var(--primary-color);
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
-    border-left: 4px solid var(--secondary-color);
-    padding-left: 1rem;
+    .tocList a:hover {
+        transform: translateX(3px);
+    }
 }
