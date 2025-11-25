@@ -16,7 +16,7 @@ const PAGES_TO_TEST = [
     '/enrollment-payment',
     '/payment',
     '/contact',
-    // '/testimonials', // Disabled - page not yet completed
+    '/testimonials',
     '/what-is-yoga',
     '/what-is-yoga/standing-asanas',
     '/yoga-healing',
@@ -45,10 +45,21 @@ const EXPECTED_LINKS = {
         '#events',
         '/enrollment-payment',
         '/payment',
+        '/programs',
+        '/testimonials#interest',
         '/#contact',
     ],
     '/enrollment-payment': [
         '/payment',
+    ],
+    '/payment': [
+        '/programs',
+        '/enrollment-payment',
+        '/testimonials#interest',
+        '/contact',
+    ],
+    '/contact': [
+        '/testimonials#interest',
     ],
     '/what-is-yoga': [
         '/what-is-yoga/standing-asanas',
@@ -77,6 +88,7 @@ const FOOTER_LINKS = [
     '/what-is-yoga',
     '/contact',
     '/testimonials',
+    '/testimonials#interest',
     '/payment',
     '/enrollment-payment',
     '/resources',
@@ -187,15 +199,14 @@ describe('Internal Link Checker', () => {
             expect(html).toMatch(/href="#events"/i);
         });
 
-        // Testimonials test disabled - page not yet completed
-        test.skip('/testimonials should have working anchor links', async () => {
+        test('/testimonials should have working anchor link for interest form', async () => {
             const response = await fetch(`${SITE_URL}/testimonials`);
             const html = await response.text();
 
-            // Check for anchor link targets
-            expect(html).toMatch(/id="review"/i);
-            expect(html).toMatch(/id="feedback"/i);
-            expect(html).toMatch(/id="interest"/i);
+            // Check for interest form section (it's now at the top)
+            expect(html).toMatch(/Interest/i);
+            // The forms are embedded iframes, not anchor links
+            expect(html).toMatch(/forms\.gle/i);
         });
     });
 
