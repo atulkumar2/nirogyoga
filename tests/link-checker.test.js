@@ -45,7 +45,6 @@ const EXPECTED_LINKS = {
         '#events',
         '/enrollment-payment',
         '/payment',
-        '/programs',
         '/testimonials#interest',
         '/#contact',
     ],
@@ -53,7 +52,7 @@ const EXPECTED_LINKS = {
         '/payment',
     ],
     '/payment': [
-        '/programs',
+        '/programs-events',
         '/enrollment-payment',
         '/testimonials#interest',
         '/contact',
