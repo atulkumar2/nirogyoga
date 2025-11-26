@@ -39,10 +39,13 @@ export default function Enrollment() {
                         </Link>
                     </div>
                     <div className={styles.ctaInfo}>
-                        <span className={styles.totalTime}>Total Expected Time for Enrollment: 10–15 minutes. Payment is mandatory during Enrollment.</span>
+                        <span className={styles.totalTime}>Total Expected Time for Enrollment: 10–15 minutes.
+                            <br />
+                            Payment is mandatory during Enrollment. Need based discounts are available on individual basis.
+                        </span>
                     </div>
                     <p className={styles.contactNote}>
-                        Have doubts? <Link href="/contact" className={styles.contactLink}>Contact us</Link>
+                        Have questions? <Link href="/contact" className={styles.contactLink}>Contact us</Link>
                     </p>
                 </div>
 

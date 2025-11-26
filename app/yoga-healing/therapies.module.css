@@ -37,3 +37,29 @@
     color: #555;
     line-height: 1.6;
 }
+/* Card Banner - Need based Discount */
+.cardBanner {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fbbf24 100%);
+    padding: 1rem 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.15);
+}
+
+.cardBannerIcon {
+    font-size: 1.3rem;
+}
+
+.cardBannerText {
+    font-size: 0.95rem;
+    color: #7c2d12;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+

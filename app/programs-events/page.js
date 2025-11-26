@@ -23,8 +23,8 @@ export default function ProgramsEvents() {
             {/* Banner */}
             <div className={styles.permanentBanner}>
                 <div className={styles.bannerMessage}>
-                    Quicker Healing with Happier mind
-                    <span className={styles.bannerHighlight}>— <Link href="/contact" className={styles.bannerLink}>Contact us for Early Seekers Privilege</Link></span>
+                    Healing with Happier minds
+                    <span className={styles.bannerHighlight}> <Link href="/contact" className={styles.bannerLink}>Ask us for Need based discounts</Link></span>
                 </div>
             </div>
 
@@ -86,6 +86,12 @@ export default function ProgramsEvents() {
                                 </tr>
                             </tbody>
                         </table>
+
+                        {/* Need based Banner */}
+                        <div className={styles.cardBanner}>
+                            <span className={styles.cardBannerIcon}>🎁</span>
+                            <span className={styles.cardBannerText}>Need based discounts available on individual basis</span>
+                        </div>
                     </div>
 
                     {/* Personal Consultation */}
@@ -136,6 +142,12 @@ export default function ProgramsEvents() {
                                 </tr>
                             </tbody>
                         </table>
+
+                        {/* Need based Banner */}
+                        <div className={styles.cardBanner}>
+                            <span className={styles.cardBannerIcon}>🎁</span>
+                            <span className={styles.cardBannerText}>Need based discounts available on individual basis</span>
+                        </div>
                     </div>
                 </div>
 

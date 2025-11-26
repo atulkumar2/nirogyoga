@@ -15,7 +15,7 @@ export default function Testimonials() {
 
             <div className={styles.container}>
                 <header className={styles.header}>
-                    <h1 className={styles.title}>Review/Feedback</h1>
+                    <h1 className={styles.title}>Interest, Review & Feedback</h1>
                     <p className={styles.subtitle}>
                         Perspective, Assessment & Appraisal - Share your experience and read what others have to say about their journey with Nirog Yoga.
                     </p>
@@ -23,10 +23,7 @@ export default function Testimonials() {
 
                 {/* Google Forms Section - Three Separate Forms */}
                 <section className={styles.formsContainer}>
-                    <h2 className={styles.formsMainTitle}>Share Your Thoughts</h2>
-                    <p className={styles.formsDescription}>
-                        We value your input! Choose the appropriate form to share your thoughts with us.
-                    </p>
+                    <h2 className={styles.formsMainTitle}>Choose a Form</h2>
 
                     <div className={styles.formsGrid}>
                         {/* Interest Form - Moved to Top for Emphasis */}
@@ -38,6 +35,11 @@ export default function Testimonials() {
                             <p className={styles.formCardDescription}>
                                 Interested in our programs? Let us know what you're looking for and we'll get in touch.
                             </p>
+                            {/* Need based Banner */}
+                            <div className={styles.cardBanner}>
+                                <span className={styles.cardBannerIcon}>🎁</span>
+                                <span className={styles.cardBannerText}>Need based discounts available on individual basis</span>
+                            </div>
                             <iframe
                                 src="https://forms.gle/4two5f7HTLp2xmkj9"
                                 width="100%"

@@ -28,6 +28,12 @@ export default function YogaHealing() {
                         to address specific health conditions.
                     </p>
 
+                    {/* Need based Banner */}
+                    <div className={styles.cardBanner}>
+                        <span className={styles.cardBannerIcon}>🎁</span>
+                        <span className={styles.cardBannerText}>Need based discounts available on individual basis</span>
+                    </div>
+
                     {/* Reusing the existing TherapyList component */}
                     <TherapyList />
                 </div>

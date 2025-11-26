@@ -70,7 +70,11 @@ export default function Payment() {
 
                 <div className={styles.ctaSection}>
                     <p className={styles.ctaText}>
-                        Ready to complete your enrollment? Fill out the enrollment form or register your interest to get started.
+                        Ready to complete your enrollment?
+                        <br />
+                        Fill out the enrollment form or register your interest to get started.
+                        <br />
+                        <i><b>Need based discounts are available on individual basis.</b></i>
                     </p>
                     <div className={styles.buttonGroup}>
                         <Link href="/programs-events" className={styles.ctaButton}>
