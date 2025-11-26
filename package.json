@@ -13,6 +13,7 @@
     "test:links": "jest tests/link-checker.test.js"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "next": "16.0.3",
     "react": "19.2.0",
     "react-dom": "19.2.0"
