@@ -231,7 +231,7 @@ export default function ProgramsEvents() {
 
                 {/* Personal Consultation Section */}
                 <div className={styles.personalSection}>
-                    <div id="personal-consultation" className={styles.card} style={{ maxWidth: '600px', margin: '0 auto', width: '100%' }}>
+                    <div id="personal-consultation" className={`${styles.card} ${styles.personalCard}`} style={{ maxWidth: '600px', margin: '0 auto', width: '100%' }}>
                         <div className={styles.cardHeader}>
                             <h2 className={styles.programTitle}>Personal Consultation</h2>
                             <span className={styles.timing}>Evening: 5:30 PM - 7:00 PM</span>
