@@ -1,0 +1,415 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.sutraCard {
+  background: linear-gradient(135deg, #fff8e1 0%, #fff3c4 100%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ffe082;
+  margin-bottom: 50px;
+}
+
+.cardTitle {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.cardIntro {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 30px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.sutraSection {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sutraSection h4 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.sanskrit {
+  font-size: 1.1rem;
+  color: #444;
+  font-style: italic;
+  margin: 15px 0;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border-left: 3px solid #ff9800;
+  line-height: 1.4;
+}
+
+.explanation {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.problemList {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.problemList li {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.problemList li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #f44336;
+  font-weight: bold;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  border-left: 3px solid #2196f3;
+}
+
+.limbsList {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.limbsList li {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 6px;
+  border-left: 3px solid var(--primary-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  line-height: 1.4;
+}
+
+.limbsList li strong {
+  color: var(--primary-color);
+}
+
+.transformList {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.transformList li {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.transformList li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.obstaclesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.obstacle,
+.solution {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.obstacle h5,
+.solution h5 {
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.obstacle h5 {
+  color: #f44336;
+}
+
+.solution h5 {
+  color: #4caf50;
+}
+
+.obstacle ul,
+.solution ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.obstacle li,
+.solution li {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.goalList {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.goalList li {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.goalList li:before {
+  content: "⭐";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.keyInsights {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f4f8 100%);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e3f2fd;
+  margin-bottom: 50px;
+}
+
+.insightsTitle {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.insightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.insight {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.insight h4 {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.insight p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.resources {
+  background: linear-gradient(135deg, #fff8e1 0%, #fff3c4 100%);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ffe082;
+  margin-bottom: 40px;
+}
+
+.resourcesTitle {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.resourcesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.resourceCard {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.resourceCard h4 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.resourceCard p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.resourceLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.resourceLink:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+}
+
+.backLink,
+.relatedLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-color);
+}
+
+.backLink:hover,
+.relatedLink:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .sutraCard {
+    padding: 20px;
+  }
+
+  .sutraSection {
+    padding: 15px;
+  }
+
+  .obstaclesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .insightsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .resourcesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .backLink,
+  .relatedLink {
+    width: 100%;
+    text-align: center;
+  }
+}

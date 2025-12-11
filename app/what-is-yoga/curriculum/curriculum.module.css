@@ -1,0 +1,256 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.curriculum {
+  margin-bottom: 40px;
+}
+
+.phase {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f4f8 100%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  border: 1px solid #e3f2fd;
+}
+
+.phaseTitle {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 10px;
+}
+
+.phaseDesc {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 25px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.practiceArea {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.practiceArea h4 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.areaDesc {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.practiceArea ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+}
+
+.practiceArea li {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.practiceArea li:before {
+  content: "🧘";
+  position: absolute;
+  left: 0;
+  font-size: 0.8rem;
+}
+
+.practiceArea strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.schedule {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+  font-style: italic;
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  border-left: 3px solid #4caf50;
+}
+
+.tips {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: rgba(255, 235, 59, 0.1);
+  border-radius: 6px;
+  border-left: 3px solid #ff9800;
+}
+
+.guidance {
+  background: linear-gradient(135deg, #fff8e1 0%, #fff3c4 100%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ffe082;
+}
+
+.guidanceTitle {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.guidanceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.guidanceCard {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+}
+
+.guidanceCard h4 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.guidanceCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.guidanceCard li {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.guidanceCard li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+}
+
+.backLink,
+.relatedLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-color);
+}
+
+.backLink:hover,
+.relatedLink:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .phase {
+    padding: 20px;
+  }
+
+  .practiceArea {
+    padding: 20px;
+  }
+
+  .guidanceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .backLink,
+  .relatedLink {
+    width: 100%;
+    text-align: center;
+  }
+}

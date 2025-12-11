@@ -1,5 +1,5 @@
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 import styles from './resources.module.css';
 
 export const metadata = {
@@ -113,6 +113,11 @@ export default function Resources() {
                             <span className={styles.cardIcon}>📖</span>
                             <span className={styles.cardTitle}>Asana Pranayama Mudra Bandha</span>
                             <span className={styles.cardDesc}>By Swami Satyananda Saraswati. A comprehensive manual for yoga practices.</span>
+                        </a>
+                        <a href="/saatvic-literature" className={styles.card}>
+                            <span className={styles.cardIcon}>📚</span>
+                            <span className={styles.cardTitle}>Saatvic Literature</span>
+                            <span className={styles.cardDesc}>Explore spiritual texts and Sattvic resources for holistic well-being.</span>
                         </a>
                     </div>
                 </section>

@@ -1,127 +1,126 @@
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 120px 20px 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
 }
 
 .header {
-    text-align: center;
-    margin-bottom: 60px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .title {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.6;
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
 }
 
 .section {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .linkList {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .linkList li {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
 }
 
 .linkList li:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .resourceLink {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
 .resourceLink:hover {
-    transform: translateX(10px);
+  transform: translateX(10px);
 }
 
 .linkTitle {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 .linkDesc {
-    font-size: 0.95rem;
-    color: #666;
+  font-size: 0.95rem;
+  color: #666;
 }
 
 @media (max-width: 768px) {
-    .title {
-        font-size: 2.2rem;
-    }
+  .title {
+    font-size: 2.2rem;
+  }
 }
 .sectionTitle {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: "Playfair Display", serif;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 .card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 1px solid #eee;
+  background: linear-gradient(135deg, #f0fff0 0%, #e6f7e6 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #d4edda;
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .cardIcon {
-    font-size: 2rem;
-    margin-bottom: 0.8rem;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .cardTitle {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #2d3748;
-    margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
 }
 
 .cardDesc {
-    font-size: 0.95rem;
-    color: #718096;
-    line-height: 1.4;
+  font-size: 0.95rem;
+  color: #718096;
+  line-height: 1.4;
 }
-

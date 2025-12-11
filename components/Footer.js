@@ -86,6 +86,7 @@ const Footer = () => {
                             <Link href="/what-is-yoga" className={styles.link}>What is Yoga?</Link>
                             <Link href="/yoga-healing" className={styles.link}>Yoga Healing</Link>
                             <Link href="/resources" className={styles.link}>Resources</Link>
+                            <Link href="/saatvic-literature" className={styles.link}>Saatvic Literature</Link>
                         </div>
                         <div className={styles.linkColumn}>
                             <h4 className={styles.linkColumnTitle}>Take Action</h4>
