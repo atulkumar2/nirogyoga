@@ -1,5 +1,5 @@
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import styles from './safety-guidelines.module.css';
 
@@ -38,8 +38,7 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>1</span>
-                            Listen to Your Body (Most Important Rule)
+                            <span className={styles.ruleNumber}>1</span> Listen to Your Body (Most Important Rule)
                         </h2>
                         <ul className={styles.list}>
                             <li>Yoga should <strong>never cause sharp pain</strong>.</li>
@@ -51,8 +50,7 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>2</span>
-                            Warm Up Before Deep Movements
+                            <span className={styles.ruleNumber}>2</span> Warm Up Before Deep Movements
                         </h2>
                         <ul className={styles.list}>
                             <li>Always prepare the joints and spine before forward bends, backbends, inversions, or balances.</li>
@@ -62,8 +60,7 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>3</span>
-                            Sync Breath With Movement
+                            <span className={styles.ruleNumber}>3</span> Sync Breath With Movement
                         </h2>
                         <ul className={styles.list}>
                             <li>Breath should remain <strong>smooth, silent, and natural</strong>.</li>
@@ -74,8 +71,7 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>4</span>
-                            Avoid Overstretching & Overflexing
+                            <span className={styles.ruleNumber}>4</span> Avoid Overstretching & Overflexing
                         </h2>
                         <ul className={styles.list}>
                             <li>Do not push beyond <strong>70–80% of your range</strong>.</li>
@@ -86,8 +82,7 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>5</span>
-                            Protect Your Spine
+                            <span className={styles.ruleNumber}>5</span> Protect Your Spine
                         </h2>
                         <ul className={styles.list}>
                             <li>Keep the spine long; avoid collapsing in forward bends.</li>
@@ -98,8 +93,7 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>6</span>
-                            Avoid Yoga After Meals
+                            <span className={styles.ruleNumber}>6</span> Avoid Yoga After Meals
                         </h2>
                         <ul className={styles.list}>
                             <li>Maintain at least <strong>2–3 hours gap</strong> after food.</li>
@@ -109,8 +103,7 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>7</span>
-                            Contraindications for Certain Conditions
+                            <span className={styles.ruleNumber}>7</span> Contraindications for Certain Conditions
                         </h2>
                         <div className={styles.contraindicationsBox}>
                             <h3 className={styles.contraindicationsTitle}>Avoid or modify yoga if you have:</h3>
@@ -130,19 +123,17 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>8</span>
-                            Never Force Inversions or Backbends
+                            <span className={styles.ruleNumber}>8</span> Never Force Inversions or Backbends
                         </h2>
                         <ul className={styles.list}>
-                            <li>Headstand, shoulderstand, deep backbends need supervision.</li>
+                            <li>Headstand, shoulder stand, deep backbends need supervision.</li>
                             <li>Avoid if you have neck issues, glaucoma, or high BP.</li>
                         </ul>
                     </div>
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>9</span>
-                            Respect Individual Pace
+                            <span className={styles.ruleNumber}>9</span> Respect Individual Pace
                         </h2>
                         <ul className={styles.list}>
                             <li>Progression is personal — no comparison.</li>
@@ -152,8 +143,7 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>10</span>
-                            Do Not Mix Multiple Methods Too Quickly
+                            <span className={styles.ruleNumber}>10</span> Do Not Mix Multiple Methods Too Quickly
                         </h2>
                         <ul className={styles.list}>
                             <li>Combining too many styles (e.g., Ashtanga + Power + Hatha + gym) can overstress the body.</li>
@@ -163,8 +153,7 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>11</span>
-                            End with Rest (Savasana or Upayoga Recovery)
+                            <span className={styles.ruleNumber}>11</span> End with Rest (Savasana or Upayoga Recovery)
                         </h2>
                         <ul className={styles.list}>
                             <li>Helps integrate the practice.</li>
