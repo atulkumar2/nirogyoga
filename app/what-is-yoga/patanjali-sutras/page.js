@@ -77,19 +77,19 @@ export default function PatanjaliSutras() {
 
                         {/* Sushumna */}
                         <line x1="600" y1="140" x2="600" y2="620" className="sushumna" />
-                        <text x="610" y="380" className="small">Sushumna</text>
+                        <text x="560" y="380" className="medium">Sushumna</text>
 
                         {/* Ida (left spiral) */}
                         <path d="M550 150 C510 210, 510 280, 550 340
                                C590 400, 590 470, 550 530
                                C510 590, 510 640, 550 670" className="ida" />
-                        <text x="500" y="330" className="small">Ida</text>
+                        <text x="500" y="330" className="medium">Ida</text>
 
                         {/* Pingala (right spiral) */}
                         <path d="M650 150 C690 210, 690 280, 650 340
                                C610 400, 610 470, 650 530
                                C690 590, 690 640, 650 670" className="pingala" />
-                        <text x="655" y="330" className="small">Pingala</text>
+                        <text x="675" y="330" className="medium">Pingala</text>
 
                         {/* Chakras on Sushumna */}
                         {/* Sahasrara */}
@@ -418,41 +418,8 @@ export default function PatanjaliSutras() {
                         <p>The seven main chakras are energy centers along the spine that correspond to different aspects of consciousness and physical function:</p>
 
                         <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', margin: '2rem 0' }}>
-                            {/* Minimal 7-Chakra Diagram */}
-                            <div style={{ textAlign: 'center', padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-lg)', flex: '1', minWidth: '280px' }}>
-                                <svg width="320" height="760" xmlns="http://www.w3.org/2000/svg">
-                                    <style>
-                                        {`.chakra { fill: #f2f2f2; stroke: #333; stroke-width: 1.4; }
-                                        .label { font: 18px sans-serif; fill: #333; }
-                                        .title { font: bold 26px sans-serif; fill: #333; }`}
-                                    </style>
 
-                                    <text x="60" y="40" className="title">7 Chakras</text>
-
-                                    <circle cx="160" cy="120" r="22" className="chakra" />
-                                    <text x="115" y="160" className="label">Sahasrara</text>
-
-                                    <circle cx="160" cy="220" r="22" className="chakra" />
-                                    <text x="120" y="260" className="label">Ajna</text>
-
-                                    <circle cx="160" cy="320" r="22" className="chakra" />
-                                    <text x="110" y="360" className="label">Vishuddha</text>
-
-                                    <circle cx="160" cy="420" r="22" className="chakra" />
-                                    <text x="115" y="460" className="label">Anahata</text>
-
-                                    <circle cx="160" cy="520" r="22" className="chakra" />
-                                    <text x="125" y="560" className="label">Manipura</text>
-
-                                    <circle cx="160" cy="620" r="22" className="chakra" />
-                                    <text x="135" y="660" className="label">Svadhisthana</text>
-
-                                    <circle cx="160" cy="720" r="22" className="chakra" />
-                                    <text x="145" y="760" className="label">Muladhara</text>
-                                </svg>
-                            </div>
-
-                            {/* Colored Chakra Diagram */}
+                            {/* Colored 7 Chakra Diagram */}
                             <div style={{ textAlign: 'center', padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-lg)', flex: '1', minWidth: '280px' }}>
                                 <svg width="340" height="780" xmlns="http://www.w3.org/2000/svg">
                                     <style>
@@ -460,10 +427,10 @@ export default function PatanjaliSutras() {
                                         .title { font: bold 26px sans-serif; fill: #333; }`}
                                     </style>
 
-                                    <text x="70" y="40" className="title">Chakra System</text>
+                                    <text x="70" y="40" className="title">7 Chakra System</text>
 
                                     <circle cx="170" cy="120" r="26" fill="#a078d6" />
-                                    <text x="115" y="160" className="label">7. Sahasrara</text>
+                                    <text x="115" y="160" className="label">7. Sahasrara </text>
 
                                     <circle cx="170" cy="210" r="26" fill="#6c5ce7" />
                                     <text x="130" y="250" className="label">6. Ajna</text>
