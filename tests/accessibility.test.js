@@ -3,23 +3,49 @@
  * Tests for WCAG compliance and accessibility best practices
  */
 
+const fetch = require('node-fetch');
 const { SITE_URL, assertSiteReachable } = require("./siteHealth");
 
 const PAGES_TO_TEST = [
     '/',
     '/about',
     '/instructors',
+    '/instructors/dr-kunal',
+    '/instructors/parvathi',
     '/programs-events',
     '/enrollment-payment',
     '/payment',
     '/contact',
     '/testimonials',
     '/what-is-yoga',
+    '/what-is-yoga/introduction',
+    '/what-is-yoga/why-yoga',
+    '/what-is-yoga/historical-references',
+    '/what-is-yoga/breathing-techniques',
     '/what-is-yoga/pranayama',
+    '/what-is-yoga/major-asanas',
+    '/what-is-yoga/standing-asanas',
+    '/what-is-yoga/surya-namaskara',
     '/what-is-yoga/meditation',
+    '/what-is-yoga/patanjali-sutras',
+    '/what-is-yoga/learning-paths',
+    '/what-is-yoga/yoga-books',
+    '/what-is-yoga/curriculum',
+    '/what-is-yoga/safety-guidelines',
     '/yoga-healing',
     '/yoga-healing/ptsd',
     '/yoga-healing/anxiety-depression',
+    '/yoga-healing/adhd',
+    '/yoga-healing/chronic-pain',
+    '/yoga-healing/arthritis',
+    '/yoga-healing/asthma',
+    '/yoga-healing/diabetes',
+    '/yoga-healing/hypertension',
+    '/yoga-healing/insomnia',
+    '/yoga-healing/mobility-balance',
+    '/yoga-healing/pcos',
+    '/saatvic-literature',
+    '/resources',
 ];
 
 describe('Accessibility Tests', () => {

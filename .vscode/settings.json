@@ -1,4 +1,16 @@
 {
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell (Repo Root)": {
+            "source": "PowerShell",
+            "args": [
+                "-NoExit",
+                "-Command",
+                "try { if (Test-Path ${workspaceFolder}\\scripts\\bootstrap.ps1) { ${workspaceFolder}\\scripts\\bootstrap.ps1 } } catch {}"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell (Repo Root)",
     "cSpell.words": [
         "asanas",
         "Ashtanga",

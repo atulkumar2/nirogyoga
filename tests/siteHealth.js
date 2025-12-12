@@ -1,4 +1,5 @@
 // tests/siteHealth.js
+const fetch = require('node-fetch');
 const SITE_URL = process.env.SITE_URL || "http://localhost:3000";
 
 async function assertSiteReachable() {
@@ -7,14 +8,14 @@ async function assertSiteReachable() {
     if (!res.ok) {
       throw new Error(
         `HTTP ${res.status} from SITE_URL=${SITE_URL} – ` +
-          `make sure your app is running or SITE_URL is correct.`
+        `make sure your app is running or SITE_URL is correct.`
       );
     }
   } catch (err) {
     throw new Error(
       `Could not reach SITE_URL=${SITE_URL}. ` +
-        `Make sure your app is running or SITE_URL is correct.\n` +
-        `Original error: ${err}`
+      `Make sure your app is running or SITE_URL is correct.\n` +
+      `Original error: ${err}`
     );
   }
 }
