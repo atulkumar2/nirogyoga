@@ -24,8 +24,8 @@ export default function PatanjaliSutras() {
                     </p>
                 </header>
 
-                <div style={{ textAlign: 'center', margin: '3rem 0', padding: '2rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-lg)' }}>
-                    <svg width="1200" height="780" viewBox="0 0 1200 780" xmlns="http://www.w3.org/2000/svg">
+                <div style={{ textAlign: 'center', margin: '3rem 0', padding: '2rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-lg)', overflowX: 'auto' }}>
+                    <svg width="1200" height="780" viewBox="0 0 1200 780" xmlns="http://www.w3.org/2000/svg" style={{ maxWidth: '100%', height: 'auto', minWidth: '800px' }}>
                         <defs>
                             <style>
                                 {`.title { font: bold 30px sans-serif; fill: #222; }
