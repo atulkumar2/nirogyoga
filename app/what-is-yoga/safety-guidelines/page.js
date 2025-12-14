@@ -163,7 +163,7 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>12</span>
+                            <span className={styles.ruleNumber}>12</span>{' '}
                             Practice Under Guidance
                         </h2>
                         <ul className={styles.list}>
@@ -174,7 +174,7 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>13</span>
+                            <span className={styles.ruleNumber}>13</span>{' '}
                             Hydrate Before, Not During
                         </h2>
                         <ul className={styles.list}>
@@ -184,7 +184,7 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>14</span>
+                            <span className={styles.ruleNumber}>14</span>{' '}
                             Avoid Yoga During Illness or Fever
                         </h2>
                         <ul className={styles.list}>
@@ -195,7 +195,7 @@ export default function SafetyGuidelines() {
 
                     <div className={styles.ruleBox}>
                         <h2 className={styles.ruleTitle}>
-                            <span className={styles.ruleNumber}>15</span>
+                            <span className={styles.ruleNumber}>15</span>{' '}
                             Mental & Emotional Safety
                         </h2>
                         <ul className={styles.list}>
@@ -210,35 +210,35 @@ export default function SafetyGuidelines() {
                     <h2 className={styles.summaryTitle}>Safety Summary</h2>
                     <div className={styles.summaryGrid}>
                         <div className={styles.summaryItem}>
-                            <span className={styles.checkIcon}>✔</span>
+                            <span className={styles.checkIcon}>✔</span>{' '}
                             Start slowly, never force your body
                         </div>
                         <div className={styles.summaryItem}>
-                            <span className={styles.checkIcon}>✔</span>
+                            <span className={styles.checkIcon}>✔</span>{' '}
                             Keep breath steady and smooth
                         </div>
                         <div className={styles.summaryItem}>
-                            <span className={styles.checkIcon}>✔</span>
+                            <span className={styles.checkIcon}>✔</span>{' '}
                             Avoid practice after meals
                         </div>
                         <div className={styles.summaryItem}>
-                            <span className={styles.checkIcon}>✔</span>
+                            <span className={styles.checkIcon}>✔</span>{' '}
                             Protect knees, spine, and neck
                         </div>
                         <div className={styles.summaryItem}>
-                            <span className={styles.checkIcon}>✔</span>
+                            <span className={styles.checkIcon}>✔</span>{' '}
                             Modify postures if injured or pregnant
                         </div>
                         <div className={styles.summaryItem}>
-                            <span className={styles.checkIcon}>✔</span>
+                            <span className={styles.checkIcon}>✔</span>{' '}
                             End with proper rest
                         </div>
                         <div className={styles.summaryItem}>
-                            <span className={styles.checkIcon}>✔</span>
+                            <span className={styles.checkIcon}>✔</span>{' '}
                             Seek guidance when attempting advanced postures
                         </div>
                         <div className={styles.summaryItem}>
-                            <span className={styles.checkIcon}>✔</span>
+                            <span className={styles.checkIcon}>✔</span>{' '}
                             Upayoga is gentler, but awareness is still essential
                         </div>
                     </div>

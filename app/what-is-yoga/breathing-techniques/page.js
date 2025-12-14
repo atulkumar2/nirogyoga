@@ -1,5 +1,5 @@
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import styles from './breathing-techniques.module.css';
 
@@ -40,7 +40,7 @@ export default function BreathingTechniques() {
                 {/* FOUNDATIONAL TECHNIQUES */}
                 <section className={styles.categorySection}>
                     <h2 className={styles.categoryTitle}>
-                        1. Foundational Techniques
+                        1. Foundational Techniques {' '}
                         <span className={styles.levelBadge + ' ' + styles.beginner}>Beginner Level</span>
                     </h2>
                     <p className={styles.text}>

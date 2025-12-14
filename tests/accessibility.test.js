@@ -48,6 +48,16 @@ const PAGES_TO_TEST = [
     '/resources',
 ];
 
+function checkImageAltAttributes(html) {
+    // Find all img tags
+    const imgTags = html.match(/<img[^>]*>/gi) || [];
+
+    imgTags.forEach(imgTag => {
+        // Check if it has alt attribute (even if empty)
+        expect(imgTag).toMatch(/alt=/i);
+    });
+}
+
 describe('Accessibility Tests', () => {
     beforeAll(async () => {
         await assertSiteReachable();
@@ -59,13 +69,7 @@ describe('Accessibility Tests', () => {
                 const response = await fetch(`${SITE_URL}${page}`);
                 const html = await response.text();
 
-                // Find all img tags
-                const imgTags = html.match(/<img[^>]*>/gi) || [];
-
-                imgTags.forEach(imgTag => {
-                    // Check if it has alt attribute (even if empty)
-                    expect(imgTag).toMatch(/alt=/i);
-                });
+                checkImageAltAttributes(html);
             });
         });
     });

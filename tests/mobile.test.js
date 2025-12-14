@@ -48,6 +48,29 @@ const PAGES_TO_TEST = [
     '/resources',
 ];
 
+function checkResponsiveImages(html) {
+    // Check that images don't have inline width styles that would break responsiveness
+    const imgTags = html.match(/<img[^>]*>/gi) || [];
+    imgTags.forEach(imgTag => {
+        // It's okay to have width/height for Next.js Image optimization
+        // But avoid inline styles with fixed px widths
+        if (imgTag.includes('style=')) {
+            expect(imgTag).not.toMatch(/style=["'][^"']*width:\s*\d+px/i);
+        }
+    });
+}
+
+function checkTouchTargets(html) {
+    // Check that buttons have proper padding/sizing
+    const buttons = html.match(/<button[^>]*>/gi) || [];
+    const links = html.match(/<a[^>]*class=[^>]*button[^>]*>/gi) || [];
+
+    // Just verify they exist and have classes (actual size is in CSS)
+    [...buttons, ...links].forEach(element => {
+        expect(element.length).toBeGreaterThan(0);
+    });
+}
+
 describe('Mobile Responsiveness Tests', () => {
     beforeAll(async () => {
         await assertSiteReachable();
@@ -80,15 +103,7 @@ describe('Mobile Responsiveness Tests', () => {
                 const response = await fetch(`${SITE_URL}${page}`);
                 const html = await response.text();
 
-                // Check that images don't have inline width styles that would break responsiveness
-                const imgTags = html.match(/<img[^>]*>/gi) || [];
-                imgTags.forEach(imgTag => {
-                    // It's okay to have width/height for Next.js Image optimization
-                    // But avoid inline styles with fixed px widths
-                    if (imgTag.includes('style=')) {
-                        expect(imgTag).not.toMatch(/style=["'][^"']*width:\s*\d+px/i);
-                    }
-                });
+                checkResponsiveImages(html);
             });
         });
     });
@@ -114,14 +129,7 @@ describe('Mobile Responsiveness Tests', () => {
                 const response = await fetch(`${SITE_URL}${page}`);
                 const html = await response.text();
 
-                // Check that buttons have proper padding/sizing
-                const buttons = html.match(/<button[^>]*>/gi) || [];
-                const links = html.match(/<a[^>]*class=[^>]*button[^>]*>/gi) || [];
-
-                // Just verify they exist and have classes (actual size is in CSS)
-                [...buttons, ...links].forEach(element => {
-                    expect(element.length).toBeGreaterThan(0);
-                });
+                checkTouchTargets(html);
             });
         });
     });
@@ -133,7 +141,7 @@ describe('Mobile Responsiveness Tests', () => {
                 const html = await response.text();
 
                 // Check for inline styles with very small fonts
-                expect(html).not.toMatch(/font-size:\s*[0-9]px/i); // Single digit px
+                expect(html).not.toMatch(/font-size:\s*\dpx/i); // Single digit px
                 expect(html).not.toMatch(/font-size:\s*1[0-1]px/i); // 10-11px
             });
         });
@@ -146,8 +154,8 @@ describe('Mobile Responsiveness Tests', () => {
                 const html = await response.text();
 
                 // Check for common causes of horizontal scroll
-                expect(html).not.toMatch(/width:\s*[0-9]{4,}px/i); // Very wide fixed widths
-                expect(html).not.toMatch(/min-width:\s*[0-9]{4,}px/i);
+                expect(html).not.toMatch(/width:\s*\d{4,}px/i); // Very wide fixed widths
+                expect(html).not.toMatch(/min-width:\s*\d{4,}px/i);
             });
         });
     });

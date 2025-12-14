@@ -18,51 +18,75 @@ const ProgramsSection = () => {
 
                 <div className={styles.compactGrid}>
                     {/* Morning Daily Sessions */}
-                    <Link href="/programs-events#morning-daily" className={`${styles.compactCard} ${styles.morningCard}`}>
-                        <div className={styles.cardIcon}>🌅</div>
-                        <h3 className={styles.compactTitle}>Morning Group - Daily</h3>
-                        <p className={styles.compactTiming}>5:30 AM - 7:00 AM</p>
-                        <p className={styles.compactDetail}>4-5 days/week</p>
-                        <div className={styles.learnMore}>Learn More →</div>
-                    </Link>
+                    <div className={`${styles.compactCard} ${styles.morningCard}`}>
+                        <Link href="/programs-events#morning-daily" className={styles.cardContent}>
+                            <div className={styles.cardIcon}>🌅</div>
+                            <h3 className={styles.compactTitle}>Morning Group - Daily</h3>
+                            <p className={styles.compactTiming}>5:30 AM - 7:00 AM</p>
+                            <p className={styles.compactDetail}>4-5 days/week</p>
+                        </Link>
+                        <div className={styles.cardActions}>
+                            <Link href="/enrollment-payment" className={styles.cardEnrollButton}>Enroll</Link>
+                            <Link href="/payment" className={styles.cardPayButton}>Pay</Link>
+                            <Link href="/programs-events#morning-daily" className={styles.cardLearnMore}>Learn More →</Link>
+                        </div>
+                    </div>
 
                     {/* Morning Alternate Days */}
-                    <Link href="/programs-events#morning-alternate" className={`${styles.compactCard} ${styles.morningCard}`}>
-                        <div className={styles.cardIcon}>🌄</div>
-                        <h3 className={styles.compactTitle}>Morning Group - Alternate Days</h3>
-                        <p className={styles.compactTiming}>5:30 AM - 7:00 AM</p>
-                        <p className={styles.compactDetail}>3 days/week</p>
-                        <div className={styles.learnMore}>Learn More →</div>
-                    </Link>
+                    <div className={`${styles.compactCard} ${styles.morningCard}`}>
+                        <Link href="/programs-events#morning-alternate" className={styles.cardContent}>
+                            <div className={styles.cardIcon}>🌄</div>
+                            <h3 className={styles.compactTitle}>Morning Group - Alternate Days</h3>
+                            <p className={styles.compactTiming}>5:30 AM - 7:00 AM</p>
+                            <p className={styles.compactDetail}>3 days/week</p>
+                        </Link>
+                        <div className={styles.cardActions}>
+                            <Link href="/enrollment-payment" className={styles.cardEnrollButton}>Enroll</Link>
+                            <Link href="/payment" className={styles.cardPayButton}>Pay</Link>
+                            <Link href="/programs-events#morning-alternate" className={styles.cardLearnMore}>Learn More →</Link>
+                        </div>
+                    </div>
 
                     {/* Evening Sessions */}
-                    <Link href="/programs-events#evening-group" className={`${styles.compactCard} ${styles.eveningCard}`}>
-                        <div className={styles.cardIcon}>🌆</div>
-                        <h3 className={styles.compactTitle}>Evening Group - 3 Days/Week</h3>
-                        <p className={styles.compactTiming}>5:00 PM - 6:30 PM</p>
-                        <p className={styles.compactDetail}>3 days/week</p>
-                        <div className={styles.learnMore}>Learn More →</div>
-                    </Link>
+                    <div className={`${styles.compactCard} ${styles.eveningCard}`}>
+                        <Link href="/programs-events#evening-group" className={styles.cardContent}>
+                            <div className={styles.cardIcon}>🌆</div>
+                            <h3 className={styles.compactTitle}>Evening Group - 3 Days/Week</h3>
+                            <p className={styles.compactTiming}>5:00 PM - 6:30 PM</p>
+                            <p className={styles.compactDetail}>3 days/week - Sat, Mon, Tues</p>
+                        </Link>
+                        <div className={styles.cardActions}>
+                            <Link href="/enrollment-payment" className={styles.cardEnrollButton}>Enroll</Link>
+                            <Link href="/payment" className={styles.cardPayButton}>Pay</Link>
+                            <Link href="/programs-events#evening-group" className={styles.cardLearnMore}>Learn More →</Link>
+                        </div>
+                    </div>
 
                     {/* Personal Consultation */}
-                    <Link href="/programs-events#personal-consultation" className={`${styles.compactCard} ${styles.personalCard}`}>
-                        <div className={styles.cardIcon}>🤝</div>
-                        <h3 className={styles.compactTitle}>Personal Consultation</h3>
-                        <p className={styles.compactTiming}>On Prior Appointment</p>
-                        <p className={styles.compactDetail}>One-on-one sessions</p>
-                        <div className={styles.learnMore}>Learn More →</div>
-                    </Link>
+                    <div className={`${styles.compactCard} ${styles.personalCard}`}>
+                        <Link href="/programs-events#personal-consultation" className={styles.cardContent}>
+                            <div className={styles.cardIcon}>🤝</div>
+                            <h3 className={styles.compactTitle}>Personal Consultation</h3>
+                            <p className={styles.compactTiming}>Prior Appointment</p>
+                            <p className={styles.compactDetail}>One-on-one session</p>
+                        </Link>
+                        <div className={styles.cardActions}>
+                            <Link href="/enrollment-payment" className={styles.cardEnrollButton}>Enroll</Link>
+                            <Link href="/payment" className={styles.cardPayButton}>Pay</Link>
+                            <Link href="/programs-events#personal-consultation" className={styles.cardLearnMore}>Learn More →</Link>
+                        </div>
+                    </div>
                 </div>
 
                 <div className={styles.ctaSection}>
                     <div className={styles.buttonGroup}>
-                        <Link href="/enrollment-payment" className={styles.ctaButton}>
+                        <Link href="/enrollment-payment" className={styles.mainEnrollButton}>
                             Enroll Now
                         </Link>
-                        <Link href="/testimonials#interest" className={styles.secondaryButton}>
+                        <Link href="/testimonials#interest" className={styles.mainRegisterButton}>
                             Register Interest
                         </Link>
-                        <Link href="/payment" className={styles.payButton}>
+                        <Link href="/payment" className={styles.mainPayButton}>
                             Pay Now
                         </Link>
                     </div>

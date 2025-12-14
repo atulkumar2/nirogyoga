@@ -48,6 +48,46 @@ const PAGES_TO_TEST = [
     '/resources',
 ];
 
+function checkExternalLinksSecurity(html) {
+    // Find all external links (http/https to other domains)
+    const externalLinks = html.match(/<a[^>]*href=["']https?:\/\/(?!localhost)[^"']*["'][^>]*>/gi) || [];
+
+    externalLinks.forEach(link => {
+        // Should have target="_blank" AND rel="noopener noreferrer"
+        if (link.includes('target="_blank"') || link.includes("target='_blank'")) {
+            expect(link).toMatch(/rel=["'][^"']*noopener/i);
+            expect(link).toMatch(/rel=["'][^"']*noreferrer/i);
+        }
+    });
+}
+
+function checkIframeSecurity(html) {
+    const iframes = html.match(/<iframe[^>]*>/gi) || [];
+
+    // Google Forms and Maps are exceptions (trusted sources)
+    iframes.forEach(iframe => {
+        const isTrustedSource = iframe.includes('google.com') ||
+            iframe.includes('youtube.com') ||
+            iframe.includes('forms.gle');
+
+        if (!isTrustedSource) {
+            expect(iframe).toMatch(/sandbox=/i);
+        }
+    });
+}
+
+function checkHttpsUsage(html) {
+    // Check for http:// in src or href (mixed content)
+    const httpResources = html.match(/(?:src|href)=["']http:\/\/[^"']*["']/gi) || [];
+
+    // Filter out localhost (allowed in development)
+    const insecureResources = httpResources.filter(resource =>
+        !resource.includes('localhost') && !resource.includes('127.0.0.1')
+    );
+
+    expect(insecureResources.length).toBe(0);
+}
+
 describe('Security Tests', () => {
     beforeAll(async () => {
         await assertSiteReachable();
@@ -59,16 +99,7 @@ describe('Security Tests', () => {
                 const response = await fetch(`${SITE_URL}${page}`);
                 const html = await response.text();
 
-                // Find all external links (http/https to other domains)
-                const externalLinks = html.match(/<a[^>]*href=["']https?:\/\/(?!localhost)[^"']*["'][^>]*>/gi) || [];
-
-                externalLinks.forEach(link => {
-                    // Should have target="_blank" AND rel="noopener noreferrer"
-                    if (link.includes('target="_blank"') || link.includes("target='_blank'")) {
-                        expect(link).toMatch(/rel=["'][^"']*noopener/i);
-                        expect(link).toMatch(/rel=["'][^"']*noreferrer/i);
-                    }
-                });
+                checkExternalLinksSecurity(html);
             });
         });
     });
@@ -138,15 +169,7 @@ describe('Security Tests', () => {
                 const response = await fetch(`${SITE_URL}${page}`);
                 const html = await response.text();
 
-                // Check for http:// in src or href (mixed content)
-                const httpResources = html.match(/(?:src|href)=["']http:\/\/[^"']*["']/gi) || [];
-
-                // Filter out localhost (allowed in development)
-                const insecureResources = httpResources.filter(resource =>
-                    !resource.includes('localhost') && !resource.includes('127.0.0.1')
-                );
-
-                expect(insecureResources.length).toBe(0);
+                checkHttpsUsage(html);
             });
         });
     });
@@ -169,18 +192,7 @@ describe('Security Tests', () => {
                 const response = await fetch(`${SITE_URL}${page}`);
                 const html = await response.text();
 
-                const iframes = html.match(/<iframe[^>]*>/gi) || [];
-
-                // Google Forms and Maps are exceptions (trusted sources)
-                iframes.forEach(iframe => {
-                    const isTrustedSource = iframe.includes('google.com') ||
-                        iframe.includes('youtube.com') ||
-                        iframe.includes('forms.gle');
-
-                    if (!isTrustedSource) {
-                        expect(iframe).toMatch(/sandbox=/i);
-                    }
-                });
+                checkIframeSecurity(html);
             });
         });
     });
