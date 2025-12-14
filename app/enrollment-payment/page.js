@@ -1,7 +1,7 @@
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import styles from './enrollment.module.css';
+import Navbar from '@/components/Navbar';
 import Link from 'next/link';
+import styles from './enrollment.module.css';
 
 export const metadata = {
     title: "Enrollment | Nirog Yoga",
@@ -21,33 +21,119 @@ export default function Enrollment() {
                     </p>
                 </header>
 
-                <div className={styles.ctaSection}>
-                    <div className={styles.buttonGroup}>
-                        <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSfKyn1PpqrUPOABP_zKrWz4X2orMMrm03EO9s4gJq1QiYgLdg/viewform"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.button}
-                        >
-                            Enroll Now
-                        </a>
-                        <Link href="/testimonials#interest" className={styles.buttonSecondary}>
-                            Register Interest
-                        </Link>
-                        <Link href="/payment" className={styles.payNowButton}>
-                            Pay Now
-                        </Link>
-                    </div>
-                    <div className={styles.ctaInfo}>
+                {/* Important Information Box */}
+                <div className={styles.importantInfoBox}>
+                    <div className={styles.importantInfoContent}>
                         <span className={styles.totalTime}>Total Expected Time for Enrollment: 10–15 minutes.
                             <br />
-                            Payment is mandatory during Enrollment. Need based discounts are available on individual basis.
+                            Payment is mandatory during Enrollment. Need based discounts are available.
                         </span>
                     </div>
+                </div>
+
+                <div className={styles.ctaSection}>
+                    <div className={styles.sessionOptions}>
+                        <h3 className={styles.sessionTitle}>Choose Your Session Type</h3>
+
+                        {/* Morning Group */}
+                        <Link href="/programs-events#morning-daily" className={styles.sessionRowLink}>
+                            <div className={styles.sessionRow}>
+                                <div className={styles.sessionInfo}>
+                                    <h4 className={styles.sessionName}>Morning Group</h4>
+                                    <p className={styles.sessionDescription}>Regular morning yoga sessions</p>
+                                </div>
+                                <div className={styles.sessionButtons}>
+                                    <a
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSfKyn1PpqrUPOABP_zKrWz4X2orMMrm03EO9s4gJq1QiYgLdg/viewform"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.enrollButton}
+                                    >
+                                        Enroll
+                                    </a>
+                                    <Link href="/payment" className={styles.payButton}>
+                                        Pay
+                                    </Link>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Morning Alternate */}
+                        <Link href="/programs-events#morning-alternate" className={styles.sessionRowLink}>
+                            <div className={styles.sessionRow}>
+                                <div className={styles.sessionInfo}>
+                                    <h4 className={styles.sessionName}>Morning Alternate</h4>
+                                    <p className={styles.sessionDescription}>Alternative morning schedule</p>
+                                </div>
+                                <div className={styles.sessionButtons}>
+                                    <a
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSfKyn1PpqrUPOABP_zKrWz4X2orMMrm03EO9s4gJq1QiYgLdg/viewform"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.enrollButton}
+                                    >
+                                        Enroll
+                                    </a>
+                                    <Link href="/payment" className={styles.payButton}>
+                                        Pay
+                                    </Link>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Evening Group */}
+                        <Link href="/programs-events#evening-group" className={styles.sessionRowLink}>
+                            <div className={styles.sessionRow}>
+                                <div className={styles.sessionInfo}>
+                                    <h4 className={styles.sessionName}>Evening Group</h4>
+                                    <p className={styles.sessionDescription}>Evening yoga sessions</p>
+                                </div>
+                                <div className={styles.sessionButtons}>
+                                    <a
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSfKyn1PpqrUPOABP_zKrWz4X2orMMrm03EO9s4gJq1QiYgLdg/viewform"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.enrollButton}
+                                    >
+                                        Enroll
+                                    </a>
+                                    <Link href="/payment" className={styles.payButton}>
+                                        Pay
+                                    </Link>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Personal Consultation */}
+                        <Link href="/programs-events#personal-consultation" className={styles.sessionRowLink}>
+                            <div className={styles.sessionRow}>
+                                <div className={styles.sessionInfo}>
+                                    <h4 className={styles.sessionName}>Personal Consultation</h4>
+                                    <p className={styles.sessionDescription}>One-on-one personalized sessions</p>
+                                </div>
+                                <div className={styles.sessionButtons}>
+                                    <a
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSfKyn1PpqrUPOABP_zKrWz4X2orMMrm03EO9s4gJq1QiYgLdg/viewform"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.enrollButton}
+                                    >
+                                        Enroll
+                                    </a>
+                                    <Link href="/payment" className={styles.payButton}>
+                                        Pay
+                                    </Link>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+
                     <p className={styles.contactNote}>
                         Have questions? <Link href="/contact" className={styles.contactLink}>Contact us</Link>
                     </p>
                 </div>
+
+
 
                 <div className={styles.timeline}>
                     {/* Step 1 */}

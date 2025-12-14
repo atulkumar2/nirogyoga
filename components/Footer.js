@@ -93,10 +93,10 @@ const Footer = () => {
                             <h4 className={styles.linkColumnTitle}>Take Action</h4>
                             <Link href="/programs-events" className={styles.link}>Programs</Link>
                             <Link href="/programs-events#events" className={styles.link}>Events</Link>
-                            <Link href="/testimonials" className={styles.link}>Testimonials</Link>
-                            <Link href="/testimonials#interest" className={styles.link}>Register Interest</Link>
                             <Link href="/enrollment-payment" className={styles.link}>Enrollment</Link>
                             <Link href="/payment" className={styles.link}>Payment</Link>
+                            <Link href="/testimonials" className={styles.link}>Testimonials</Link>
+                            <Link href="/testimonials#interest" className={styles.link}>Register Interest</Link>
                             <Link href="/contact" className={styles.link}>Contact</Link>
                         </div>
                     </div>
