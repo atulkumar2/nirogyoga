@@ -1,140 +1,202 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 120px 20px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
 }
 
 .header {
-    text-align: center;
-    margin-bottom: 60px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .title {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-    margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
 }
 
 .card {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .cardTitle {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
 }
 
 .text {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 10px;
-    display: block;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+  display: block;
 }
 
 .link {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .link:hover {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .mapContainer {
-    width: 100%;
-    height: 400px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .socials {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .socialIcon {
-    width: 45px;
-    height: 45px;
-    background: #f4f4f4;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-color);
-    transition: all 0.3s ease;
+  width: 45px;
+  height: 45px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
 }
 
 .socialIcon:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-3px);
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
 }
 
 .ctaSection {
-    text-align: center;
-    padding: 60px 40px;
-    background: linear-gradient(135deg, rgba(139, 69, 19, 0.05), rgba(218, 165, 32, 0.05));
-    border-radius: 15px;
-    margin-bottom: 60px;
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 69, 19, 0.05),
+    rgba(218, 165, 32, 0.05)
+  );
+  border-radius: 15px;
+  margin-bottom: 60px;
 }
 
 .ctaTitle {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
 }
 
 .ctaText {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 700px;
-    margin: 0 auto 30px;
-    line-height: 1.6;
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.ctaButtonGroup {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButtonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 
 .ctaButton {
-    display: inline-block;
-    padding: 15px 40px;
-    background: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.2);
+  display: inline-block;
+  padding: 15px 40px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.2);
 }
 
 .ctaButton:hover {
-    background: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(218, 165, 32, 0.3);
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(218, 165, 32, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .card {
+    padding: 30px 20px;
+  }
+
+  .ctaSection {
+    padding: 40px 20px;
+  }
+
+  .ctaTitle {
+    font-size: 1.8rem;
+  }
+
+  .ctaText {
+    font-size: 1rem;
+  }
+
+  .ctaButtonGroup {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .ctaButton {
+    width: 100%;
+    text-align: center;
+    max-width: 300px;
+  }
 }
