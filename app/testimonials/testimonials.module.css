@@ -1,243 +1,306 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--spacing-lg) var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-md);
 }
 
 .header {
-    text-align: center;
-    margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .title {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .formsContainer {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
 .formsMainTitle {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .formsDescription {
-    text-align: center;
-    color: #666;
-    margin-bottom: 3rem;
-    font-size: 1.1rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
 }
 
 .formsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Tab Navigation Styles */
+.tabsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tabButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 2px solid var(--primary-light);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.tabButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.activeTab {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-md);
+}
+
+.activeTab:hover {
+  transform: translateY(-2px);
+  background: var(--primary-dark);
+}
+
+.tabIcon {
+  font-size: 1.2rem;
+}
+
+.tabTitle {
+  white-space: nowrap;
 }
 
 .formCard {
-    background: white;
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    box-shadow: var(--shadow-md);
-    border: 2px solid var(--primary-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--primary-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .formCard:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .formCardHeader {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .formIcon {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .formCardTitle {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin: 0;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 0;
 }
 
 .formCardDescription {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .formIframe {
-    border: none;
-    border-radius: var(--radius-md);
-    width: 100%;
-    min-height: 600px;
-    background: #f8f9fa;
+  border: none;
+  border-radius: var(--radius-md);
+  width: 100%;
+  min-height: 600px;
+  background: #f8f9fa;
 }
 
 .integrationInstructions {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 2rem;
-    border-radius: var(--radius-md);
-    margin-top: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  margin-top: 2rem;
 }
 
 .integrationInstructions h4 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
 .integrationInstructions ol {
-    text-align: left;
-    color: #666;
-    line-height: 1.8;
-    margin-left: 1.5rem;
+  text-align: left;
+  color: #666;
+  line-height: 1.8;
+  margin-left: 1.5rem;
 }
 
 .integrationInstructions code {
-    background: white;
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--radius-sm);
-    font-size: 0.9rem;
+  background: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
 }
 
 .testimonialsSection {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .sectionTitle {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    text-align: center;
-    border-bottom: 2px solid var(--primary-light);
-    padding-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 1rem;
 }
 
 .testimonialsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .testimonialCard {
-    background: white;
-    padding: 2rem;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    border-left: 4px solid var(--primary-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--primary-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .testimonialCard:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .testimonialHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
 }
 
 .testimonialName {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--text-dark);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
 }
 
 .testimonialDate {
-    font-size: 0.9rem;
-    color: #999;
+  font-size: 0.9rem;
+  color: #999;
 }
 
 .testimonialProgram {
-    display: inline-block;
-    background: var(--primary-light);
-    color: var(--primary-color);
-    padding: 0.25rem 0.75rem;
-    border-radius: var(--radius-full);
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .testimonialText {
-    color: var(--text-dark);
-    line-height: 1.6;
-    font-style: italic;
-    margin-bottom: 1rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
 .testimonialRating {
-    color: var(--secondary-color);
-    font-size: 1.2rem;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
 }
 
 .noTestimonials {
-    text-align: center;
-    padding: 3rem;
-    background: #f8f9fa;
-    border-radius: var(--radius-md);
-    color: #666;
+  text-align: center;
+  padding: 3rem;
+  background: #f8f9fa;
+  border-radius: var(--radius-md);
+  color: #666;
 }
 
 @media (max-width: 768px) {
-    .title {
-        font-size: 2rem;
-    }
+  .title {
+    font-size: 2rem;
+  }
 
-    .testimonialsGrid {
-        grid-template-columns: 1fr;
-    }
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+  }
 
-    .formsGrid {
-        grid-template-columns: 1fr;
-    }
+  .formsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .tabButton {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
 }
 
 /* Card Banner - Need based Discount */
 .cardBanner {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fbbf24 100%);
-    padding: 1rem 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.15);
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fbbf24 100%);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.15);
 }
 
 .cardBannerIcon {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .cardBannerText {
-    font-size: 0.95rem;
-    color: #7c2d12;
-    font-weight: 600;
-    letter-spacing: 0.3px;
+  font-size: 0.95rem;
+  color: #7c2d12;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
