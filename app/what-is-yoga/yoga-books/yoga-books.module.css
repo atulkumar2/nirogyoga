@@ -1,0 +1,4 @@
+/* Placeholder CSS for legacy yoga-books page */
+.container { padding: 1rem; }
+.header { margin-bottom: 1rem; }
+.bookList { display: grid; gap: 1rem; }

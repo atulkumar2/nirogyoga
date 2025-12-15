@@ -1,0 +1,11 @@
+/* Placeholder CSS for legacy learning-paths page */
+.container {
+  padding: 1rem;
+}
+.section {
+  margin: 1rem 0;
+}
+.linkList {
+  list-style: none;
+  padding: 0;
+}
