@@ -1,5 +1,6 @@
 # Test files - not needed in production
 tests/
+scripts/
 *.test.js
 *.spec.js
 

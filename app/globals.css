@@ -1,19 +1,20 @@
 :root {
   /* Color Palette - Serene & Earthy */
-  --primary-color: #2C5F2D; /* Deep Forest Green */
-  --primary-light: #97BC62; /* Soft Sage */
-  --secondary-color: #D4A373; /* Earthy Sand */
-  --accent-color: #E9C46A; /* Soft Gold */
+  --primary-color: #2c5f2d; /* Deep Forest Green */
+  --primary-dark: #0f2a0f; /* Much Darker Forest Green for better contrast */
+  --primary-light: #97bc62; /* Soft Sage */
+  --secondary-color: #d4a373; /* Earthy Sand */
+  --accent-color: #e9c46a; /* Soft Gold */
   --text-dark: #264653; /* Deep Teal/Charcoal */
-  --text-light: #F4F1DE; /* Off-white */
-  --background-light: #F4F1DE; /* Creamy White */
-  --background-dark: #1A2F38; /* Deep Night Blue */
-  --surface-light: #FFFFFF;
-  --surface-dark: #233D47;
+  --text-light: #f4f1de; /* Off-white */
+  --background-light: #f4f1de; /* Creamy White */
+  --background-dark: #1a2f38; /* Deep Night Blue */
+  --surface-light: #ffffff;
+  --surface-dark: #233d47;
 
   /* Typography */
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -29,14 +30,14 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-light: #1A2F38; /* Switch for dark mode preference if needed, but we might enforce a theme */
+    --background-light: #1a2f38; /* Switch for dark mode preference if needed, but we might enforce a theme */
     /* For now, let's stick to a light-themed wellness vibe as default, but support dark mode variables */
   }
 }
@@ -62,7 +63,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 600;
   line-height: 1.2;
@@ -70,9 +76,15 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary-color);
 }
 
-h1 { font-size: 3.5rem; }
-h2 { font-size: 2.5rem; }
-h3 { font-size: 1.75rem; }
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
 
 p {
   margin-bottom: var(--spacing-sm);
@@ -121,14 +133,34 @@ button {
   padding: var(--spacing-lg) 0;
 }
 
-.text-center { text-align: center; }
-.flex-center { display: flex; justify-content: center; align-items: center; }
-.grid-cols-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-md); }
-.grid-cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-md); }
-
-@media (max-width: 768px) {
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  .grid-cols-2, .grid-cols-3 { grid-template-columns: 1fr; }
+.text-center {
+  text-align: center;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+.grid-cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .grid-cols-2,
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+}

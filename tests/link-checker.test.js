@@ -139,56 +139,52 @@ describe('Internal Link Checker', () => {
     });
 
     describe('Page Accessibility', () => {
-        PAGES_TO_TEST.forEach(page => {
-            test(`${page} should be accessible`, async () => {
-                const response = await fetch(`${SITE_URL}${page}`);
-                expect(response.status).toBe(200);
-            });
+        test.each(PAGES_TO_TEST)('%s should be accessible', async (page) => {
+            const response = await fetch(`${SITE_URL}${page}`);
+            expect(response.status).toBe(200);
         });
     });
 
     describe('Navbar Links', () => {
-        PAGES_TO_TEST.forEach(page => {
-            test(`${page} should have all navbar links`, async () => {
-                const response = await fetch(`${SITE_URL}${page}`);
-                const html = await response.text();
+        test.each(PAGES_TO_TEST)('%s should have all navbar links', async (page) => {
+            const response = await fetch(`${SITE_URL}${page}`);
+            const html = await response.text();
+            const escapedSlash = String.raw`\/`;
 
-                NAVBAR_LINKS.forEach(link => {
-                    const linkPattern = new RegExp(`href="${link.replace(/\//g, '\\/')}"`, 'i');
-                    expect(html).toMatch(linkPattern);
-                });
+            NAVBAR_LINKS.forEach(link => {
+                const linkPattern = new RegExp(`href="${link.replaceAll('/', escapedSlash)}"`, 'i');
+                expect(html).toMatch(linkPattern);
             });
         });
     });
 
     describe('Footer Links', () => {
-        PAGES_TO_TEST.forEach(page => {
-            test(`${page} should have all footer links`, async () => {
-                const response = await fetch(`${SITE_URL}${page}`);
-                const html = await response.text();
+        test.each(PAGES_TO_TEST)('%s should have all footer links', async (page) => {
+            const response = await fetch(`${SITE_URL}${page}`);
+            const html = await response.text();
+            const escapedSlash = String.raw`\/`;
 
-                FOOTER_LINKS.forEach(link => {
-                    const linkPattern = new RegExp(`href="${link.replace(/\//g, '\\/')}"`, 'i');
-                    expect(html).toMatch(linkPattern);
-                });
+            FOOTER_LINKS.forEach(link => {
+                const linkPattern = new RegExp(`href="${link.replaceAll('/', escapedSlash)}"`, 'i');
+                expect(html).toMatch(linkPattern);
             });
         });
     });
 
     describe('Page-Specific Links', () => {
-        Object.entries(EXPECTED_LINKS).forEach(([page, links]) => {
-            test(`${page} should have expected internal links`, async () => {
-                const response = await fetch(`${SITE_URL}${page}`);
-                const html = await response.text();
+        test.each(Object.entries(EXPECTED_LINKS))('%s should have expected internal links', async (page, links) => {
+            const response = await fetch(`${SITE_URL}${page}`);
+            const html = await response.text();
+            const escapedSlash = String.raw`\/`;
 
-                links.forEach(link => {
-                    const linkPattern = new RegExp(`href="${link.replace(/\//g, '\\/')}"`, 'i');
-                    try {
-                        expect(html).toMatch(linkPattern);
-                    } catch (e) {
-                        throw new Error(`Missing link "${link}" on page "${page}"`);
-                    }
-                });
+            links.forEach(link => {
+                const linkPattern = new RegExp(`href="${link.replaceAll('/', escapedSlash)}"`, 'i');
+                try {
+                    expect(html).toMatch(linkPattern);
+                } catch (e) {
+                    console.error(`Link check failed for "${link}" on page "${page}":`, e.message);
+                    throw new Error(`Missing link "${link}" on page "${page}"`);
+                }
             });
         });
     });

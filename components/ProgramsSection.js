@@ -26,7 +26,7 @@ const ProgramsSection = () => {
                             <p className={styles.compactDetail}>4-5 days/week</p>
                         </Link>
                         <div className={styles.cardActions}>
-                            <Link href="/enrollment-payment" className={styles.cardEnrollButton}>Enroll</Link>
+                            <Link href="/enrollment-payment#morning-daily" className={styles.cardEnrollButton}>Enroll</Link>
                             <Link href="/payment" className={styles.cardPayButton}>Pay</Link>
                             <Link href="/programs-events#morning-daily" className={styles.cardLearnMore}>Learn More →</Link>
                         </div>
@@ -41,7 +41,7 @@ const ProgramsSection = () => {
                             <p className={styles.compactDetail}>3 days/week</p>
                         </Link>
                         <div className={styles.cardActions}>
-                            <Link href="/enrollment-payment" className={styles.cardEnrollButton}>Enroll</Link>
+                            <Link href="/enrollment-payment#morning-alternate" className={styles.cardEnrollButton}>Enroll</Link>
                             <Link href="/payment" className={styles.cardPayButton}>Pay</Link>
                             <Link href="/programs-events#morning-alternate" className={styles.cardLearnMore}>Learn More →</Link>
                         </div>
@@ -56,7 +56,7 @@ const ProgramsSection = () => {
                             <p className={styles.compactDetail}>3 days/week - Sat, Mon, Tues</p>
                         </Link>
                         <div className={styles.cardActions}>
-                            <Link href="/enrollment-payment" className={styles.cardEnrollButton}>Enroll</Link>
+                            <Link href="/enrollment-payment#evening-group" className={styles.cardEnrollButton}>Enroll</Link>
                             <Link href="/payment" className={styles.cardPayButton}>Pay</Link>
                             <Link href="/programs-events#evening-group" className={styles.cardLearnMore}>Learn More →</Link>
                         </div>
@@ -71,7 +71,7 @@ const ProgramsSection = () => {
                             <p className={styles.compactDetail}>One-on-one session</p>
                         </Link>
                         <div className={styles.cardActions}>
-                            <Link href="/enrollment-payment" className={styles.cardEnrollButton}>Enroll</Link>
+                            <Link href="/enrollment-payment#personal-consultation" className={styles.cardEnrollButton}>Enroll</Link>
                             <Link href="/payment" className={styles.cardPayButton}>Pay</Link>
                             <Link href="/programs-events#personal-consultation" className={styles.cardLearnMore}>Learn More →</Link>
                         </div>

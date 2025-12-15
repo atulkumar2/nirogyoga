@@ -1,14 +1,36 @@
+'use client';
+
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 import styles from './enrollment.module.css';
 
-export const metadata = {
-    title: "Enrollment | Nirog Yoga",
-    description: "Begin your healing journey. Understand what to expect in our enrollment questionnaire.",
-};
-
 export default function Enrollment() {
+    const router = useRouter();
+
+    useEffect(() => {
+        const hash = globalThis.location.hash.substring(1);
+        if (hash) {
+            const element = document.getElementById(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    }, []);
+
+    const handleSessionClick = (sectionId) => {
+        router.push(`/programs-events#${sectionId}`);
+    };
+
+    const handleKeyDown = (event, sectionId) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            handleSessionClick(sectionId);
+        }
+    };
+
     return (
         <main>
             <Navbar />
@@ -33,14 +55,24 @@ export default function Enrollment() {
 
                 <div className={styles.ctaSection}>
                     <div className={styles.sessionOptions}>
-                        <h3 className={styles.sessionTitle}>Choose Your Session Type</h3>
+                        <h2 className={styles.sessionTitle}>Choose Your Session Type</h2>
 
                         {/* Morning Group */}
-                        <Link href="/programs-events#morning-daily" className={styles.sessionRowLink}>
+                        <button
+                            className={`${styles.sessionRowLink} ${styles.morningSession}`}
+                            onClick={() => handleSessionClick('morning-daily')}
+                            onKeyDown={(e) => handleKeyDown(e, 'morning-daily')}
+                            type="button"
+                            aria-label="Learn more about Morning Group sessions"
+                            id="morning-daily"
+                        >
                             <div className={styles.sessionRow}>
                                 <div className={styles.sessionInfo}>
-                                    <h4 className={styles.sessionName}>Morning Group</h4>
-                                    <p className={styles.sessionDescription}>Regular morning yoga sessions</p>
+                                    <span className={styles.sessionIcon}>🌅</span>
+                                    <div className={styles.sessionText}>
+                                        <h4 className={styles.sessionName}>Morning Group</h4>
+                                        <p className={styles.sessionDescription}>Daily Yoga sessions</p>
+                                    </div>
                                 </div>
                                 <div className={styles.sessionButtons}>
                                     <a
@@ -56,14 +88,24 @@ export default function Enrollment() {
                                     </Link>
                                 </div>
                             </div>
-                        </Link>
+                        </button>
 
                         {/* Morning Alternate */}
-                        <Link href="/programs-events#morning-alternate" className={styles.sessionRowLink}>
+                        <button
+                            className={`${styles.sessionRowLink} ${styles.morningSession}`}
+                            onClick={() => handleSessionClick('morning-alternate')}
+                            onKeyDown={(e) => handleKeyDown(e, 'morning-alternate')}
+                            type="button"
+                            aria-label="Learn more about Morning Alternate sessions"
+                            id="morning-alternate"
+                        >
                             <div className={styles.sessionRow}>
                                 <div className={styles.sessionInfo}>
-                                    <h4 className={styles.sessionName}>Morning Alternate</h4>
-                                    <p className={styles.sessionDescription}>Alternative morning schedule</p>
+                                    <span className={styles.sessionIcon}>🌄</span>
+                                    <div className={styles.sessionText}>
+                                        <h4 className={styles.sessionName}>Morning Alternate Days</h4>
+                                        <p className={styles.sessionDescription}>Alternative Morning schedule</p>
+                                    </div>
                                 </div>
                                 <div className={styles.sessionButtons}>
                                     <a
@@ -79,14 +121,24 @@ export default function Enrollment() {
                                     </Link>
                                 </div>
                             </div>
-                        </Link>
+                        </button>
 
                         {/* Evening Group */}
-                        <Link href="/programs-events#evening-group" className={styles.sessionRowLink}>
+                        <button
+                            className={`${styles.sessionRowLink} ${styles.eveningSession}`}
+                            onClick={() => handleSessionClick('evening-group')}
+                            onKeyDown={(e) => handleKeyDown(e, 'evening-group')}
+                            type="button"
+                            aria-label="Learn more about Evening Group sessions"
+                            id="evening-group"
+                        >
                             <div className={styles.sessionRow}>
                                 <div className={styles.sessionInfo}>
-                                    <h4 className={styles.sessionName}>Evening Group</h4>
-                                    <p className={styles.sessionDescription}>Evening yoga sessions</p>
+                                    <span className={styles.sessionIcon}>🌆</span>
+                                    <div className={styles.sessionText}>
+                                        <h4 className={styles.sessionName}>Evening Group</h4>
+                                        <p className={styles.sessionDescription}>Alternate Evening sessions</p>
+                                    </div>
                                 </div>
                                 <div className={styles.sessionButtons}>
                                     <a
@@ -102,14 +154,24 @@ export default function Enrollment() {
                                     </Link>
                                 </div>
                             </div>
-                        </Link>
+                        </button>
 
                         {/* Personal Consultation */}
-                        <Link href="/programs-events#personal-consultation" className={styles.sessionRowLink}>
+                        <button
+                            className={`${styles.sessionRowLink} ${styles.personalSession}`}
+                            onClick={() => handleSessionClick('personal-consultation')}
+                            onKeyDown={(e) => handleKeyDown(e, 'personal-consultation')}
+                            type="button"
+                            aria-label="Learn more about Personal Consultation sessions"
+                            id="personal-consultation"
+                        >
                             <div className={styles.sessionRow}>
                                 <div className={styles.sessionInfo}>
-                                    <h4 className={styles.sessionName}>Personal Consultation</h4>
-                                    <p className={styles.sessionDescription}>One-on-one personalized sessions</p>
+                                    <span className={styles.sessionIcon}>🤝</span>
+                                    <div className={styles.sessionText}>
+                                        <h4 className={styles.sessionName}>Personal Consultation</h4>
+                                        <p className={styles.sessionDescription}>One-on-one personalized sessions</p>
+                                    </div>
                                 </div>
                                 <div className={styles.sessionButtons}>
                                     <a
@@ -125,7 +187,7 @@ export default function Enrollment() {
                                     </Link>
                                 </div>
                             </div>
-                        </Link>
+                        </button>
                     </div>
 
                     <p className={styles.contactNote}>
@@ -134,12 +196,12 @@ export default function Enrollment() {
                 </div>
 
 
-
                 <div className={styles.timeline}>
+                    <h2 className={styles.sectionHeading}>Details captured in Enrollment form</h2>
                     {/* Step 1 */}
                     <div className={styles.step}>
                         <div className={styles.stepHeader}>
-                            <h2 className={styles.stepTitle}>1. Basic Details</h2>
+                            <h3 className={styles.stepTitle}>1. Basic Details</h3>
                             <span className={styles.time}>1–2 minutes</span>
                         </div>
                         <p className={styles.description}>We'll start with some basics to create your participant profile.</p>
@@ -153,7 +215,7 @@ export default function Enrollment() {
                     {/* Step 2 */}
                     <div className={styles.step}>
                         <div className={styles.stepHeader}>
-                            <h2 className={styles.stepTitle}>2. Health & Medical History</h2>
+                            <h3 className={styles.stepTitle}>2. Health & Medical History</h3>
                             <span className={styles.time}>4–6 minutes</span>
                         </div>
                         <p className={styles.description}>
@@ -170,7 +232,7 @@ export default function Enrollment() {
                     {/* Step 3 */}
                     <div className={styles.step}>
                         <div className={styles.stepHeader}>
-                            <h2 className={styles.stepTitle}>3. Yoga & Lifestyle Experience</h2>
+                            <h3 className={styles.stepTitle}>3. Yoga & Lifestyle Experience</h3>
                             <span className={styles.time}>1 minute</span>
                         </div>
                         <p className={styles.description}>Help us understand your familiarity with mind-body practices.</p>
@@ -183,7 +245,7 @@ export default function Enrollment() {
                     {/* Step 4 */}
                     <div className={styles.step}>
                         <div className={styles.stepHeader}>
-                            <h2 className={styles.stepTitle}>4. Goals & Expectations</h2>
+                            <h3 className={styles.stepTitle}>4. Goals & Expectations</h3>
                             <span className={styles.time}>2–3 minutes</span>
                         </div>
                         <p className={styles.description}>Tell us what you hope to achieve.</p>
@@ -196,7 +258,7 @@ export default function Enrollment() {
                     {/* Step 5 */}
                     <div className={styles.step}>
                         <div className={styles.stepHeader}>
-                            <h2 className={styles.stepTitle}>5. Consent & Declaration</h2>
+                            <h3 className={styles.stepTitle}>5. Consent & Declaration</h3>
                             <span className={styles.time}>30 seconds</span>
                         </div>
                         <p className={styles.description}>A quick confirmation of your readiness.</p>
@@ -205,7 +267,7 @@ export default function Enrollment() {
                     {/* Step 6 */}
                     <div className={styles.step}>
                         <div className={styles.stepHeader}>
-                            <h2 className={styles.stepTitle}>6. Payment Information</h2>
+                            <h3 className={styles.stepTitle}>6. Payment Information</h3>
                             <span className={styles.time}>1–2 minutes</span>
                         </div>
                         <p className={styles.description}>Choose your session type and complete the contribution.</p>
@@ -216,6 +278,31 @@ export default function Enrollment() {
                     </div>
                 </div>
 
+
+                {/* Bottom CTA Section */}
+                <div className={styles.bottomCtaSection}>
+                    <div className={styles.bottomButtonGroup}>
+                        <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSfKyn1PpqrUPOABP_zKrWz4X2orMMrm03EO9s4gJq1QiYgLdg/viewform"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.bottomEnrollButton}
+                        >
+                            Enroll Now
+                        </a>
+                        <Link href="/testimonials#interest" className={styles.bottomRegisterButton}>
+                            Register Interest
+                        </Link>
+                        <button
+                            onClick={() => globalThis.scrollTo({ top: 0, behavior: 'smooth' })}
+                            className={styles.bottomTopButton}
+                            type="button"
+                            aria-label="Go to top of page"
+                        >
+                            Go To Top
+                        </button>
+                    </div>
+                </div>
 
             </div>
 

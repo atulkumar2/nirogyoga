@@ -4,6 +4,14 @@
   padding: 120px 20px 60px;
 }
 
+.sectionHeading {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: var(--font-heading);
+}
+
 .header {
   text-align: center;
   margin-bottom: var(--spacing-lg);
@@ -282,16 +290,70 @@
   box-shadow: var(--shadow-md);
 }
 
+/* Morning Session Styling */
+.morningSession .sessionRow {
+  background: linear-gradient(135deg, #fffbf0 0%, #fff3e0 100%);
+  border: 1px solid #ffe0b2;
+}
+
+/* Evening Session Styling */
+.eveningSession .sessionRow {
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+  border: 1px solid #e1bee7;
+}
+
+/* Personal Session Styling */
+.personalSession .sessionRow {
+  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+  border: 1px solid #80deea;
+}
+
 /* Session Row Link Styles */
 .sessionRowLink {
   text-decoration: none;
   color: inherit;
   display: block;
   transition: opacity 0.3s ease;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  text-align: left;
+  width: 100%;
 }
 
-.sessionRowLink:hover {
-  opacity: 0.9;
+.sessionInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.sessionName {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.sessionDescription {
+  margin: 0.5rem 0 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.sessionIcon {
+  font-size: 2rem;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+.sessionText {
+  display: flex;
+  flex-direction: column;
 }
 
 .sessionButtons {
@@ -406,4 +468,96 @@
     padding: 1rem;
     margin: 1.5rem 0;
   }
+}
+
+/* Bottom CTA Section */
+.bottomCtaSection {
+  text-align: center;
+  margin: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.bottomButtonGroup {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bottomEnrollButton {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color), #2d5a3d);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.bottomEnrollButton:hover {
+  background: linear-gradient(135deg, var(--primary-dark), #1a3a26);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+}
+
+.bottomRegisterButton {
+  display: inline-block;
+  background: transparent;
+  color: var(--primary-color);
+  padding: 13px 38px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.bottomRegisterButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.bottomRegisterButton:hover::before {
+  left: 0;
+}
+
+.bottomRegisterButton:hover {
+  color: white;
+  border-color: var(--primary-color);
+  position: relative;
+  z-index: 1;
+}
+
+.bottomTopButton {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--secondary-color), #d97706);
+  color: var(--primary-color);
+  padding: 13px 38px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+}
+
+.bottomTopButton:hover {
+  background: linear-gradient(135deg, #b45309, #92400e);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
 }

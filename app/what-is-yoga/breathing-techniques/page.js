@@ -107,7 +107,7 @@ export default function BreathingTechniques() {
                 {/* CLEANSING & ENERGIZING */}
                 <section className={styles.categorySection}>
                     <h2 className={styles.categoryTitle}>
-                        2. Cleansing & Energizing Techniques
+                        2. Cleansing & Energizing Techniques {' '}
                         <span className={styles.levelBadge + ' ' + styles.intermediate}>Intermediate</span>
                     </h2>
                     <p className={styles.text}>
@@ -245,7 +245,7 @@ export default function BreathingTechniques() {
                 {/* RETENTION-BASED */}
                 <section className={styles.categorySection}>
                     <h2 className={styles.categoryTitle}>
-                        5. Retention-Based Techniques
+                        5. Retention-Based Techniques (Control of Kumbhaka) {' '}
                         <span className={styles.levelBadge + ' ' + styles.advanced}>Advanced</span>
                     </h2>
                     <p className={styles.text}>
@@ -332,7 +332,7 @@ export default function BreathingTechniques() {
                 {/* ADVANCED YOGIC */}
                 <section className={styles.categorySection}>
                     <h2 className={styles.categoryTitle}>
-                        7. Advanced Yogic Techniques (Subtle Body Work)
+                        7. Advanced Yogic Techniques (Subtle Body Work) {' '}
                         <span className={styles.levelBadge + ' ' + styles.advanced}>Advanced</span>
                     </h2>
                     <p className={styles.text}>
