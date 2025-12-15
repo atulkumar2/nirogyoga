@@ -204,44 +204,45 @@ export default function SafetyGuidelines() {
               <li>Meditation, breathwork, or deep relaxation can be grounding.</li>
             </ul>
           </div>
+        </section>
 
-          <section className={styles.summarySection}>
-            <h2 className={styles.summaryTitle}>Safety Summary</h2>
-            <div className={styles.summaryGrid}>
-              <div className={styles.summaryItem}>
-                <span className={styles.checkIcon}>✔</span>{' '}
-                Start slowly, never force your body
-              </div>
-              <div className={styles.summaryItem}>
-                <span className={styles.checkIcon}>✔</span>{' '}
-                Keep breath steady and smooth
-              </div>
-              <div className={styles.summaryItem}>
-                <span className={styles.checkIcon}>✔</span>{' '}
-                Avoid practice after meals
-              </div>
-              <div className={styles.summaryItem}>
-                <span className={styles.checkIcon}>✔</span>{' '}
-                Protect knees, spine, and neck
-              </div>
-              <div className={styles.summaryItem}>
-                <span className={styles.checkIcon}>✔</span>{' '}
-                Modify postures if injured or pregnant
-              </div>
-              <div className={styles.summaryItem}>
-                <span className={styles.checkIcon}>✔</span>{' '}
-                End with proper rest
-              </div>
-              <div className={styles.summaryItem}>
-                <span className={styles.checkIcon}>✔</span>{' '}
-                Seek guidance when attempting advanced postures
-              </div>
-              <div className={styles.summaryItem}>
-                <span className={styles.checkIcon}>✔</span>{' '}
-                Upayoga is gentler, but awareness is still essential
-              </div>
+        <section className={styles.summarySection}>
+          <h2 className={styles.summaryTitle}>Safety Summary</h2>
+          <div className={styles.summaryGrid}>
+            <div className={styles.summaryItem}>
+              <span className={styles.checkIcon}>✔</span>{' '}
+              Start slowly, never force your body
             </div>
-          </section>
+            <div className={styles.summaryItem}>
+              <span className={styles.checkIcon}>✔</span>{' '}
+              Keep breath steady and smooth
+            </div>
+            <div className={styles.summaryItem}>
+              <span className={styles.checkIcon}>✔</span>{' '}
+              Avoid practice after meals
+            </div>
+            <div className={styles.summaryItem}>
+              <span className={styles.checkIcon}>✔</span>{' '}
+              Protect knees, spine, and neck
+            </div>
+            <div className={styles.summaryItem}>
+              <span className={styles.checkIcon}>✔</span>{' '}
+              Modify postures if injured or pregnant
+            </div>
+            <div className={styles.summaryItem}>
+              <span className={styles.checkIcon}>✔</span>{' '}
+              End with proper rest
+            </div>
+            <div className={styles.summaryItem}>
+              <span className={styles.checkIcon}>✔</span>{' '}
+              Seek guidance when attempting advanced postures
+            </div>
+            <div className={styles.summaryItem}>
+              <span className={styles.checkIcon}>✔</span>{' '}
+              Upayoga is gentler, but awareness is still essential
+            </div>
+          </div>
+        </section>
       </div>
 
       <Footer />

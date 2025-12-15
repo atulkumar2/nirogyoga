@@ -1,5 +1,5 @@
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import styles from './standing-asanas.module.css';
 
@@ -52,12 +52,6 @@ export default function StandingAsanas() {
             <li className={styles.listItem}>Always come out of each pose <strong>slowly and with control</strong>, returning to Tadasana to feel the effects.</li>
           </ul>
         </section>
-      </div>
-
-      <Footer />
-    </main>
-  );
-}
 
         <section className={styles.guidelinesSection}>
           <h2 className={styles.sectionTitle}>General Guidelines for Standing Asanas</h2>
@@ -70,7 +64,7 @@ export default function StandingAsanas() {
           </ul>
         </section>
 
-        <h2 className={styles.sectionTitle} style={{ textAlign: 'center', display: 'block', border: 'none' }}>Major Standing Asanas Taught at Nirog Yoga University</h2>
+        <h2 className={styles.sectionTitle}>Major Standing Asanas Taught at Nirog Yoga University</h2>
 
         <div className={styles.asanasGrid}>
           {/* 1. Tadasana */}
@@ -357,4 +351,9 @@ export default function StandingAsanas() {
             </div>
 
           </div>
-        </section>
+        </section>      </div>
+
+      <Footer />
+    </main>
+  );
+}
