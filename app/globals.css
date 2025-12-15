@@ -2,6 +2,7 @@
   /* Color Palette - Serene & Earthy */
   --primary-color: #2c5f2d; /* Deep Forest Green */
   --primary-dark: #0f2a0f; /* Much Darker Forest Green for better contrast */
+  --primary-hover: #244f24; /* Slightly darker hover for primary */
   --primary-light: #97bc62; /* Soft Sage */
   --secondary-color: #d4a373; /* Earthy Sand */
   --accent-color: #e9c46a; /* Soft Gold */

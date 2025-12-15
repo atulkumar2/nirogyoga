@@ -241,7 +241,7 @@
 
 .summaryEnrollButton {
   background: var(--primary-color);
-  color: white !important;
+  color: white;
   padding: 0.25rem 0.6rem;
   border-radius: 4px;
   text-decoration: none;
@@ -253,7 +253,30 @@
 
 .summaryEnrollButton:hover {
   background: var(--primary-hover);
-  color: white !important;
+  color: white;
+}
+
+.summaryActions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.summaryPayButton {
+  background: var(--secondary-color);
+  color: var(--text-dark);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.summaryPayButton:hover {
+  background: #d97706;
+  color: var(--text-dark);
 }
 
 .grid {
@@ -319,6 +342,19 @@
   margin-right: 8px;
   color: var(--primary-color);
   font-size: 1.1rem;
+}
+
+.sessionIcon {
+  font-size: 2rem;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+.summaryIcon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
 .pricingTable {

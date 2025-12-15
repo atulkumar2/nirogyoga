@@ -20,7 +20,7 @@ const ProgramsSection = () => {
                     {/* Morning Daily Sessions */}
                     <div className={`${styles.compactCard} ${styles.morningCard}`}>
                         <Link href="/programs-events#morning-daily" className={styles.cardContent}>
-                            <div className={styles.cardIcon}>🌅</div>
+                            <span className={styles.sessionIcon}>🌅</span>
                             <div className={styles.titleContainer}>
                                 <h3 className={styles.compactTitle}>
                                     <span className={styles.titleLine}>Morning Group</span>
@@ -42,7 +42,7 @@ const ProgramsSection = () => {
                     {/* Morning Alternate Days */}
                     <div className={`${styles.compactCard} ${styles.morningCard}`}>
                         <Link href="/programs-events#morning-alternate" className={styles.cardContent}>
-                            <div className={styles.cardIcon}>🌄</div>
+                            <span className={styles.sessionIcon}>🌄</span>
                             <div className={styles.titleContainer}>
                                 <h3 className={styles.compactTitle}>
                                     <span className={styles.titleLine}>Morning Group</span>
@@ -64,7 +64,7 @@ const ProgramsSection = () => {
                     {/* Evening Sessions */}
                     <div className={`${styles.compactCard} ${styles.eveningCard}`}>
                         <Link href="/programs-events#evening-group" className={styles.cardContent}>
-                            <div className={styles.cardIcon}>🌆</div>
+                            <span className={styles.sessionIcon}>🌆</span>
                             <div className={styles.titleContainer}>
                                 <h3 className={styles.compactTitle}>
                                     <span className={styles.titleLine}>Evening Group</span>
@@ -86,7 +86,7 @@ const ProgramsSection = () => {
                     {/* Personal Consultation */}
                     <div className={`${styles.compactCard} ${styles.personalCard}`}>
                         <Link href="/programs-events#personal-consultation" className={styles.cardContent}>
-                            <div className={styles.cardIcon}>🤝</div>
+                            <span className={styles.sessionIcon}>🤝</span>
                             <div className={styles.titleContainer}>
                                 <h3 className={styles.compactTitle}>
                                     <span className={styles.titleLine}>Personal</span>

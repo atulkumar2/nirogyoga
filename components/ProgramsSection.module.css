@@ -97,6 +97,11 @@
   margin-bottom: 15px;
 }
 
+.sessionIcon {
+  font-size: 2rem;
+  margin-bottom: 0;
+  display: inline-block;
+}
 .compactTitle {
   font-size: 1.2rem;
   color: var(--primary-color);

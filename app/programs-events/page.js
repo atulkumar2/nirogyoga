@@ -14,8 +14,8 @@ export default function ProgramsEvents() {
         document.title = "Programs & Events | Nirog Yoga";
     }, []);
 
-    const handleEnrollClick = () => {
-        router.push('/enrollment-payment');
+    const handleEnrollClick = (sectionId) => {
+        router.push(`/enrollment-payment#${sectionId}`);
     };
     return (
         <main>
@@ -50,19 +50,31 @@ export default function ProgramsEvents() {
                     <ul className={styles.summaryList}>
                         <li>
                             <a href="#morning-daily">🌅 Morning Group - Daily</a>
-                            <button className={styles.summaryEnrollButton} onClick={handleEnrollClick}>Enroll / Pay</button>
+                            <div className={styles.summaryActions}>
+                                <button className={styles.summaryEnrollButton} onClick={() => handleEnrollClick('morning-daily')}>Enroll</button>
+                                <Link href="/payment" className={styles.summaryPayButton}>Pay</Link>
+                            </div>
                         </li>
                         <li>
                             <a href="#morning-alternate">🌄 Morning Group - Alternate Days</a>
-                            <button className={styles.summaryEnrollButton} onClick={handleEnrollClick}>Enroll / Pay</button>
+                            <div className={styles.summaryActions}>
+                                <button className={styles.summaryEnrollButton} onClick={() => handleEnrollClick('morning-alternate')}>Enroll</button>
+                                <Link href="/payment" className={styles.summaryPayButton}>Pay</Link>
+                            </div>
                         </li>
                         <li>
                             <a href="#evening-group">🌆 Evening Group - 3 Days/week - Sat/Mon/Tues</a>
-                            <button className={styles.summaryEnrollButton} onClick={handleEnrollClick}>Enroll / Pay</button>
+                            <div className={styles.summaryActions}>
+                                <button className={styles.summaryEnrollButton} onClick={() => handleEnrollClick('evening-group')}>Enroll</button>
+                                <Link href="/payment" className={styles.summaryPayButton}>Pay</Link>
+                            </div>
                         </li>
                         <li>
                             <a href="#personal-consultation">🤝 Personal Consultation - Prior Appointments</a>
-                            <button className={styles.summaryEnrollButton} onClick={handleEnrollClick}>Enroll / Pay</button>
+                            <div className={styles.summaryActions}>
+                                <button className={styles.summaryEnrollButton} onClick={() => handleEnrollClick('personal-consultation')}>Enroll</button>
+                                <Link href="/payment" className={styles.summaryPayButton}>Pay</Link>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -71,6 +83,7 @@ export default function ProgramsEvents() {
                     {/* Morning Daily Group Sessions */}
                     <div id="morning-daily" className={`${styles.card} ${styles.morningCard}`}>
                         <div className={styles.cardHeader}>
+                            <span className={styles.sessionIcon}>🌅</span>
                             <h2 className={styles.programTitle}>Morning Group - Daily</h2>
                             <span className={styles.timing}>5:30 AM - 7:00 AM</span>
                         </div>
@@ -123,7 +136,7 @@ export default function ProgramsEvents() {
 
                         {/* Need based Banner */}
                         <div className={styles.cardBanner}>
-                            <button className={styles.cardBannerButton} onClick={handleEnrollClick}>Enroll</button>
+                            <button className={styles.cardBannerButton} onClick={() => handleEnrollClick('morning-daily')}>Enroll</button>
                             <span className={styles.cardBannerIcon}>🎁</span>
                             <span className={styles.cardBannerText}>Need based discounts</span>
                             <button className={styles.cardBannerButton} onClick={() => router.push('/payment')}>Pay</button>
@@ -133,6 +146,7 @@ export default function ProgramsEvents() {
                     {/* Morning Alternate Days Group Sessions */}
                     <div id="morning-alternate" className={`${styles.card} ${styles.morningCard}`}>
                         <div className={styles.cardHeader}>
+                            <span className={styles.sessionIcon}>🌄</span>
                             <h2 className={styles.programTitle}>Morning Group - Alternate Days</h2>
                             <span className={styles.timing}>5:30 AM - 7:00 AM</span>
                         </div>
@@ -185,7 +199,7 @@ export default function ProgramsEvents() {
 
                         {/* Need based Banner */}
                         <div className={styles.cardBanner}>
-                            <button className={styles.cardBannerButton} onClick={handleEnrollClick}>Enroll</button>
+                            <button className={styles.cardBannerButton} onClick={() => handleEnrollClick('morning-alternate')}>Enroll</button>
                             <span className={styles.cardBannerIcon}>🎁</span>
                             <span className={styles.cardBannerText}>Need based discounts</span>
                             <button className={styles.cardBannerButton} onClick={() => router.push('/payment')}>Pay</button>
@@ -195,6 +209,7 @@ export default function ProgramsEvents() {
                     {/* Evening Group Sessions */}
                     <div id="evening-group" className={`${styles.card} ${styles.eveningCard}`}>
                         <div className={styles.cardHeader}>
+                            <span className={styles.sessionIcon}>🌆</span>
                             <h2 className={styles.programTitle}>Evening Group - 3 Days/Week</h2>
                             <span className={styles.timing}>5:00 PM - 6:30 PM</span>
                         </div>
@@ -247,7 +262,7 @@ export default function ProgramsEvents() {
 
                         {/* Need based Banner */}
                         <div className={styles.cardBanner}>
-                            <button className={styles.cardBannerButton} onClick={handleEnrollClick}>Enroll</button>
+                            <button className={styles.cardBannerButton} onClick={() => handleEnrollClick('evening-group')}>Enroll</button>
                             <span className={styles.cardBannerIcon}>🎁</span>
                             <span className={styles.cardBannerText}>Need based discounts</span>
                             <button className={styles.cardBannerButton} onClick={() => router.push('/payment')}>Pay</button>
@@ -259,6 +274,7 @@ export default function ProgramsEvents() {
                 <div className={styles.personalSection}>
                     <div id="personal-consultation" className={`${styles.card} ${styles.personalCard}`} style={{ maxWidth: '600px', margin: '0 auto', width: '100%' }}>
                         <div className={styles.cardHeader}>
+                            <span className={styles.sessionIcon}>🤝</span>
                             <h2 className={styles.programTitle}>Personal Consultation</h2>
                             <span className={styles.timing}>Evening: 5:30 PM - 7:00 PM</span>
                         </div>
@@ -307,7 +323,7 @@ export default function ProgramsEvents() {
 
                         {/* Need based Banner */}
                         <div className={styles.cardBanner}>
-                            <button className={styles.cardBannerButton} onClick={handleEnrollClick}>Enroll</button>
+                            <button className={styles.cardBannerButton} onClick={() => handleEnrollClick('personal-consultation')}>Enroll</button>
                             <span className={styles.cardBannerIcon}>🎁</span>
                             <span className={styles.cardBannerText}>Need based discounts</span>
                             <button className={styles.cardBannerButton} onClick={() => router.push('/payment')}>Pay</button>
