@@ -34,7 +34,7 @@ export default function StandingAsanas() {
         </section>
 
         <div className={styles.sequenceSummary}>
-          <h3 style={{ color: 'var(--primary-color)', marginBottom: '1rem' }}>Total Time: ~9 minutes</h3>
+          <h2 className={styles.sectionTitle}>Total Time: ~9 minutes</h2>
           <p className={styles.text}>Perfect length for:</p>
           <ul className={styles.list}>
             <li className={styles.listItem}>Beginners</li>

@@ -80,10 +80,11 @@ export default function Enrollment() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={styles.enrollButton}
+                                        onClick={(e) => e.stopPropagation()}
                                     >
                                         Enroll
                                     </a>
-                                    <Link href="/payment" className={styles.payButton}>
+                                    <Link href="/payment" className={styles.payButton} onClick={(e) => e.stopPropagation()}>
                                         Pay
                                     </Link>
                                 </div>
@@ -113,10 +114,11 @@ export default function Enrollment() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={styles.enrollButton}
+                                        onClick={(e) => e.stopPropagation()}
                                     >
                                         Enroll
                                     </a>
-                                    <Link href="/payment" className={styles.payButton}>
+                                    <Link href="/payment" className={styles.payButton} onClick={(e) => e.stopPropagation()}>
                                         Pay
                                     </Link>
                                 </div>
@@ -146,10 +148,11 @@ export default function Enrollment() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={styles.enrollButton}
+                                        onClick={(e) => e.stopPropagation()}
                                     >
                                         Enroll
                                     </a>
-                                    <Link href="/payment" className={styles.payButton}>
+                                    <Link href="/payment" className={styles.payButton} onClick={(e) => e.stopPropagation()}>
                                         Pay
                                     </Link>
                                 </div>
@@ -179,10 +182,11 @@ export default function Enrollment() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={styles.enrollButton}
+                                        onClick={(e) => e.stopPropagation()}
                                     >
                                         Enroll
                                     </a>
-                                    <Link href="/payment" className={styles.payButton}>
+                                    <Link href="/payment" className={styles.payButton} onClick={(e) => e.stopPropagation()}>
                                         Pay
                                     </Link>
                                 </div>
