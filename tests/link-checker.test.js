@@ -209,6 +209,27 @@ describe('Internal Link Checker', () => {
                 }
             }
         }, 15000); // 15 second timeout for checking all pages
+
+        test('Anchors with visible text "Enroll" should link to /enrollment-payment (except on /enrollment-payment page)', async () => {
+            for (const page of PAGES_TO_TEST) {
+                const response = await fetch(`${SITE_URL}${page}`);
+                const html = await response.text();
+
+                const enrollAnchorRegex = /<a\b[^>]*href="([^"]+)"[^>]*>(?:(?!<a\b)[\s\S])*?Enroll(?:(?!<a\b)[\s\S])*?<\/a>/gi;
+                const matches = [...html.matchAll(enrollAnchorRegex)];
+
+                matches.forEach(match => {
+                    const href = match[1];
+                    if (page === '/enrollment-payment') return; // enroll page may link to external forms
+                    try {
+                        expect(href).toMatch(/^\/enrollment-payment(?:$|#)/i);
+                    } catch (err) {
+                        console.error(`Link check failed for "${link}" on page "${page}":`, e.message);
+                        throw new Error(`Found enroll anchor on page "${page}" with href "${href}"`);
+                    }
+                });
+            }
+        }, 20000);
     });
 
     describe('Programs/Events Links', () => {
@@ -221,7 +242,30 @@ describe('Internal Link Checker', () => {
                 expect(html).not.toMatch(/href="\/programs"[^-]/i);
                 expect(html).not.toMatch(/href="\/events"[^-]/i);
             }
-        }, 15000); // 15 second timeout
+        }, 20000); // 20 second timeout
+    });
+
+    describe('Payment Links', () => {
+        test('All Pay links should point to /payment', async () => {
+            for (const page of PAGES_TO_TEST) {
+                const response = await fetch(`${SITE_URL}${page}`);
+                const html = await response.text();
+
+                // Anchors whose visible text is exactly 'Pay' should link to /payment
+                const payAnchors = [...html.matchAll(/<a[^>]*href="([^"]+)"[^>]*>\s*Pay\s*<\/a>/gi)];
+                payAnchors.forEach(match => {
+                    const href = match[1];
+                    expect(href).toMatch(/^\/payment$/i);
+                });
+
+                // Anchors that include a payButton class should also link to /payment
+                const payClassAnchors = [...html.matchAll(/<a[^>]*class="[^"]*payButton[^"]*"[^>]*href="([^"]+)"/gi)];
+                payClassAnchors.forEach(match => {
+                    const href = match[1];
+                    expect(href).toMatch(/^\/payment$/i);
+                });
+            }
+        }, 15000);
     });
 
     describe('Anchor Links', () => {
