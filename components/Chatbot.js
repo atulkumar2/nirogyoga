@@ -6,7 +6,7 @@ import styles from './Chatbot.module.css';
 const Chatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
-        { text: "Namaste! How can I help you with your yoga journey today?", isBot: true }
+        { id: `msg-${Date.now()}`, text: "Namaste! How can I help you with your yoga journey today?", isBot: true }
     ]);
     const [inputValue, setInputValue] = useState("");
 
@@ -17,11 +17,12 @@ const Chatbot = () => {
         if (!inputValue.trim()) return;
 
         // Add user message
-        setMessages(prev => [...prev, { text: inputValue, isBot: false }]);
+        setMessages(prev => [...prev, { id: `msg-${Date.now()}-${Math.random()}`, text: inputValue, isBot: false }]);
 
         // Simulate bot response
         setTimeout(() => {
             setMessages(prev => [...prev, {
+                id: `msg-${Date.now()}-${Math.random()}`,
                 text: "Thank you for your message. Prof. (Dr.) Kunal Katyayan or our team will get back to you shortly. For immediate assistance, please call 8792873242.",
                 isBot: true
             }]);
@@ -48,8 +49,8 @@ const Chatbot = () => {
                     </div>
 
                     <div className={styles.messages}>
-                        {messages.map((msg, index) => (
-                            <div key={index} className={`${styles.message} ${msg.isBot ? styles.botMessage : styles.userMessage}`}>
+                        {messages.map((msg) => (
+                            <div key={msg.id} className={`${styles.message} ${msg.isBot ? styles.botMessage : styles.userMessage}`}>
                                 {msg.text}
                             </div>
                         ))}

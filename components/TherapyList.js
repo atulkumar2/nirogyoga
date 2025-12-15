@@ -28,12 +28,12 @@ const TherapyList = () => {
     return (
         <section id="therapy" className={styles.section}>
             <div className={styles.container}>
-                <h2 className={styles.heading}>Benefits from Medically verified Yoga Healing</h2>
+                <h2 className={styles.heading}>Medically verified Yoga Healing</h2>
                 <p className={styles.subtext}>
                     Yoga is proven to be therapeutic for many cases. Our specialized programs address a wide range of physical and mental health conditions.
                 </p>
                 <div className={styles.grid}>
-                    {conditions.sort((a, b) => {
+                    {[...conditions].sort((a, b) => {
                         const aInternal = a.link.startsWith('/');
                         const bInternal = b.link.startsWith('/');
                         if (aInternal && !bInternal) return -1;
@@ -44,7 +44,7 @@ const TherapyList = () => {
 
                         return (
                             <a
-                                key={index}
+                                key={condition.link}
                                 href={condition.link}
                                 target={isInternal ? undefined : "_blank"}
                                 rel={isInternal ? undefined : "noopener noreferrer"}

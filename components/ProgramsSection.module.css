@@ -103,6 +103,33 @@
   margin-bottom: 10px;
   font-family: "Playfair Display", serif;
   font-weight: 600;
+  min-height: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.titleLine {
+  display: block;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.titleDivider {
+  width: 60%;
+  height: 1px;
+  background-color: var(--primary-color);
+  border: none;
+  margin: 8px 0 12px 0;
 }
 
 .compactTiming {
@@ -410,6 +437,16 @@
 .payButton:hover {
   background-color: #d97706;
   transform: translateY(-2px);
+}
+
+.cardDivider {
+  width: 100%;
+  align-self: stretch;
+  border: none;
+  border-top: 3px solid #ccc;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 8px 0 12px 0;
 }
 
 /* Responsive for tablets */

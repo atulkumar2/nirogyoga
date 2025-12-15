@@ -21,10 +21,17 @@ const ProgramsSection = () => {
                     <div className={`${styles.compactCard} ${styles.morningCard}`}>
                         <Link href="/programs-events#morning-daily" className={styles.cardContent}>
                             <div className={styles.cardIcon}>🌅</div>
-                            <h3 className={styles.compactTitle}>Morning Group - Daily</h3>
+                            <div className={styles.titleContainer}>
+                                <h3 className={styles.compactTitle}>
+                                    <span className={styles.titleLine}>Morning Group</span>
+                                    <span className={styles.titleLine}>- Daily</span>
+                                </h3>
+                                <hr className={styles.titleDivider} />
+                            </div>
                             <p className={styles.compactTiming}>5:30 AM - 7:00 AM</p>
                             <p className={styles.compactDetail}>4-5 days/week</p>
                         </Link>
+                        <hr className={styles.cardDivider} />
                         <div className={styles.cardActions}>
                             <Link href="/enrollment-payment#morning-daily" className={styles.cardEnrollButton}>Enroll</Link>
                             <Link href="/payment" className={styles.cardPayButton}>Pay</Link>
@@ -36,10 +43,17 @@ const ProgramsSection = () => {
                     <div className={`${styles.compactCard} ${styles.morningCard}`}>
                         <Link href="/programs-events#morning-alternate" className={styles.cardContent}>
                             <div className={styles.cardIcon}>🌄</div>
-                            <h3 className={styles.compactTitle}>Morning Group - Alternate Days</h3>
+                            <div className={styles.titleContainer}>
+                                <h3 className={styles.compactTitle}>
+                                    <span className={styles.titleLine}>Morning Group</span>
+                                    <span className={styles.titleLine}>- Alternate Days</span>
+                                </h3>
+                                <hr className={styles.titleDivider} />
+                            </div>
                             <p className={styles.compactTiming}>5:30 AM - 7:00 AM</p>
                             <p className={styles.compactDetail}>3 days/week</p>
                         </Link>
+                        <hr className={styles.cardDivider} />
                         <div className={styles.cardActions}>
                             <Link href="/enrollment-payment#morning-alternate" className={styles.cardEnrollButton}>Enroll</Link>
                             <Link href="/payment" className={styles.cardPayButton}>Pay</Link>
@@ -51,10 +65,17 @@ const ProgramsSection = () => {
                     <div className={`${styles.compactCard} ${styles.eveningCard}`}>
                         <Link href="/programs-events#evening-group" className={styles.cardContent}>
                             <div className={styles.cardIcon}>🌆</div>
-                            <h3 className={styles.compactTitle}>Evening Group - 3 Days/Week</h3>
+                            <div className={styles.titleContainer}>
+                                <h3 className={styles.compactTitle}>
+                                    <span className={styles.titleLine}>Evening Group</span>
+                                    <span className={styles.titleLine}>- 3 Days/Week</span>
+                                </h3>
+                                <hr className={styles.titleDivider} />
+                            </div>
                             <p className={styles.compactTiming}>5:00 PM - 6:30 PM</p>
-                            <p className={styles.compactDetail}>3 days/week - Sat, Mon, Tues</p>
+                            <p className={styles.compactDetail}>Sat, Mon, Tues</p>
                         </Link>
+                        <hr className={styles.cardDivider} />
                         <div className={styles.cardActions}>
                             <Link href="/enrollment-payment#evening-group" className={styles.cardEnrollButton}>Enroll</Link>
                             <Link href="/payment" className={styles.cardPayButton}>Pay</Link>
@@ -66,10 +87,17 @@ const ProgramsSection = () => {
                     <div className={`${styles.compactCard} ${styles.personalCard}`}>
                         <Link href="/programs-events#personal-consultation" className={styles.cardContent}>
                             <div className={styles.cardIcon}>🤝</div>
-                            <h3 className={styles.compactTitle}>Personal Consultation</h3>
+                            <div className={styles.titleContainer}>
+                                <h3 className={styles.compactTitle}>
+                                    <span className={styles.titleLine}>Personal</span>
+                                    <span className={styles.titleLine}>Consultation</span>
+                                </h3>
+                                <hr className={styles.titleDivider} />
+                            </div>
                             <p className={styles.compactTiming}>Prior Appointment</p>
                             <p className={styles.compactDetail}>One-on-one session</p>
                         </Link>
+                        <hr className={styles.cardDivider} />
                         <div className={styles.cardActions}>
                             <Link href="/enrollment-payment#personal-consultation" className={styles.cardEnrollButton}>Enroll</Link>
                             <Link href="/payment" className={styles.cardPayButton}>Pay</Link>

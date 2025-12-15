@@ -1,10 +1,10 @@
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import TherapyList from '@/components/TherapyList';
-import InstructorProfile from '@/components/InstructorProfile';
-import ProgramsSection from '@/components/ProgramsSection';
-import Footer from '@/components/Footer';
 import Chatbot from '@/components/Chatbot';
+import Footer from '@/components/Footer';
+import Hero from '@/components/Hero';
+import InstructorProfile from '@/components/InstructorProfile';
+import Navbar from '@/components/Navbar';
+import ProgramsSection from '@/components/ProgramsSection';
+import TherapyList from '@/components/TherapyList';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -22,9 +22,9 @@ export default function Home() {
         </p>
       </section>
 
-      <TherapyList />
-      <InstructorProfile />
       <ProgramsSection />
+      <InstructorProfile />
+      <TherapyList />
       <Footer />
       <Chatbot />
     </main>
