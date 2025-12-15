@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './major-asanas.module.css';
 
 export const metadata = {
@@ -320,49 +321,49 @@ export default function MajorAsanas() {
         </section>
 
         <section className={styles.resources}>
-          <h3 className={styles.resourcesTitle}>🔗 Related Practice Resources</h3>
+          <h3 className={styles.resourcesTitle}>📖 Additional Resources</h3>
           <div className={styles.resourcesGrid}>
             <div className={styles.resourceCard}>
               <h4>Standing Asanas</h4>
               <p>Detailed guide to standing poses with alignment and modifications.</p>
-              <a href="/knowledge-base/standing-asanas" className={styles.resourceLink}>
+              <Link href="/knowledge-base/standing-asanas" className={styles.resourceLink}>
                 Learn Standing Poses →
-              </a>
+              </Link>
             </div>
 
             <div className={styles.resourceCard}>
               <h4>Surya Namaskara</h4>
               <p>Complete Sun Salutation sequence with 12-step classical practice.</p>
-              <a href="/knowledge-base/surya-namaskara" className={styles.resourceLink}>
+              <Link href="/knowledge-base/surya-namaskara" className={styles.resourceLink}>
                 Practice Sequence →
-              </a>
+              </Link>
             </div>
 
             <div className={styles.resourceCard}>
               <h4>Safety Guidelines</h4>
               <p>Essential safety rules and precautions for all asana practice.</p>
-              <a href="/knowledge-base/safety-guidelines" className={styles.resourceLink}>
+              <Link href="/knowledge-base/safety-guidelines" className={styles.resourceLink}>
                 View Guidelines →
-              </a>
+              </Link>
             </div>
 
             <div className={styles.resourceCard}>
               <h4>Practice Curriculum</h4>
               <p>Structured 8-week to 1-year learning path for asana practice.</p>
-              <a href="/knowledge-base/curriculum" className={styles.resourceLink}>
+              <Link href="/knowledge-base/curriculum" className={styles.resourceLink}>
                 View Curriculum →
-              </a>
+              </Link>
             </div>
           </div>
         </section>
 
         <div className={styles.navigation}>
-          <a href="/knowledge-base" className={styles.backLink}>
+          <Link href="/knowledge-base" className={styles.backLink}>
             ← Back to Knowledge base
-          </a>
-          <a href="/knowledge-base/standing-asanas" className={styles.relatedLink}>
+          </Link>
+          <Link href="/knowledge-base/standing-asanas" className={styles.relatedLink}>
             Next: Standing Asanas →
-          </a>
+          </Link>
         </div>
       </div>
 

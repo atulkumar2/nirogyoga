@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './surya-namaskara.module.css';
 
 export const metadata = {
@@ -426,49 +427,49 @@ export default function SuryaNamaskara() {
                 </section>
 
                 <section className={styles.resources}>
-                    <h3 className={styles.resourcesTitle}>🔗 Related Practice Resources</h3>
+                    <h3 className={styles.resourcesTitle}>📖 Additional Resources</h3>
                     <div className={styles.resourcesGrid}>
                         <div className={styles.resourceCard}>
                             <h4>Standing Asanas</h4>
                             <p>Detailed guide to standing poses used in Surya Namaskara sequences.</p>
-                            <a href="/knowledge-base/standing-asanas" className={styles.resourceLink}>
+                            <Link href="/knowledge-base/standing-asanas" className={styles.resourceLink}>
                                 Learn Standing Poses →
-                            </a>
+                            </Link>
                         </div>
 
                         <div className={styles.resourceCard}>
                             <h4>Pranayama (Breath Regulation)</h4>
                             <p>Breathing techniques essential for coordinating with movement.</p>
-                            <a href="/knowledge-base/pranayama" className={styles.resourceLink}>
+                            <Link href="/knowledge-base/pranayama" className={styles.resourceLink}>
                                 Learn Pranayama →
-                            </a>
+                            </Link>
                         </div>
 
                         <div className={styles.resourceCard}>
                             <h4>Safety Guidelines</h4>
                             <p>Important precautions and modifications for Sun Salutation practice.</p>
-                            <a href="/knowledge-base/safety-guidelines" className={styles.resourceLink}>
+                            <Link href="/knowledge-base/safety-guidelines" className={styles.resourceLink}>
                                 View Guidelines →
-                            </a>
+                            </Link>
                         </div>
 
                         <div className={styles.resourceCard}>
                             <h4>Practice Curriculum</h4>
                             <p>Structured learning plan integrating Surya Namaskara into your practice.</p>
-                            <a href="/knowledge-base/curriculum" className={styles.resourceLink}>
+                            <Link href="/knowledge-base/curriculum" className={styles.resourceLink}>
                                 View Curriculum →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </section>
 
                 <div className={styles.navigation}>
-                    <a href="/knowledge-base" className={styles.backLink}>
+                    <Link href="/knowledge-base" className={styles.backLink}>
                         ← Back to Knowledge base
-                    </a>
-                    <a href="/knowledge-base/safety-guidelines" className={styles.relatedLink}>
+                    </Link>
+                    <Link href="/knowledge-base/safety-guidelines" className={styles.relatedLink}>
                         Next: Safety Guidelines →
-                    </a>
+                    </Link>
                 </div>
             </div>
 

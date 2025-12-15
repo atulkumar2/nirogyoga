@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './breathing-techniques.module.css';
 
 export const metadata = {
@@ -26,11 +27,11 @@ export default function BreathingTechniques() {
             Breathing control in yoga is not accidental — it is a deliberate, scientific method to regulate the autonomic nervous system, balance prāṇa, and prepare the mind for deeper practices like meditation. Below are the major categories and techniques of yogic breath control, explained with precision and purpose.
           </p>
 
-          <div style={{ textAlign: 'center', margin: '2rem 0' }}>
+          <div className={styles.imageWrapper}>
             <Image
               src="/breathing-techniques.png"
               alt="Yogic Breathing Techniques Guide"
-              style={{ maxWidth: '100%', height: 'auto', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)' }}
+              className={styles.heroImage}
               width={800}
               height={450}
             />
@@ -211,49 +212,49 @@ export default function BreathingTechniques() {
         </section>
 
         <section className={styles.resources}>
-          <h3 className={styles.resourcesTitle}>🔗 Related Practice Resources</h3>
+          <h3 className={styles.resourcesTitle}>📖 Additional Resources</h3>
           <div className={styles.resourcesGrid}>
             <div className={styles.resourceCard}>
               <h4>Pranayama (Breath Regulation)</h4>
               <p>Comprehensive guide to classical pranayama techniques and practice.</p>
-              <a href="/knowledge-base/pranayama" className={styles.resourceLink}>
+              <Link href="/knowledge-base/pranayama" className={styles.resourceLink}>
                 Learn Pranayama →
-              </a>
+              </Link>
             </div>
 
             <div className={styles.resourceCard}>
               <h4>Meditation (Dhyāna)</h4>
               <p>Use breathing techniques as a foundation for meditation practice.</p>
-              <a href="/knowledge-base/meditation" className={styles.resourceLink}>
+              <Link href="/knowledge-base/meditation" className={styles.resourceLink}>
                 Explore Meditation →
-              </a>
+              </Link>
             </div>
 
             <div className={styles.resourceCard}>
               <h4>Safety Guidelines</h4>
               <p>Important precautions and contraindications for breath work.</p>
-              <a href="/knowledge-base/safety-guidelines" className={styles.resourceLink}>
+              <Link href="/knowledge-base/safety-guidelines" className={styles.resourceLink}>
                 View Guidelines →
-              </a>
+              </Link>
             </div>
 
             <div className={styles.resourceCard}>
               <h4>Practice Curriculum</h4>
               <p>Structured progression of breathing practices from beginner to advanced.</p>
-              <a href="/knowledge-base/curriculum" className={styles.resourceLink}>
+              <Link href="/knowledge-base/curriculum" className={styles.resourceLink}>
                 View Curriculum →
-              </a>
+              </Link>
             </div>
           </div>
         </section>
 
         <div className={styles.navigation}>
-          <a href="/knowledge-base" className={styles.backLink}>
+          <Link href="/knowledge-base" className={styles.backLink}>
             ← Back to Knowledge base
-          </a>
-          <a href="/knowledge-base/pranayama" className={styles.relatedLink}>
+          </Link>
+          <Link href="/knowledge-base/pranayama" className={styles.relatedLink}>
             Next: Pranayama →
-          </a>
+          </Link>
         </div>
       </div>
 

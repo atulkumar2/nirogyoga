@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './safety-guidelines.module.css';
 
 export const metadata = {
@@ -26,11 +27,11 @@ export default function SafetyGuidelines() {
             Yoga and Upayoga offer enormous benefits, but both require mindful practice. Whether you're a beginner, intermediate practitioner, or instructor, the following guidelines ensure safety, effectiveness, and long-term progress.
           </p>
 
-          <div style={{ textAlign: 'center', margin: '2rem 0' }}>
+          <div className={styles.imageWrapper}>
             <Image
               src="/safety-guidelines.png"
               alt="Safety Guidelines Infographic"
-              style={{ maxWidth: '100%', height: 'auto', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)' }}
+              className={styles.heroImage}
               width={900}
               height={500}
             />
@@ -245,49 +246,49 @@ export default function SafetyGuidelines() {
         </section>
 
         <section className={styles.resources}>
-          <h3 className={styles.resourcesTitle}>🔗 Related Practice Resources</h3>
+          <h3 className={styles.resourcesTitle}>📖 Additional Resources</h3>
           <div className={styles.resourcesGrid}>
             <div className={styles.resourceCard}>
               <h4>Standing Asanas</h4>
               <p>Learn proper alignment for standing poses with safety in mind.</p>
-              <a href="/knowledge-base/standing-asanas" className={styles.resourceLink}>
+              <Link href="/knowledge-base/standing-asanas" className={styles.resourceLink}>
                 View Poses →
-              </a>
+              </Link>
             </div>
 
             <div className={styles.resourceCard}>
               <h4>Major Asanas</h4>
               <p>Complete guide to yoga postures with variations and modifications.</p>
-              <a href="/knowledge-base/major-asanas" className={styles.resourceLink}>
+              <Link href="/knowledge-base/major-asanas" className={styles.resourceLink}>
                 Explore Asanas →
-              </a>
+              </Link>
             </div>
 
             <div className={styles.resourceCard}>
               <h4>Pranayama</h4>
               <p>Breathing techniques with safety guidelines for all levels.</p>
-              <a href="/knowledge-base/pranayama" className={styles.resourceLink}>
+              <Link href="/knowledge-base/pranayama" className={styles.resourceLink}>
                 Learn Pranayama →
-              </a>
+              </Link>
             </div>
 
             <div className={styles.resourceCard}>
               <h4>Practice Curriculum</h4>
               <p>Structured progression with built-in safety at each level.</p>
-              <a href="/knowledge-base/curriculum" className={styles.resourceLink}>
+              <Link href="/knowledge-base/curriculum" className={styles.resourceLink}>
                 View Curriculum →
-              </a>
+              </Link>
             </div>
           </div>
         </section>
 
         <div className={styles.navigation}>
-          <a href="/knowledge-base" className={styles.backLink}>
+          <Link href="/knowledge-base" className={styles.backLink}>
             ← Back to Knowledge base
-          </a>
-          <a href="/knowledge-base/standing-asanas" className={styles.relatedLink}>
+          </Link>
+          <Link href="/knowledge-base/standing-asanas" className={styles.relatedLink}>
             Next: Standing Asanas →
-          </a>
+          </Link>
         </div>
       </div>
 

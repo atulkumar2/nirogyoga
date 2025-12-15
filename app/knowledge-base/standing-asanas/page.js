@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './standing-asanas.module.css';
 
 export const metadata = {
@@ -354,50 +355,51 @@ export default function StandingAsanas() {
         </section>
 
         <section className={styles.resources}>
-          <h3 className={styles.resourcesTitle}>🔗 Related Practice Resources</h3>
+          <h3 className={styles.resourcesTitle}>📖 Additional Resources</h3>
           <div className={styles.resourcesGrid}>
             <div className={styles.resourceCard}>
               <h4>Major Asanas</h4>
               <p>Comprehensive guide to 10 major categories of yoga postures.</p>
-              <a href="/knowledge-base/major-asanas" className={styles.resourceLink}>
+              <Link href="/knowledge-base/major-asanas" className={styles.resourceLink}>
                 Explore Categories →
-              </a>
+              </Link>
             </div>
 
             <div className={styles.resourceCard}>
               <h4>Surya Namaskara</h4>
               <p>Complete 12-step Sun Salutation sequence with breath coordination.</p>
-              <a href="/knowledge-base/surya-namaskara" className={styles.resourceLink}>
+              <Link href="/knowledge-base/surya-namaskara" className={styles.resourceLink}>
                 Learn Sequence →
-              </a>
+              </Link>
             </div>
 
             <div className={styles.resourceCard}>
               <h4>Safety Guidelines</h4>
               <p>15 essential safety rules and modifications for asana practice.</p>
-              <a href="/knowledge-base/safety-guidelines" className={styles.resourceLink}>
+              <Link href="/knowledge-base/safety-guidelines" className={styles.resourceLink}>
                 View Guidelines →
-              </a>
+              </Link>
             </div>
 
             <div className={styles.resourceCard}>
               <h4>Practice Curriculum</h4>
               <p>Structured 8-week to 1-year learning plan.</p>
-              <a href="/knowledge-base/curriculum" className={styles.resourceLink}>
+              <Link href="/knowledge-base/curriculum" className={styles.resourceLink}>
                 View Curriculum →
-              </a>
+              </Link>
             </div>
           </div>
         </section>
 
         <div className={styles.navigation}>
-          <a href="/knowledge-base" className={styles.backLink}>
+          <Link href="/knowledge-base" className={styles.backLink}>
             ← Back to Knowledge base
-          </a>
-          <a href="/knowledge-base/surya-namaskara" className={styles.relatedLink}>
+          </Link>
+          <Link href="/knowledge-base/surya-namaskara" className={styles.relatedLink}>
             Next: Surya Namaskara →
-          </a>
-        </div>      </div>
+          </Link>
+        </div>
+      </div>
 
       <Footer />
     </main>

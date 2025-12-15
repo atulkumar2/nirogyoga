@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import Link from 'next/link';
 import styles from './patanjali-sutras.module.css';
 
 export const metadata = {
@@ -213,52 +214,52 @@ export default function PatanjaliSutras() {
                         </ol>
                     </div>
                 </div>
-            </div>
 
-            <section className={styles.resources}>
-                <h3 className={styles.resourcesTitle}>🔗 Related Resources</h3>
-                <div className={styles.resourcesGrid}>
-                    <div className={styles.resourceCard}>
-                        <h4>Meditation (Dhyāna)</h4>
-                        <p>Practical guidance on meditation, the 7th limb of Patanjali's yoga.</p>
-                        <a href="/knowledge-base/meditation" className={styles.resourceLink}>
-                            Learn Meditation →
-                        </a>
-                    </div>
+                <section className={styles.resources}>
+                    <h3 className={styles.resourcesTitle}>📖 Additional Resources</h3>
+                    <div className={styles.resourcesGrid}>
+                        <div className={styles.resourceCard}>
+                            <h4>Meditation (Dhyāna)</h4>
+                            <p>Practical guidance on meditation, the 7th limb of Patanjali's yoga.</p>
+                            <Link href="/knowledge-base/meditation" className={styles.resourceLink}>
+                                Learn Meditation →
+                            </Link>
+                        </div>
 
-                    <div className={styles.resourceCard}>
-                        <h4>Historical References</h4>
-                        <p>Timeline of yoga history including Patanjali's classical era.</p>
-                        <a href="/knowledge-base/historical-references" className={styles.resourceLink}>
-                            View History →
-                        </a>
-                    </div>
+                        <div className={styles.resourceCard}>
+                            <h4>Historical References</h4>
+                            <p>Timeline of yoga history including Patanjali's classical era.</p>
+                            <Link href="/knowledge-base/historical-references" className={styles.resourceLink}>
+                                View History →
+                            </Link>
+                        </div>
 
-                    <div className={styles.resourceCard}>
-                        <h4>Essential Yoga Books</h4>
-                        <p>Recommended texts for studying Patanjali's Yoga Sutras in depth.</p>
-                        <a href="/knowledge-base/yoga-books" className={styles.resourceLink}>
-                            Browse Books →
-                        </a>
-                    </div>
+                        <div className={styles.resourceCard}>
+                            <h4>Essential Yoga Books</h4>
+                            <p>Recommended texts for studying Patanjali's Yoga Sutras in depth.</p>
+                            <Link href="/knowledge-base/yoga-books" className={styles.resourceLink}>
+                                Browse Books →
+                            </Link>
+                        </div>
 
-                    <div className={styles.resourceCard}>
-                        <h4>Learning Paths</h4>
-                        <p>Structured study paths incorporating philosophical foundations.</p>
-                        <a href="/knowledge-base/learning-paths" className={styles.resourceLink}>
-                            View Paths →
-                        </a>
+                        <div className={styles.resourceCard}>
+                            <h4>Learning Paths</h4>
+                            <p>Structured study paths incorporating philosophical foundations.</p>
+                            <Link href="/knowledge-base/learning-paths" className={styles.resourceLink}>
+                                View Paths →
+                            </Link>
+                        </div>
                     </div>
+                </section>
+
+                <div className={styles.navigation}>
+                    <Link href="/knowledge-base" className={styles.backLink}>
+                        ← Back to Knowledge base
+                    </Link>
+                    <Link href="/knowledge-base/meditation" className={styles.relatedLink}>
+                        Next: Meditation →
+                    </Link>
                 </div>
-            </section>
-
-            <div className={styles.navigation}>
-                <a href="/knowledge-base" className={styles.backLink}>
-                    ← Back to Knowledge base
-                </a>
-                <a href="/knowledge-base/meditation" className={styles.relatedLink}>
-                    Next: Meditation →
-                </a>
             </div>
 
             <Footer />

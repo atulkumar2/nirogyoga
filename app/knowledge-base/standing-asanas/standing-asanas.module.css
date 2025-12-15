@@ -1,175 +1,279 @@
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: var(--spacing-lg) var(--spacing-md);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-md);
 }
 
 .header {
-    text-align: center;
-    margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .title {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    font-weight: 600;
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 600;
 }
 
 .introSection,
 .guidelinesSection,
 .curriculumSection,
 .safetySection {
-    margin-bottom: 3rem;
-    background: white;
-    padding: 2rem;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
+  margin-bottom: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .sectionTitle {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid var(--primary-light);
-    padding-bottom: 0.5rem;
-    display: inline-block;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
 .text {
-    color: var(--text-dark);
-    line-height: 1.6;
-    margin-bottom: 1rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .list {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .listItem {
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
 }
 
 .asanasGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .asanaCard {
-    background: white;
-    padding: 2rem;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    border: 1px solid #eee;
-    transition: transform 0.3s ease;
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  border: 1px solid #eee;
+  transition: transform 0.3s ease;
 }
 
 .asanaCard:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .asanaTitle {
-    font-size: 1.4rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
 }
 
 .asanaPurpose {
-    font-weight: 600;
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-    display: block;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  display: block;
 }
 
 .keyPointsTitle,
 .benefitsTitle {
-    font-weight: 600;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    display: block;
-    color: #555;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #555;
 }
 
 .benefits {
-    font-style: italic;
-    color: #666;
+  font-style: italic;
+  color: #666;
 }
 
 .sequenceSection {
-    margin-bottom: 3rem;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 2.5rem;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
 }
 
 .sequenceSteps {
-    display: grid;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .sequenceStep {
-    background: white;
-    padding: 1.5rem;
-    border-radius: var(--radius-sm);
-    border-left: 4px solid var(--primary-color);
-    box-shadow: var(--shadow-sm);
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--primary-color);
+  box-shadow: var(--shadow-sm);
 }
 
 .stepNumber {
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
 }
 
 .stepDuration {
-    display: inline-block;
-    background: var(--secondary-color);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: var(--radius-full);
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+  display: inline-block;
+  background: var(--secondary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .stepHow,
 .stepPurpose {
-    margin-top: 0.75rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
 }
 
 .sequenceSummary {
-    background: white;
-    padding: 2rem;
-    border-radius: var(--radius-sm);
-    border: 2px solid var(--primary-light);
-    text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--primary-light);
+  text-align: center;
+}
+
+.resources {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f4f8 100%);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e3f2fd;
+  margin-bottom: 40px;
+}
+
+.resourcesTitle {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.resourcesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.resourceCard {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.resourceCard h4 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.resourceCard p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.resourceLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.resourceLink:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+}
+
+.backLink,
+.relatedLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-color);
+}
+
+.backLink:hover,
+.relatedLink:hover {
+  background: var(--primary-color);
+  color: white;
 }
 
 @media (max-width: 768px) {
-    .title {
-        font-size: 2rem;
-    }
+  .title {
+    font-size: 2rem;
+  }
 
-    .sectionTitle {
-        font-size: 1.5rem;
-    }
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
 
-    .asanasGrid {
-        grid-template-columns: 1fr;
-    }
+  .asanasGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .resources {
+    padding: 20px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .backLink,
+  .relatedLink {
+    text-align: center;
+  }
 }

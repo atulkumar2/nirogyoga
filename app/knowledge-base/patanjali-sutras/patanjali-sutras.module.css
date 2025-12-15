@@ -293,11 +293,11 @@
 }
 
 .resources {
-  background: linear-gradient(135deg, #fff8e1 0%, #fff3c4 100%);
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f4f8 100%);
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid #ffe082;
+  border: 1px solid #e3f2fd;
   margin-bottom: 40px;
 }
 
