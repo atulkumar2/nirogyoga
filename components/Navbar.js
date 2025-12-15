@@ -1,7 +1,7 @@
 "use client";
-import { useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
@@ -30,11 +30,16 @@ const Navbar = () => {
                 </div>
             </Link>
 
-            <button className={styles.hamburger} onClick={toggleMenu} aria-label="Toggle menu">
-                <span className={styles.bar}></span>
-                <span className={styles.bar}></span>
-                <span className={styles.bar}></span>
-            </button>
+            <div className={styles.navContainer}>
+                <Link href="/enrollment-payment" className={styles.mobileCtaButton} onClick={closeMenu}>
+                    Enroll / Payment
+                </Link>
+                <button className={styles.hamburger} onClick={toggleMenu} aria-label="Toggle menu">
+                    <span className={styles.bar}></span>
+                    <span className={styles.bar}></span>
+                    <span className={styles.bar}></span>
+                </button>
+            </div>
 
             <div className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
                 <Link href="/about" className={styles.link} onClick={closeMenu}>About</Link>
