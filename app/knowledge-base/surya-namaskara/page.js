@@ -424,6 +424,52 @@ export default function SuryaNamaskara() {
                         Surya Namaskara is not just a warm-up routine — it is a structured, intelligent, and scientifically validated practice that harmonizes the entire human system. Its elegance lies in the seamless integration of movement, breath, awareness, and rhythm. Within the academic framework of Nirog Yoga University, Surya Namaskara forms a foundational pillar for physical conditioning, mental focus, and energetic awakening.
                     </p>
                 </section>
+
+                <section className={styles.resources}>
+                    <h3 className={styles.resourcesTitle}>🔗 Related Practice Resources</h3>
+                    <div className={styles.resourcesGrid}>
+                        <div className={styles.resourceCard}>
+                            <h4>Standing Asanas</h4>
+                            <p>Detailed guide to standing poses used in Surya Namaskara sequences.</p>
+                            <a href="/knowledge-base/standing-asanas" className={styles.resourceLink}>
+                                Learn Standing Poses →
+                            </a>
+                        </div>
+
+                        <div className={styles.resourceCard}>
+                            <h4>Pranayama (Breath Regulation)</h4>
+                            <p>Breathing techniques essential for coordinating with movement.</p>
+                            <a href="/knowledge-base/pranayama" className={styles.resourceLink}>
+                                Learn Pranayama →
+                            </a>
+                        </div>
+
+                        <div className={styles.resourceCard}>
+                            <h4>Safety Guidelines</h4>
+                            <p>Important precautions and modifications for Sun Salutation practice.</p>
+                            <a href="/knowledge-base/safety-guidelines" className={styles.resourceLink}>
+                                View Guidelines →
+                            </a>
+                        </div>
+
+                        <div className={styles.resourceCard}>
+                            <h4>Practice Curriculum</h4>
+                            <p>Structured learning plan integrating Surya Namaskara into your practice.</p>
+                            <a href="/knowledge-base/curriculum" className={styles.resourceLink}>
+                                View Curriculum →
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <div className={styles.navigation}>
+                    <a href="/knowledge-base" className={styles.backLink}>
+                        ← Back to Knowledge base
+                    </a>
+                    <a href="/knowledge-base/safety-guidelines" className={styles.relatedLink}>
+                        Next: Safety Guidelines →
+                    </a>
+                </div>
             </div>
 
             <Footer />

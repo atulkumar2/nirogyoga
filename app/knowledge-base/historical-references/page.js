@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import Link from 'next/link';
 import styles from './historical-references.module.css';
 
 export const metadata = {
@@ -233,6 +234,44 @@ export default function HistoricalReferences() {
                         </table>
                     </div>
                 </section>
+
+                <div className={styles.resources}>
+                    <h3 className={styles.resourcesTitle}>📖 Additional Resources</h3>
+                    <div className={styles.resourcesGrid}>
+                        <div className={styles.resourceCard}>
+                            <h4>Introduction to Yoga</h4>
+                            <p>Start with the foundations of Yoga as an ancient science.</p>
+                            <Link href="/knowledge-base/introduction" className={styles.resourceLink}>
+                                Read Introduction →
+                            </Link>
+                        </div>
+
+                        <div className={styles.resourceCard}>
+                            <h4>Essential Yoga Books</h4>
+                            <p>Core texts that preserve and explain the yogic tradition.</p>
+                            <Link href="/knowledge-base/yoga-books" className={styles.resourceLink}>
+                                Browse Books →
+                            </Link>
+                        </div>
+
+                        <div className={styles.resourceCard}>
+                            <h4>Patanjali Yoga Sutras</h4>
+                            <p>Structured summary of the eight-limbed path and core ideas.</p>
+                            <Link href="/knowledge-base/patanjali-sutras" className={styles.resourceLink}>
+                                Read Summary →
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.navigation}>
+                    <Link href="/knowledge-base" className={styles.backLink}>
+                        ← Back to Knowledge base
+                    </Link>
+                    <Link href="/knowledge-base/patanjali-sutras" className={styles.relatedLink}>
+                        Next: Patanjali Sutras →
+                    </Link>
+                </div>
             </div>
 
             <Footer />

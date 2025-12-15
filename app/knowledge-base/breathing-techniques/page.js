@@ -209,6 +209,52 @@ export default function BreathingTechniques() {
             <li>Articles from Journal of Alternative and Complementary Medicine.</li>
           </ul>
         </section>
+
+        <section className={styles.resources}>
+          <h3 className={styles.resourcesTitle}>🔗 Related Practice Resources</h3>
+          <div className={styles.resourcesGrid}>
+            <div className={styles.resourceCard}>
+              <h4>Pranayama (Breath Regulation)</h4>
+              <p>Comprehensive guide to classical pranayama techniques and practice.</p>
+              <a href="/knowledge-base/pranayama" className={styles.resourceLink}>
+                Learn Pranayama →
+              </a>
+            </div>
+
+            <div className={styles.resourceCard}>
+              <h4>Meditation (Dhyāna)</h4>
+              <p>Use breathing techniques as a foundation for meditation practice.</p>
+              <a href="/knowledge-base/meditation" className={styles.resourceLink}>
+                Explore Meditation →
+              </a>
+            </div>
+
+            <div className={styles.resourceCard}>
+              <h4>Safety Guidelines</h4>
+              <p>Important precautions and contraindications for breath work.</p>
+              <a href="/knowledge-base/safety-guidelines" className={styles.resourceLink}>
+                View Guidelines →
+              </a>
+            </div>
+
+            <div className={styles.resourceCard}>
+              <h4>Practice Curriculum</h4>
+              <p>Structured progression of breathing practices from beginner to advanced.</p>
+              <a href="/knowledge-base/curriculum" className={styles.resourceLink}>
+                View Curriculum →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div className={styles.navigation}>
+          <a href="/knowledge-base" className={styles.backLink}>
+            ← Back to Knowledge base
+          </a>
+          <a href="/knowledge-base/pranayama" className={styles.relatedLink}>
+            Next: Pranayama →
+          </a>
+        </div>
       </div>
 
       <Footer />

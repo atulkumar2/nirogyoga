@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import Link from 'next/link';
 import styles from './introduction.module.css';
 
 export const metadata = {
@@ -151,6 +152,44 @@ export default function IntroductionToYoga() {
             <li>Ministry of AYUSH (Govt. of India). “Yoga Education and Research Guidelines.”</li>
           </ol>
         </section>
+
+        <div className={styles.resources}>
+          <h3 className={styles.resourcesTitle}>📖 Additional Resources</h3>
+          <div className={styles.resourcesGrid}>
+            <div className={styles.resourceCard}>
+              <h4>Why Yoga?</h4>
+              <p>Understand why Yoga is a foundation for holistic human development.</p>
+              <Link href="/knowledge-base/why-yoga" className={styles.resourceLink}>
+                Read Overview →
+              </Link>
+            </div>
+
+            <div className={styles.resourceCard}>
+              <h4>Historical References</h4>
+              <p>Key texts and eras that shaped Yoga as a knowledge system.</p>
+              <Link href="/knowledge-base/historical-references" className={styles.resourceLink}>
+                Explore Timeline →
+              </Link>
+            </div>
+
+            <div className={styles.resourceCard}>
+              <h4>Pranayama</h4>
+              <p>Breath regulation foundations, science, and major categories.</p>
+              <Link href="/knowledge-base/pranayama" className={styles.resourceLink}>
+                Study Pranayama →
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.navigation}>
+          <Link href="/knowledge-base" className={styles.backLink}>
+            ← Back to Knowledge base
+          </Link>
+          <Link href="/knowledge-base/historical-references" className={styles.relatedLink}>
+            Next: Historical References →
+          </Link>
+        </div>
       </div>
 
       <Footer />

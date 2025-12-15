@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './meditation.module.css';
 
 export const metadata = {
@@ -125,6 +126,44 @@ export default function Meditation() {
                         <li>Traditional texts discussing samādhi and dhyāna</li>
                         <li>Clinical papers on meditation and health outcomes</li>
                     </ul>
+                </div>
+
+                <div className={styles.resources}>
+                    <h3 className={styles.resourcesTitle}>📖 Additional Resources</h3>
+                    <div className={styles.resourcesGrid}>
+                        <div className={styles.resourceCard}>
+                            <h4>Patanjali Yoga Sutras</h4>
+                            <p>Conceptual foundation for dhyāna, samādhi, and mental discipline.</p>
+                            <Link href="/knowledge-base/patanjali-sutras" className={styles.resourceLink}>
+                                Read Summary →
+                            </Link>
+                        </div>
+
+                        <div className={styles.resourceCard}>
+                            <h4>Pranayama</h4>
+                            <p>Breath regulation that prepares the nervous system for meditation.</p>
+                            <Link href="/knowledge-base/pranayama" className={styles.resourceLink}>
+                                Study Pranayama →
+                            </Link>
+                        </div>
+
+                        <div className={styles.resourceCard}>
+                            <h4>Breathing Techniques</h4>
+                            <p>Practical breath-control drills for steadiness and calm.</p>
+                            <Link href="/knowledge-base/breathing-techniques" className={styles.resourceLink}>
+                                Practice Techniques →
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.navigation}>
+                    <Link href="/knowledge-base" className={styles.backLink}>
+                        ← Back to Knowledge base
+                    </Link>
+                    <Link href="/knowledge-base/pranayama" className={styles.relatedLink}>
+                        Next: Pranayama →
+                    </Link>
                 </div>
             </div>
 

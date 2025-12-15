@@ -243,6 +243,52 @@ export default function SafetyGuidelines() {
             </div>
           </div>
         </section>
+
+        <section className={styles.resources}>
+          <h3 className={styles.resourcesTitle}>🔗 Related Practice Resources</h3>
+          <div className={styles.resourcesGrid}>
+            <div className={styles.resourceCard}>
+              <h4>Standing Asanas</h4>
+              <p>Learn proper alignment for standing poses with safety in mind.</p>
+              <a href="/knowledge-base/standing-asanas" className={styles.resourceLink}>
+                View Poses →
+              </a>
+            </div>
+
+            <div className={styles.resourceCard}>
+              <h4>Major Asanas</h4>
+              <p>Complete guide to yoga postures with variations and modifications.</p>
+              <a href="/knowledge-base/major-asanas" className={styles.resourceLink}>
+                Explore Asanas →
+              </a>
+            </div>
+
+            <div className={styles.resourceCard}>
+              <h4>Pranayama</h4>
+              <p>Breathing techniques with safety guidelines for all levels.</p>
+              <a href="/knowledge-base/pranayama" className={styles.resourceLink}>
+                Learn Pranayama →
+              </a>
+            </div>
+
+            <div className={styles.resourceCard}>
+              <h4>Practice Curriculum</h4>
+              <p>Structured progression with built-in safety at each level.</p>
+              <a href="/knowledge-base/curriculum" className={styles.resourceLink}>
+                View Curriculum →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div className={styles.navigation}>
+          <a href="/knowledge-base" className={styles.backLink}>
+            ← Back to Knowledge base
+          </a>
+          <a href="/knowledge-base/standing-asanas" className={styles.relatedLink}>
+            Next: Standing Asanas →
+          </a>
+        </div>
       </div>
 
       <Footer />

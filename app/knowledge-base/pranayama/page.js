@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './pranayama.module.css';
 
 export const metadata = {
@@ -198,6 +199,44 @@ export default function Pranayama() {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Major Categories of Prāṇāyāma</h2>
         </section>
+
+        <div className={styles.resources}>
+          <h3 className={styles.resourcesTitle}>📖 Additional Resources</h3>
+          <div className={styles.resourcesGrid}>
+            <div className={styles.resourceCard}>
+              <h4>Breathing Techniques</h4>
+              <p>Practical breath-control drills and foundational training methods.</p>
+              <Link href="/knowledge-base/breathing-techniques" className={styles.resourceLink}>
+                Practice Techniques →
+              </Link>
+            </div>
+
+            <div className={styles.resourceCard}>
+              <h4>Safety Guidelines</h4>
+              <p>Rules and modifications for safe practice across asana and breathwork.</p>
+              <Link href="/knowledge-base/safety-guidelines" className={styles.resourceLink}>
+                View Guidelines →
+              </Link>
+            </div>
+
+            <div className={styles.resourceCard}>
+              <h4>Practice Curriculum</h4>
+              <p>A structured 8-week to 1-year plan: asana, pranayama, and meditation.</p>
+              <Link href="/knowledge-base/curriculum" className={styles.resourceLink}>
+                View Curriculum →
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.navigation}>
+          <Link href="/knowledge-base" className={styles.backLink}>
+            ← Back to Knowledge base
+          </Link>
+          <Link href="/knowledge-base/breathing-techniques" className={styles.relatedLink}>
+            Next: Breathing Techniques →
+          </Link>
+        </div>
 
       </div>
 

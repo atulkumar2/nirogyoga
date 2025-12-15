@@ -74,9 +74,41 @@ export default function YogaCurriculum() {
                     {/* Remaining phases... */}
                 </div>
 
+                <div className={styles.resources}>
+                    <h3 className={styles.resourcesTitle}>📖 Additional Resources</h3>
+                    <div className={styles.resourcesGrid}>
+                        <div className={styles.resourceCard}>
+                            <h4>Safety Guidelines</h4>
+                            <p>Foundational rules and modifications for safe daily practice.</p>
+                            <Link href="/knowledge-base/safety-guidelines" className={styles.resourceLink}>
+                                View Guidelines →
+                            </Link>
+                        </div>
+
+                        <div className={styles.resourceCard}>
+                            <h4>Major Asanas</h4>
+                            <p>Core posture categories and practice focus areas to build skill.</p>
+                            <Link href="/knowledge-base/major-asanas" className={styles.resourceLink}>
+                                Explore Asanas →
+                            </Link>
+                        </div>
+
+                        <div className={styles.resourceCard}>
+                            <h4>Pranayama</h4>
+                            <p>Breath regulation foundations that integrate with structured practice.</p>
+                            <Link href="/knowledge-base/pranayama" className={styles.resourceLink}>
+                                Study Pranayama →
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
                 <div className={styles.navigation}>
                     <Link href="/knowledge-base" className={styles.backLink}>
                         ← Back to Knowledge base
+                    </Link>
+                    <Link href="/knowledge-base/major-asanas" className={styles.relatedLink}>
+                        Next: Major Asanas →
                     </Link>
                 </div>
             </div>
