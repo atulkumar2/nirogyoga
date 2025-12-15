@@ -84,7 +84,7 @@ const Footer = () => {
                             <h4 className={styles.linkColumnTitle}>Learn</h4>
                             <Link href="/about" className={styles.link}>About</Link>
                             <Link href="/instructors" className={styles.link}>Instructors</Link>
-                            <Link href="/what-is-yoga" className={styles.link}>What is Yoga?</Link>
+                            <Link href="/knowledge-base" className={styles.link}>Knowledge base</Link>
                             <Link href="/yoga-healing" className={styles.link}>Yoga Healing</Link>
                             <Link href="/resources" className={styles.link}>Resources</Link>
                             <Link href="/saatvic-literature" className={styles.link}>Saatvic Literature</Link>

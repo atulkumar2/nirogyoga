@@ -46,7 +46,7 @@ const Navbar = () => {
                 <Link href="/instructors" className={styles.link} onClick={closeMenu}>Instructors</Link>
                 <Link href="/programs-events" className={styles.link} onClick={closeMenu}>Programs / Events</Link>
                 <Link href="/testimonials" className={styles.link} onClick={closeMenu}>Testimonials</Link>
-                <Link href="/what-is-yoga" className={styles.link} onClick={closeMenu}>What is Yoga?</Link>
+                <Link href="/knowledge-base" className={styles.link} onClick={closeMenu}>Knowledge base</Link>
                 <Link href="/yoga-healing" className={styles.link} onClick={closeMenu}>Yoga Healing</Link>
                 <Link href="/contact" className={styles.link} onClick={closeMenu}>Contact</Link>
                 <Link href="/enrollment-payment" className={styles.ctaButton} onClick={closeMenu}>

@@ -162,7 +162,7 @@ export default function YogaLearningPaths() {
                         <div className={styles.resourceCard}>
                             <h4>Essential Yoga Books</h4>
                             <p>Complete guide to the most important yoga texts and modern works.</p>
-                            <Link href="/what-is-yoga/yoga-books" className={styles.resourceLink}>
+                            <Link href="/knowledge-base/yoga-books" className={styles.resourceLink}>
                                 Browse Books →
                             </Link>
                         </div>
@@ -170,7 +170,7 @@ export default function YogaLearningPaths() {
                         <div className={styles.resourceCard}>
                             <h4>Patanjali Yoga Sutras</h4>
                             <p>One-page summary of the foundational yoga philosophy.</p>
-                            <Link href="/what-is-yoga/patanjali-sutras" className={styles.resourceLink}>
+                            <Link href="/knowledge-base/patanjali-sutras" className={styles.resourceLink}>
                                 Read Summary →
                             </Link>
                         </div>
@@ -178,7 +178,7 @@ export default function YogaLearningPaths() {
                         <div className={styles.resourceCard}>
                             <h4>Practice Curriculum</h4>
                             <p>8-week to 1-year structured practice plan with asana, pranayama, and meditation.</p>
-                            <Link href="/what-is-yoga/curriculum" className={styles.resourceLink}>
+                            <Link href="/knowledge-base/curriculum" className={styles.resourceLink}>
                                 View Curriculum →
                             </Link>
                         </div>
@@ -186,10 +186,10 @@ export default function YogaLearningPaths() {
                 </div>
 
                 <div className={styles.navigation}>
-                    <Link href="/what-is-yoga" className={styles.backLink}>
-                        ← Back to What is Yoga
+                    <Link href="/knowledge-base" className={styles.backLink}>
+                        ← Back to Knowledge base
                     </Link>
-                    <Link href="/what-is-yoga/yoga-books" className={styles.relatedLink}>
+                    <Link href="/knowledge-base/yoga-books" className={styles.relatedLink}>
                         Browse Essential Books →
                     </Link>
                 </div>

@@ -247,10 +247,10 @@ export default function YogaCurriculum() {
                 </div>
 
                 <div className={styles.navigation}>
-                    <Link href="/what-is-yoga" className={styles.backLink}>
-                        ← Back to What is Yoga
+                    <Link href="/knowledge-base" className={styles.backLink}>
+                        ← Back to Knowledge base
                     </Link>
-                    <Link href="/what-is-yoga/major-asanas" className={styles.relatedLink}>
+                    <Link href="/knowledge-base/major-asanas" className={styles.relatedLink}>
                         Explore Major Asanas →
                     </Link>
                 </div>

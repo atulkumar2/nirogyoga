@@ -36,27 +36,29 @@ npm test -- --coverage
 #### Option 2: Manual Browser Testing
 
 1. Start the development server:
+
    ```bash
    npm run dev
    ```
 
 2. Open browser console and run:
+
    ```javascript
    // Check all navbar links
-   document.querySelectorAll('nav a').forEach(link => {
+   document.querySelectorAll("nav a").forEach((link) => {
      console.log(link.href, link.textContent);
    });
 
    // Check all footer links
-   document.querySelectorAll('footer a').forEach(link => {
+   document.querySelectorAll("footer a").forEach((link) => {
      console.log(link.href, link.textContent);
    });
 
    // Check for broken internal links
-   document.querySelectorAll('a[href^="/"]').forEach(link => {
-     if (!link.href.includes('#')) {
-       fetch(link.href).then(r => {
-         if (r.status !== 200) console.error('Broken:', link.href);
+   document.querySelectorAll('a[href^="/"]').forEach((link) => {
+     if (!link.href.includes("#")) {
+       fetch(link.href).then((r) => {
+         if (r.status !== 200) console.error("Broken:", link.href);
        });
      }
    });
@@ -87,6 +89,7 @@ Add to `package.json`:
 ### Expected Results
 
 All tests should pass with:
+
 - ✅ All pages accessible (200 status)
 - ✅ No broken internal links
 - ✅ All navbar links present on every page
@@ -99,6 +102,7 @@ All tests should pass with:
 ### Troubleshooting
 
 If tests fail:
+
 1. Check that the dev server is running on `http://localhost:3000`
 2. Verify the page exists and is accessible
 3. Check the HTML source for the expected link

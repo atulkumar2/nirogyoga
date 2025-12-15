@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import styles from './why-yoga.module.css';
 
 export const metadata = {
-    title: "Why Yoga? | What is Yoga?",
+    title: "Why Yoga? | Knowledge base",
     description: "Discover why Yoga is the foundation of holistic human development and a preventive health approach for modern life.",
 };
 

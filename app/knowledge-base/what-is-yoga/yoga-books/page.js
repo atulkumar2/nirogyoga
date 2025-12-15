@@ -128,7 +128,7 @@ export default function YogaBooks() {
                         <div className={styles.resourceCard}>
                             <h4>Reading Roadmap</h4>
                             <p>Structured progression from beginner to expert level books.</p>
-                            <Link href="/what-is-yoga/learning-paths" className={styles.resourceLink}>
+                            <Link href="/knowledge-base/learning-paths" className={styles.resourceLink}>
                                 View Reading Roadmap →
                             </Link>
                         </div>
@@ -136,7 +136,7 @@ export default function YogaBooks() {
                         <div className={styles.resourceCard}>
                             <h4>Patanjali Yoga Sutras</h4>
                             <p>One-page summary of the foundational yoga text.</p>
-                            <Link href="/what-is-yoga/patanjali-sutras" className={styles.resourceLink}>
+                            <Link href="/knowledge-base/patanjali-sutras" className={styles.resourceLink}>
                                 Read Summary →
                             </Link>
                         </div>
@@ -152,10 +152,10 @@ export default function YogaBooks() {
                 </div>
 
                 <div className={styles.navigation}>
-                    <Link href="/what-is-yoga" className={styles.backLink}>
-                        ← Back to What is Yoga
+                    <Link href="/knowledge-base" className={styles.backLink}>
+                        ← Back to Knowledge base
                     </Link>
-                    <Link href="/what-is-yoga/learning-paths" className={styles.relatedLink}>
+                    <Link href="/knowledge-base/learning-paths" className={styles.relatedLink}>
                         View Learning Paths →
                     </Link>
                 </div>

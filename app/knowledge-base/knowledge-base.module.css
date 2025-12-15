@@ -1,0 +1,30 @@
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.header {
+  margin-bottom: 1.5rem;
+}
+.title {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+}
+.subtitle {
+  margin: 0;
+  color: var(--muted-text, #555);
+}
+.section {
+  margin-top: 1rem;
+}
+.linkList {
+  list-style: none;
+  padding: 0;
+}
+.linkList li {
+  margin: 0.5rem 0;
+}
+.link {
+  color: var(--primary, #2b7a2b);
+  text-decoration: none;
+}
