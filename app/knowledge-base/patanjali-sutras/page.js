@@ -28,11 +28,11 @@ export default function PatanjaliSutras() {
                     <svg width="1200" height="780" viewBox="0 0 1200 780" xmlns="http://www.w3.org/2000/svg" style={{ maxWidth: '100%', height: 'auto', minWidth: '800px' }}>
                         <defs>
                             <style>
-                                {`.title { font: bold 30px sans-serif; }
-                                .subtitle { font: 18px sans-serif; }
-                                .section-title { font: bold 22px sans-serif; }
-                                .text { font: 16px sans-serif; }
-                                .small { font: 14px sans-serif; }
+                                {`.title { font: bold 30px sans-serif; fill: #222; }
+                                .subtitle { font: 18px sans-serif; fill: #555; }
+                                .section-title { font: bold 22px sans-serif; fill: #333; }
+                                .text { font: 16px sans-serif; fill: #333; }
+                                .small { font: 14px sans-serif; fill: #555; }
                                 .box { fill: #f5f5f5; stroke: #ccc; stroke-width: 1.2; rx: 10; }
                                 .guna-box { fill: #fafafa; stroke: #ccc; stroke-width: 1.2; rx: 10; }
                                 .sushumna { stroke: #444; stroke-width: 4; }
@@ -173,7 +173,7 @@ export default function PatanjaliSutras() {
                 </div>
 
                 <div className={styles.sutraCard}>
-                    <h3 className={styles.cardTitle}>The Essence of Patanjali Patanjali Yoga Sutras</h3>
+                    <h3 className={styles.cardTitle}>The Essence of Patanjali Yoga Sutras</h3>
                     <p className={styles.cardIntro}>Patanjali explains how the mind works and how to reach freedom through disciplined practice.</p>
 
                     <div className={styles.sutraSection}>
@@ -212,31 +212,360 @@ export default function PatanjaliSutras() {
                             <li><strong>Dhyana</strong> – Meditation flow (continuous awareness)</li>
                             <li><strong>Samadhi</strong> – Oneness / absorption (union with the divine)</li>
                         </ol>
+
+                        <div style={{ textAlign: 'center', margin: '2rem 0', padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-lg)' }}>
+                            <svg width="800" height="1300" viewBox="0 0 800 1300" xmlns="http://www.w3.org/2000/svg">
+                                <style>
+                                    {`.bg { fill: #020617; }
+                                    .title { font: bold 34px sans-serif; fill: #e5e7eb; }
+                                    .subtitle { font: 18px sans-serif; fill: #9ca3af; }
+                                    .card { fill: #020617; stroke: #1e293b; stroke-width: 1.4; rx: 18; }
+                                    .badge { fill: #2563eb; }
+                                    .badge-number { font: bold 18px sans-serif; fill: #e5e7eb; }
+                                    .limb-title { font: bold 20px sans-serif; fill: #e5e7eb; }
+                                    .limb-sub { font: 15px sans-serif; fill: #cbd5f5; }
+                                    .footer { font: 16px sans-serif; fill: #9ca3af; }`}
+                                </style>
+
+                                {/* Background */}
+                                <rect x="0" y="0" width="800" height="1300" className="bg" />
+
+                                {/* Header */}
+                                <text x="110" y="70" className="title">Patanjali's Eight Limbs of Yoga</text>
+                                <text x="110" y="105" className="subtitle">
+                                    From outer discipline to inner absorption — the complete path
+                                </text>
+
+                                {/* Row 1: Yama (left), Niyama (right) */}
+                                {/* Yama */}
+                                <rect x="40" y="150" width="340" height="170" className="card" />
+                                <circle cx="70" cy="180" r="18" className="badge" />
+                                <text x="64" y="186" className="badge-number">1</text>
+                                <text x="105" y="187" className="limb-title">Yama</text>
+                                <text x="105" y="213" className="limb-sub">Ethical restraints:</text>
+                                <text x="105" y="235" className="limb-sub">• Ahimsa — Non-violence</text>
+                                <text x="105" y="257" className="limb-sub">• Satya — Truthfulness</text>
+                                <text x="105" y="279" className="limb-sub">• Asteya — Non-stealing</text>
+                                <text x="105" y="301" className="limb-sub">• Brahmacharya — Moderation</text>
+                                <text x="105" y="323" className="limb-sub">• Aparigraha — Non-greed</text>
+
+                                {/* Niyama */}
+                                <rect x="420" y="150" width="340" height="170" className="card" />
+                                <circle cx="450" cy="180" r="18" className="badge" />
+                                <text x="444" y="186" className="badge-number">2</text>
+                                <text x="485" y="187" className="limb-title">Niyama</text>
+                                <text x="485" y="213" className="limb-sub">Inner discipline:</text>
+                                <text x="485" y="235" className="limb-sub">• Saucha — Purity</text>
+                                <text x="485" y="257" className="limb-sub">• Santosha — Contentment</text>
+                                <text x="485" y="279" className="limb-sub">• Tapas — Austerity</text>
+                                <text x="485" y="301" className="limb-sub">• Svadhyaya — Self-study</text>
+                                <text x="485" y="323" className="limb-sub">• Ishvara pranidhana — Surrender</text>
+
+                                {/* Row 2: Asana (left), Pranayama (right) */}
+                                {/* Asana */}
+                                <rect x="40" y="350" width="340" height="150" className="card" />
+                                <circle cx="70" cy="380" r="18" className="badge" />
+                                <text x="64" y="386" className="badge-number">3</text>
+                                <text x="105" y="387" className="limb-title">Asana</text>
+                                <text x="105" y="413" className="limb-sub">Steady, comfortable posture;</text>
+                                <text x="105" y="435" className="limb-sub">prepares body and nerves</text>
+                                <text x="105" y="457" className="limb-sub">for long inner practice.</text>
+
+                                {/* Pranayama */}
+                                <rect x="420" y="350" width="340" height="150" className="card" />
+                                <circle cx="450" cy="380" r="18" className="badge" />
+                                <text x="444" y="386" className="badge-number">4</text>
+                                <text x="485" y="387" className="limb-title">Pranayama</text>
+                                <text x="485" y="413" className="limb-sub">Regulation of breath:</text>
+                                <text x="485" y="435" className="limb-sub">length, depth, rhythm.</text>
+                                <text x="485" y="457" className="limb-sub">Balances energy and calms</text>
+                                <text x="485" y="479" className="limb-sub">the mind.</text>
+
+                                {/* Row 3: Pratyahara (left), Dharana (right) */}
+                                {/* Pratyahara */}
+                                <rect x="40" y="530" width="340" height="150" className="card" />
+                                <circle cx="70" cy="560" r="18" className="badge" />
+                                <text x="64" y="566" className="badge-number">5</text>
+                                <text x="105" y="567" className="limb-title">Pratyahara</text>
+                                <text x="105" y="593" className="limb-sub">Withdrawal of the senses</text>
+                                <text x="105" y="615" className="limb-sub">from outer distractions.</text>
+                                <text x="105" y="637" className="limb-sub">Mind turns inward, preparing</text>
+                                <text x="105" y="659" className="limb-sub">for deep focus.</text>
+
+                                {/* Dharana */}
+                                <rect x="420" y="530" width="340" height="150" className="card" />
+                                <circle cx="450" cy="560" r="18" className="badge" />
+                                <text x="444" y="566" className="badge-number">6</text>
+                                <text x="485" y="567" className="limb-title">Dharana</text>
+                                <text x="485" y="593" className="limb-sub">One-pointed concentration on</text>
+                                <text x="485" y="615" className="limb-sub">breath, mantra, chakra, or</text>
+                                <text x="485" y="637" className="limb-sub">inner image. Mind is held</text>
+                                <text x="485" y="659" className="limb-sub">steadily in place.</text>
+
+                                {/* Row 4: Dhyana (left), Samadhi (right) */}
+                                {/* Dhyana */}
+                                <rect x="40" y="710" width="340" height="150" className="card" />
+                                <circle cx="70" cy="740" r="18" className="badge" />
+                                <text x="64" y="746" className="badge-number">7</text>
+                                <text x="105" y="747" className="limb-title">Dhyana</text>
+                                <text x="105" y="773" className="limb-sub">Meditation: continuous,</text>
+                                <text x="105" y="795" className="limb-sub">effortless flow of attention</text>
+                                <text x="105" y="817" className="limb-sub">towards the chosen object.</text>
+                                <text x="105" y="839" className="limb-sub">Less effort, more absorption.</text>
+
+                                {/* Samadhi */}
+                                <rect x="420" y="710" width="340" height="150" className="card" />
+                                <circle cx="450" cy="740" r="18" className="badge" />
+                                <text x="444" y="746" className="badge-number">8</text>
+                                <text x="485" y="747" className="limb-title">Samadhi</text>
+                                <text x="485" y="773" className="limb-sub">Deep absorption: meditator,</text>
+                                <text x="485" y="795" className="limb-sub">process, and object merge.</text>
+                                <text x="485" y="817" className="limb-sub">State of inner stillness,</text>
+                                <text x="485" y="839" className="limb-sub">clarity, and unity.</text>
+
+                                {/* Footer line */}
+                                <text x="90" y="930" className="footer">
+                                    Journey of Ashtanga Yoga: Ethics → Discipline → Body → Breath → Senses → Focus → Meditation → Absorption
+                                </text>
+                            </svg>
+                        </div>
+
+                        <p className={styles.note}>The first five limbs purify and prepare; the last three constitute actual meditation practice.</p>
+                    </div>
+
+                    <div className={styles.sutraSection}>
+                        <h4>3.1 The Five Koshas (Layers of Being)</h4>
+                        <p>The human being consists of five interconnected layers, from gross to subtle:</p>
+
+                        <div style={{ textAlign: 'center', margin: '2rem 0', padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-lg)' }}>
+                            <svg width="650" height="500" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <style>
+                                        {`.title { font: bold 28px sans-serif; fill: #333; }
+                                        .layer { font: 18px sans-serif; fill: #333; }
+                                        .circle { fill-opacity: 0.17; stroke: #333; stroke-width: 1.4; }`}
+                                    </style>
+                                </defs>
+
+                                <text x="200" y="40" className="title">The Five Koshas</text>
+
+                                <circle cx="320" cy="260" r="180" className="circle" fill="#cce6ff" />
+                                <text x="245" y="120" className="layer">1. Annamaya — Physical</text>
+
+                                <circle cx="320" cy="260" r="140" className="circle" fill="#ffd9b3" />
+                                <text x="250" y="175" className="layer">2. Pranamaya — Energy</text>
+
+                                <circle cx="320" cy="260" r="100" className="circle" fill="#e6ccff" />
+                                <text x="240" y="230" className="layer">3. Manomaya — Mind</text>
+
+                                <circle cx="320" cy="260" r="60" className="circle" fill="#ccffcc" />
+                                <text x="235" y="265" className="layer">4. Vijnanamaya — Intellect</text>
+
+                                <circle cx="320" cy="260" r="30" className="circle" fill="#ffe6e6" />
+                                <text x="270" y="310" className="layer">5. Anandamaya — Bliss</text>
+                            </svg>
+                        </div>
+
+                        <p className={styles.explanation}>Yoga works through all five koshas, starting from the physical body and moving inward toward spiritual awakening.</p>
+                    </div>
+
+                    <div className={styles.sutraSection}>
+                        <h4>3.2 The Nadi System (Subtle Energy Channels)</h4>
+                        <p>The three main nadis (energy channels) that carry prana through the subtle body:</p>
+
+                        <div style={{ textAlign: 'center', margin: '2rem 0', padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-lg)' }}>
+                            <svg width="380" height="820" xmlns="http://www.w3.org/2000/svg">
+                                <style>
+                                    {`.title { font: bold 26px sans-serif; fill: #333; }
+                                    .label { font: 16px sans-serif; fill: #333; }
+                                    .sushumna { stroke: #555; stroke-width: 4; }`}
+                                </style>
+
+                                <text x="70" y="40" className="title">Chakras + Sushumna Nadi</text>
+
+                                {/* Sushumna line */}
+                                <line x1="190" y1="80" x2="190" y2="760" className="sushumna" />
+
+                                {/* Chakras */}
+                                <circle cx="190" cy="120" r="24" fill="#a078d6" />
+                                <text x="105" y="160" className="label">Sahasrara</text>
+
+                                <circle cx="190" cy="200" r="22" fill="#6c5ce7" />
+                                <text x="135" y="235" className="label">Ajna</text>
+
+                                <circle cx="190" cy="280" r="22" fill="#0984e3" />
+                                <text x="125" y="315" className="label">Vishuddha</text>
+
+                                <circle cx="190" cy="360" r="22" fill="#00b894" />
+                                <text x="130" y="395" className="label">Anahata</text>
+
+                                <circle cx="190" cy="440" r="22" fill="#fdcb6e" />
+                                <text x="130" y="475" className="label">Manipura</text>
+
+                                <circle cx="190" cy="520" r="22" fill="#e17055" />
+                                <text x="130" y="555" className="label">Svadhisthana</text>
+
+                                <circle cx="190" cy="600" r="22" fill="#d63031" />
+                                <text x="135" y="635" className="label">Muladhara</text>
+                            </svg>
+                        </div>
+
+                        <p className={styles.explanation}><strong>Sushumna</strong> (central channel) carries kundalini energy upward. <strong>Ida</strong> (left, lunar) governs cooling and receptive energies. <strong>Pingala</strong> (right, solar) governs heating and active energies. The chakras represent energy centers along the Sushumna.</p>
+                    </div>
+
+                    <div className={styles.sutraSection}>
+                        <h4>3.3 The Seven Chakras (Energy Centers)</h4>
+                        <p>The seven main chakras are energy centers along the spine that correspond to different aspects of consciousness and physical function:</p>
+
+                        <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', margin: '2rem 0' }}>
+
+                            {/* Colored 7 Chakra Diagram */}
+                            <div style={{ textAlign: 'center', padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-lg)', flex: '1', minWidth: '280px' }}>
+                                <svg width="340" height="780" xmlns="http://www.w3.org/2000/svg">
+                                    <style>
+                                        {`.label { font: 18px sans-serif; fill: #333; }
+                                        .title { font: bold 26px sans-serif; fill: #333; }`}
+                                    </style>
+
+                                    <text x="70" y="40" className="title">7 Chakra System</text>
+
+                                    <circle cx="170" cy="120" r="26" fill="#a078d6" />
+                                    <text x="115" y="160" className="label">7. Sahasrara </text>
+
+                                    <circle cx="170" cy="210" r="26" fill="#6c5ce7" />
+                                    <text x="130" y="250" className="label">6. Ajna</text>
+
+                                    <circle cx="170" cy="300" r="26" fill="#0984e3" />
+                                    <text x="115" y="340" className="label">5. Vishuddha</text>
+
+                                    <circle cx="170" cy="390" r="26" fill="#00b894" />
+                                    <text x="125" y="430" className="label">4. Anahata</text>
+
+                                    <circle cx="170" cy="480" r="26" fill="#fdcb6e" />
+                                    <text x="125" y="520" className="label">3. Manipura</text>
+
+                                    <circle cx="170" cy="570" r="26" fill="#e17055" />
+                                    <text x="125" y="610" className="label">2. Svadhisthana</text>
+
+                                    <circle cx="170" cy="660" r="26" fill="#d63031" />
+                                    <text x="135" y="700" className="label">1. Muladhara</text>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div style={{ marginTop: '2rem' }}>
+                            <h5 style={{ marginBottom: '1rem', color: '#333' }}>Chakra Functions & Locations:</h5>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
+                                <div style={{ padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-md)' }}>
+                                    <h6 style={{ margin: '0 0 0.5rem 0', color: '#a078d6' }}>7. Sahasrara (Crown)</h6>
+                                    <p style={{ margin: 0, fontSize: '0.9rem' }}>Spiritual connection, consciousness, enlightenment</p>
+                                </div>
+                                <div style={{ padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-md)' }}>
+                                    <h6 style={{ margin: '0 0 0.5rem 0', color: '#6c5ce7' }}>6. Ajna (Third Eye)</h6>
+                                    <p style={{ margin: 0, fontSize: '0.9rem' }}>Intuition, wisdom, perception, imagination</p>
+                                </div>
+                                <div style={{ padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-md)' }}>
+                                    <h6 style={{ margin: '0 0 0.5rem 0', color: '#0984e3' }}>5. Vishuddha (Throat)</h6>
+                                    <p style={{ margin: 0, fontSize: '0.9rem' }}>Communication, self-expression, truth</p>
+                                </div>
+                                <div style={{ padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-md)' }}>
+                                    <h6 style={{ margin: '0 0 0.5rem 0', color: '#00b894' }}>4. Anahata (Heart)</h6>
+                                    <p style={{ margin: 0, fontSize: '0.9rem' }}>Love, compassion, relationships, healing</p>
+                                </div>
+                                <div style={{ padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-md)' }}>
+                                    <h6 style={{ margin: '0 0 0.5rem 0', color: '#fdcb6e' }}>3. Manipura (Solar Plexus)</h6>
+                                    <p style={{ margin: 0, fontSize: '0.9rem' }}>Personal power, confidence, digestion, metabolism</p>
+                                </div>
+                                <div style={{ padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-md)' }}>
+                                    <h6 style={{ margin: '0 0 0.5rem 0', color: '#e17055' }}>2. Svadhisthana (Sacral)</h6>
+                                    <p style={{ margin: 0, fontSize: '0.9rem' }}>Creativity, emotions, sexuality, pleasure</p>
+                                </div>
+                                <div style={{ padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: 'var(--radius-md)' }}>
+                                    <h6 style={{ margin: '0 0 0.5rem 0', color: '#d63031' }}>1. Muladhara (Root)</h6>
+                                    <p style={{ margin: 0, fontSize: '0.9rem' }}>Grounding, stability, survival, security</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.sutraSection}>
+                        <h4>7. How the Mind Transforms</h4>
+                        <p>Through two essential practices:</p>
+                        <ul className={styles.transformList}>
+                            <li><strong>Abhyasa</strong> (practice) - consistent, dedicated effort</li>
+                            <li><strong>Vairagya</strong> (detachment) - letting go of attachment to results</li>
+                        </ul>
+                        <p className={styles.explanation}>Both together purify consciousness and reveal our true nature. Practice without detachment leads to ego; detachment without practice leads to laziness.</p>
+                    </div>
+
+                    <div className={styles.sutraSection}>
+                        <h4>8. Obstacles & Solutions</h4>
+                        <div className={styles.obstaclesGrid}>
+                            <div className={styles.obstacle}>
+                                <h5>Obstacles:</h5>
+                                <ul>
+                                    <li>Disease (vyadhi)</li>
+                                    <li>Doubt (vicikitsa)</li>
+                                    <li>Procrastination (styana)</li>
+                                    <li>Instability (auddhatya)</li>
+                                </ul>
+                            </div>
+                            <div className={styles.solution}>
+                                <h5>Solutions:</h5>
+                                <ul>
+                                    <li>Breath control (pranayama)</li>
+                                    <li>Cultivate opposite thoughts</li>
+                                    <li>Devotion (bhakti)</li>
+                                    <li>Steady lifestyle (consistent practice)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.sutraSection}>
+                        <h4>9. Goal of Patanjali's Yoga</h4>
+                        <p>The ultimate aim is liberation (kaivalya):</p>
+                        <ul className={styles.goalList}>
+                            <li><strong>Freedom from suffering</strong> - cessation of mental fluctuations</li>
+                            <li><strong>Realization of true Self</strong> - seeing beyond ego and mind</li>
+                            <li><strong>Stability and clarity</strong> - unwavering peace of mind</li>
+                            <li><strong>Bliss and liberation</strong> - union with pure consciousness</li>
+                        </ul>
+                        <p className={styles.note}>This is not about supernatural powers or physical perfection — it's about fundamental freedom from mental suffering.</p>
                     </div>
                 </div>
 
-                <section className={styles.resources}>
-                    <h3 className={styles.resourcesTitle}>📖 Additional Resources</h3>
+                <div className={styles.keyInsights}>
+                    <h3 className={styles.insightsTitle}>🔑 Key Insights from Patanjali</h3>
+                    <div className={styles.insightsGrid}>
+                        <div className={styles.insight}>
+                            <h4>Mind is the Problem & Solution</h4>
+                            <p>Yoga begins and ends with understanding the mind. Physical practices are tools to prepare for mental purification.</p>
+                        </div>
+
+                        <div className={styles.insight}>
+                            <h4>Practice + Detachment = Freedom</h4>
+                            <p>Dedicated practice without attachment to results leads to genuine transformation.</p>
+                        </div>
+
+                        <div className={styles.insight}>
+                            <h4>All Suffering is Optional</h4>
+                            <p>Mental fluctuations create suffering. Controlling them brings peace that cannot be disturbed.</p>
+                        </div>
+
+                        <div className={styles.insight}>
+                            <h4>Yoga is a Science</h4>
+                            <p>Patanjali presents yoga as a systematic methodology, not mysticism or religion.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.resources}>
+                    <h3 className={styles.resourcesTitle}>📚 Study Resources</h3>
                     <div className={styles.resourcesGrid}>
                         <div className={styles.resourceCard}>
-                            <h4>Meditation (Dhyāna)</h4>
-                            <p>Practical guidance on meditation, the 7th limb of Patanjali's yoga.</p>
-                            <Link href="/knowledge-base/meditation" className={styles.resourceLink}>
-                                Learn Meditation →
-                            </Link>
-                        </div>
-
-                        <div className={styles.resourceCard}>
-                            <h4>Historical References</h4>
-                            <p>Timeline of yoga history including Patanjali's classical era.</p>
-                            <Link href="/knowledge-base/historical-references" className={styles.resourceLink}>
-                                View History →
-                            </Link>
-                        </div>
-
-                        <div className={styles.resourceCard}>
                             <h4>Essential Yoga Books</h4>
-                            <p>Recommended texts for studying Patanjali's Yoga Sutras in depth.</p>
+                            <p>Complete guide to yoga texts including detailed Sutras commentaries.</p>
                             <Link href="/knowledge-base/yoga-books" className={styles.resourceLink}>
                                 Browse Books →
                             </Link>
@@ -244,20 +573,36 @@ export default function PatanjaliSutras() {
 
                         <div className={styles.resourceCard}>
                             <h4>Learning Paths</h4>
-                            <p>Structured study paths incorporating philosophical foundations.</p>
+                            <p>Structured reading roadmap from beginner to expert level.</p>
                             <Link href="/knowledge-base/learning-paths" className={styles.resourceLink}>
                                 View Paths →
                             </Link>
                         </div>
+
+                        <div className={styles.resourceCard}>
+                            <h4>Practice Curriculum</h4>
+                            <p>8-week to 1-year structured practice plan.</p>
+                            <Link href="/knowledge-base/curriculum" className={styles.resourceLink}>
+                                View Curriculum →
+                            </Link>
+                        </div>
+
+                        <div className={styles.resourceCard}>
+                            <h4>Saatvic Literature</h4>
+                            <p>AI tools and curated spiritual texts for deeper study.</p>
+                            <Link href="/saatvic-literature" className={styles.resourceLink}>
+                                Explore Literature →
+                            </Link>
+                        </div>
                     </div>
-                </section>
+                </div>
 
                 <div className={styles.navigation}>
                     <Link href="/knowledge-base" className={styles.backLink}>
                         ← Back to Knowledge base
                     </Link>
-                    <Link href="/knowledge-base/meditation" className={styles.relatedLink}>
-                        Next: Meditation →
+                    <Link href="/knowledge-base/yoga-books" className={styles.relatedLink}>
+                        Browse Essential Books →
                     </Link>
                 </div>
             </div>
@@ -266,4 +611,3 @@ export default function PatanjaliSutras() {
         </main>
     );
 }
-

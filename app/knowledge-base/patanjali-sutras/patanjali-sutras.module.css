@@ -293,11 +293,11 @@
 }
 
 .resources {
-  background: linear-gradient(135deg, #f8f9ff 0%, #e8f4f8 100%);
+  background: linear-gradient(135deg, #fff8e1 0%, #fff3c4 100%);
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e3f2fd;
+  border: 1px solid #ffe082;
   margin-bottom: 40px;
 }
 
@@ -396,5 +396,41 @@
 
   .sutraSection {
     padding: 15px;
+  }
+
+  .obstaclesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .insightsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .resourcesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .backLink,
+  .relatedLink {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* SVG responsiveness */
+@media (max-width: 768px) {
+  .yogaMapContainer {
+    padding: 1rem !important;
+  }
+
+  .yogaMapContainer svg {
+    max-width: 100%;
+    height: auto;
+    min-width: 800px; /* Ensure minimum width to show all content */
   }
 }
