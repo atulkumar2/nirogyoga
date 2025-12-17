@@ -1,7 +1,3 @@
-:root {
-  --primary-color: #0b5fff;
-}
-
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -26,8 +22,74 @@
   margin: 0;
 }
 
+/* Table of contents */
+.toc {
+  background: #ffffff;
+  border: 1px solid #eef6ff;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin: 18px 0 20px;
+}
+
+.tocTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0 0 8px 0;
+}
+
+.tocList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tocList li {
+  margin-right: 8px;
+}
+
+.tocLink {
+  color: #0b5fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+.tocLink:hover {
+  background: #f1f7ff;
+  border-color: #ddefff;
+}
+
 .article {
   margin-top: 1.5rem;
+}
+
+/* References styling */
+.references {
+  margin-top: 18px;
+  padding-top: 10px;
+}
+.referencesTitle {
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+.referencesList {
+  list-style: disc;
+  margin-left: 1.2rem;
+  color: #374151;
+}
+.referencesList a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.referencesList a:hover {
+  text-decoration: underline;
 }
 
 /* Make each section stand out as a card */

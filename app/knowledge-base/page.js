@@ -33,7 +33,7 @@ export default function KnowledgeBase() {
                             <li><a href="/knowledge-base/meditation" className={styles.link}>Meditation (Dhyāna)</a></li>
                             <li><a href="/knowledge-base/learning-paths" className={styles.link}>Yoga Learning Paths</a></li>
                             <li><a href="/knowledge-base/yoga-books" className={styles.link}>Essential Yoga Books</a></li>
-                            <li><a href="/knowledge-base/yoga-terms" className={styles.link}>Yoga — Basic Terms & Meanings</a></li>
+                            <li><a href="/knowledge-base/yoga-terms" className={styles.link}>Basic Terms & Meanings</a></li>
                             <li><a href="/saatvic-literature" className={styles.link}>Saatvic Literature</a></li>
                         </ul>
                     </section>
