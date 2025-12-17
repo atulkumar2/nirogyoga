@@ -32,6 +32,7 @@ const PAGES_TO_TEST = [
     '/knowledge-base/yoga-books',
     '/knowledge-base/curriculum',
     '/knowledge-base/safety-guidelines',
+    '/knowledge-base/yoga-terms',
     '/yoga-healing',
     '/yoga-healing/ptsd',
     '/yoga-healing/anxiety-depression',
@@ -100,6 +101,7 @@ const EXPECTED_LINKS = {
         '/knowledge-base/yoga-books',
         '/knowledge-base/curriculum',
         '/knowledge-base/safety-guidelines',
+        '/knowledge-base/yoga-terms',
     ],
 };
 
@@ -224,7 +226,8 @@ describe('Internal Link Checker', () => {
                     try {
                         expect(href).toMatch(/^\/enrollment-payment(?:$|#)/i);
                     } catch (err) {
-                        console.error(`Link check failed for "${link}" on page "${page}":`, e.message);
+                        // Log helpful diagnostics and rethrow a clear error
+                        console.error(`Found enroll anchor on page "${page}" with href "${href}":`, err.message);
                         throw new Error(`Found enroll anchor on page "${page}" with href "${href}"`);
                     }
                 });

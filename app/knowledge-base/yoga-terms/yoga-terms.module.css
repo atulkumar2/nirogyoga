@@ -1,0 +1,146 @@
+:root {
+  --primary-color: #0b5fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: #666;
+  margin: 0;
+}
+
+.article {
+  margin-top: 1.5rem;
+}
+
+/* Make each section stand out as a card */
+.article section {
+  margin-bottom: 28px;
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eef3f7;
+}
+
+.sectionTitle {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f5f9;
+  font-family: "Playfair Display", serif;
+}
+
+.intro,
+.outro {
+  color: #374151;
+}
+
+/* Resources block */
+.resources {
+  background: linear-gradient(135deg, #f8f9ff 0%, #eef7fb 100%);
+  padding: 26px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e3f2fd;
+  margin-bottom: 30px;
+}
+
+.resourcesTitle {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.resourcesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.resourceCard {
+  background: white;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e6eef6;
+  text-align: left;
+}
+
+.resourceCard h4 {
+  font-size: 1.05rem;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+.resourceCard p {
+  color: #556;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.resourceLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.resourceLink:hover {
+  text-decoration: underline;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  padding: 16px 0 0;
+  border-top: 1px solid #eee;
+}
+
+.backLink,
+.relatedLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color);
+}
+
+.backLink:hover,
+.relatedLink:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .article section {
+    padding: 18px;
+  }
+}
