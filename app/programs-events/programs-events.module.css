@@ -304,7 +304,7 @@
 
 .cardHeader {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   padding-bottom: 15px;
   border-bottom: 1px solid #f0f0f0;
 }
@@ -327,13 +327,13 @@
 }
 
 .details {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .detailItem {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #666;
   font-size: 0.95rem;
 }

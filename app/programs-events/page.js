@@ -125,11 +125,11 @@ export default function ProgramsEvents() {
                                 </tr>
                                 <tr>
                                     <td>6 Months</td>
-                                    <td className={styles.price}>₹13,000</td>
+                                    <td className={styles.price}>₹13,500</td>
                                 </tr>
                                 <tr>
                                     <td>12 Months</td>
-                                    <td className={styles.price}>₹24,000</td>
+                                    <td className={styles.price}>₹26,000</td>
                                 </tr>
                             </tbody>
                         </table>

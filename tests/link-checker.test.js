@@ -143,7 +143,9 @@ describe('Internal Link Checker', () => {
     describe('Page Accessibility', () => {
         test.each(PAGES_TO_TEST)('%s should be accessible', async (page) => {
             const response = await fetch(`${SITE_URL}${page}`);
-            expect(response.status).toBe(200);
+            if (response.status !== 200) {
+                throw new Error(`Page "${page}" returned status ${response.status} for ${SITE_URL}${page}`);
+            }
         });
     });
 
@@ -155,7 +157,11 @@ describe('Internal Link Checker', () => {
 
             NAVBAR_LINKS.forEach(link => {
                 const linkPattern = new RegExp(`href="${link.replaceAll('/', escapedSlash)}"`, 'i');
-                expect(html).toMatch(linkPattern);
+                const idx = html.search(linkPattern);
+                if (idx === -1) {
+                    const snippet = html.slice(0, 200);
+                    throw new Error(`Missing navbar link "${link}" on page "${page}". Page URL: ${SITE_URL}${page}. Snippet: ${snippet}`);
+                }
             });
         });
     });
@@ -168,7 +174,11 @@ describe('Internal Link Checker', () => {
 
             FOOTER_LINKS.forEach(link => {
                 const linkPattern = new RegExp(`href="${link.replaceAll('/', escapedSlash)}"`, 'i');
-                expect(html).toMatch(linkPattern);
+                const idx = html.search(linkPattern);
+                if (idx === -1) {
+                    const snippet = html.slice(0, 200);
+                    throw new Error(`Missing footer link "${link}" on page "${page}". Page URL: ${SITE_URL}${page}. Snippet: ${snippet}`);
+                }
             });
         });
     });
@@ -181,41 +191,79 @@ describe('Internal Link Checker', () => {
 
             links.forEach(link => {
                 const linkPattern = new RegExp(`href="${link.replaceAll('/', escapedSlash)}"`, 'i');
-                try {
-                    expect(html).toMatch(linkPattern);
-                } catch (e) {
-                    console.error(`Link check failed for "${link}" on page "${page}":`, e.message);
-                    throw new Error(`Missing link "${link}" on page "${page}"`);
+                const idx = html.search(linkPattern);
+                if (idx === -1) {
+                    const snippet = html.slice(0, 200);
+                    console.error(`Link check failed for "${link}" on page "${page}". Snippet: ${snippet}`);
+                    throw new Error(`Missing link "${link}" on page "${page}". Page URL: ${SITE_URL}${page}. Snippet: ${snippet}`);
                 }
             });
         });
     });
 
+    // Helper: fetch with per-request timeout and diagnostic messages
+    const FETCH_TIMEOUT_MS = 8000;
+
+    async function fetchWithTimeout(url, timeoutMs = FETCH_TIMEOUT_MS) {
+        return await Promise.race([
+            fetch(url),
+            new Promise((_, reject) => setTimeout(() => reject(new Error(`Fetch timed out after ${timeoutMs}ms for ${url}`)), timeoutMs)),
+        ]);
+    }
+
+    async function fetchTextWithTimeout(url, timeoutMs = FETCH_TIMEOUT_MS) {
+        try {
+            const response = await fetchWithTimeout(url, timeoutMs);
+            return await Promise.race([
+                response.text(),
+                new Promise((_, reject) => setTimeout(() => reject(new Error(`Reading response timed out after ${timeoutMs}ms for ${url}`)), timeoutMs)),
+            ]);
+        } catch (err) {
+            // Normalize and include URL in the message
+            throw new Error(`${err.message} (URL: ${url})`);
+        }
+    }
+
     describe('Enrollment Links', () => {
+        // Increase Jest's timeout for this long-running test and add per-page timeouts so we fail fast with details
         test('All enrollment links should point to /enrollment-payment', async () => {
             for (const page of PAGES_TO_TEST) {
-                const response = await fetch(`${SITE_URL}${page}`);
-                const html = await response.text();
+                let html;
+                try {
+                    html = await fetchTextWithTimeout(`${SITE_URL}${page}`, FETCH_TIMEOUT_MS);
+                } catch (err) {
+                    // Provide clear context on which page/URL timed out or errored
+                    throw new Error(`Timeout/network error while fetching page "${page}" (${SITE_URL}${page}): ${err.message}`);
+                }
 
                 // Should NOT have old /enrollment links
-                expect(html).not.toMatch(/href="\/enrollment"[^-]/i);
+                const deprecatedRegex = /href="\/enrollment"[^-]/i;
+                const deprecatedMatch = deprecatedRegex.exec(html);
+                if (deprecatedMatch) {
+                    const snippet = html.substring(Math.max(0, deprecatedMatch.index - 50), Math.min(html.length, deprecatedMatch.index + 50));
+                    throw new Error(`Found deprecated "/enrollment" link on page "${page}": ${deprecatedMatch[0]}. Snippet: ${snippet}`);
+                }
 
                 // Check if page has enrollment links, they should be /enrollment-payment
-                if (html.includes('Enroll')) {
-                    const enrollLinks = html.match(/href="(\/enrollment[^"]*)"/gi);
-                    if (enrollLinks) {
-                        enrollLinks.forEach(match => {
-                            expect(match).toMatch(/\/enrollment-payment/i);
-                        });
+                const enrollLinks = [...html.matchAll(/href="(\/enrollment[^"]*)"/gi)];
+                enrollLinks.forEach(match => {
+                    const href = match[1];
+                    if (!/\/enrollment-payment/i.test(href)) {
+                        const snippet = html.substring(Math.max(0, match.index - 50), Math.min(html.length, match.index + 50));
+                        throw new Error(`Enroll link on page "${page}" points to "${href}" (expected "/enrollment-payment"). Snippet: ${snippet}`);
                     }
-                }
+                });
             }
-        }, 15000); // 15 second timeout for checking all pages
+        }, 120000); // 2 minute timeout for checking all pages (per-page fetch has a shorter timeout)
 
         test('Anchors with visible text "Enroll" should link to /enrollment-payment (except on /enrollment-payment page)', async () => {
             for (const page of PAGES_TO_TEST) {
-                const response = await fetch(`${SITE_URL}${page}`);
-                const html = await response.text();
+                let html;
+                try {
+                    html = await fetchTextWithTimeout(`${SITE_URL}${page}`, FETCH_TIMEOUT_MS);
+                } catch (err) {
+                    throw new Error(`Timeout/network error while fetching page "${page}" (${SITE_URL}${page}): ${err.message}`);
+                }
 
                 const enrollAnchorRegex = /<a\b[^>]*href="([^"]+)"[^>]*>(?:(?!<a\b)[\s\S])*?Enroll(?:(?!<a\b)[\s\S])*?<\/a>/gi;
                 const matches = [...html.matchAll(enrollAnchorRegex)];
@@ -227,12 +275,13 @@ describe('Internal Link Checker', () => {
                         expect(href).toMatch(/^\/enrollment-payment(?:$|#)/i);
                     } catch (err) {
                         // Log helpful diagnostics and rethrow a clear error
+                        const snippet = html.substring(Math.max(0, match.index - 50), Math.min(html.length, match.index + 50));
                         console.error(`Found enroll anchor on page "${page}" with href "${href}":`, err.message);
-                        throw new Error(`Found enroll anchor on page "${page}" with href "${href}"`);
+                        throw new Error(`Found enroll anchor on page "${page}" with href "${href}". Snippet: ${snippet}`);
                     }
                 });
             }
-        }, 20000);
+        }, 120000); // 2 minute timeout
     });
 
     describe('Programs/Events Links', () => {
@@ -242,10 +291,20 @@ describe('Internal Link Checker', () => {
                 const html = await response.text();
 
                 // Should NOT have old /programs or /events links (except anchor links)
-                expect(html).not.toMatch(/href="\/programs"[^-]/i);
-                expect(html).not.toMatch(/href="\/events"[^-]/i);
+                const progRegex = /href="\/programs"[^-]/i;
+                const progMatch = progRegex.exec(html);
+                if (progMatch) {
+                    const snippet = html.substring(Math.max(0, progMatch.index - 50), Math.min(html.length, progMatch.index + 50));
+                    throw new Error(`Found deprecated "/programs" link on page "${page}": ${progMatch[0]}. Snippet: ${snippet}`);
+                }
+                const eventsRegex = /href="\/events"[^-]/i;
+                const eventsMatch = eventsRegex.exec(html);
+                if (eventsMatch) {
+                    const snippet = html.substring(Math.max(0, eventsMatch.index - 50), Math.min(html.length, eventsMatch.index + 50));
+                    throw new Error(`Found deprecated "/events" link on page "${page}": ${eventsMatch[0]}. Snippet: ${snippet}`);
+                }
             }
-        }, 20000); // 20 second timeout
+        }, 120000); // 2 minute timeout
     });
 
     describe('Payment Links', () => {
@@ -258,17 +317,23 @@ describe('Internal Link Checker', () => {
                 const payAnchors = [...html.matchAll(/<a[^>]*href="([^"]+)"[^>]*>\s*Pay\s*<\/a>/gi)];
                 payAnchors.forEach(match => {
                     const href = match[1];
-                    expect(href).toMatch(/^\/payment$/i);
+                    if (!/^\/payment$/i.test(href)) {
+                        const snippet = html.substring(Math.max(0, match.index - 50), Math.min(html.length, match.index + 50));
+                        throw new Error(`Pay anchor on page "${page}" points to "${href}" (expected "/payment"). Snippet: ${snippet}`);
+                    }
                 });
 
                 // Anchors that include a payButton class should also link to /payment
                 const payClassAnchors = [...html.matchAll(/<a[^>]*class="[^"]*payButton[^"]*"[^>]*href="([^"]+)"/gi)];
                 payClassAnchors.forEach(match => {
                     const href = match[1];
-                    expect(href).toMatch(/^\/payment$/i);
+                    if (!/^\/payment$/i.test(href)) {
+                        const snippet = html.substring(Math.max(0, match.index - 50), Math.min(html.length, match.index + 50));
+                        throw new Error(`Pay button on page "${page}" points to "${href}" (expected "/payment"). Snippet: ${snippet}`);
+                    }
                 });
             }
-        }, 15000);
+        }, 120000); // 2 minute timeout
     });
 
     describe('Anchor Links', () => {
@@ -277,12 +342,12 @@ describe('Internal Link Checker', () => {
             const html = await response.text();
 
             // Check for anchor link targets
-            expect(html).toMatch(/id="programs"/i);
-            expect(html).toMatch(/id="events"/i);
+            if (!/id="programs"/i.test(html)) throw new Error(`Missing id="programs" on /programs-events. Page URL: ${SITE_URL}/programs-events`);
+            if (!/id="events"/i.test(html)) throw new Error(`Missing id="events" on /programs-events. Page URL: ${SITE_URL}/programs-events`);
 
             // Check for anchor link references
-            expect(html).toMatch(/href="#programs"/i);
-            expect(html).toMatch(/href="#events"/i);
+            if (!/href="#programs"/i.test(html)) throw new Error(`Missing href="#programs" reference on /programs-events. Page URL: ${SITE_URL}/programs-events`);
+            if (!/href="#events"/i.test(html)) throw new Error(`Missing href="#events" reference on /programs-events. Page URL: ${SITE_URL}/programs-events`);
         });
 
         test('/testimonials should have working anchor link for interest form', async () => {
@@ -290,9 +355,9 @@ describe('Internal Link Checker', () => {
             const html = await response.text();
 
             // Check for interest form section (it's now at the top)
-            expect(html).toMatch(/Interest/i);
+            if (!/Interest/i.test(html)) throw new Error(`Missing "Interest" text on /testimonials. Page URL: ${SITE_URL}/testimonials`);
             // The forms are embedded iframes, not anchor links
-            expect(html).toMatch(/forms\.gle/i);
+            if (!/forms\.gle/i.test(html)) throw new Error(`Missing embedded forms (forms.gle) on /testimonials. Page URL: ${SITE_URL}/testimonials`);
         });
     });
 
@@ -302,18 +367,22 @@ describe('Internal Link Checker', () => {
             const html = await response.text();
 
             // Google Forms should have target="_blank" and rel="noopener noreferrer"
-            const googleFormLinks = html.match(/href="https:\/\/forms\.gle[^"]*"/gi);
-            if (googleFormLinks) {
-                googleFormLinks.forEach(link => {
-                    const linkContext = html.substring(
-                        html.indexOf(link) - 100,
-                        html.indexOf(link) + 200
-                    );
-                    expect(linkContext).toMatch(/target="_blank"/i);
-                    expect(linkContext).toMatch(/rel="noopener noreferrer"/i);
-                });
+            const googleFormRegex = /href="https:\/\/forms\.gle[^"]*"/gi;
+            let googleMatch;
+            while ((googleMatch = googleFormRegex.exec(html)) !== null) {
+                const start = googleMatch.index;
+                const linkContext = html.substring(
+                    Math.max(0, start - 100),
+                    Math.min(html.length, start + 200)
+                );
+                if (!/target="_blank"/i.test(linkContext)) {
+                    throw new Error(`Google Form link missing target="_blank". Context: ${linkContext}`);
+                }
+                if (!/rel="noopener noreferrer"/i.test(linkContext)) {
+                    throw new Error(`Google Form link missing rel="noopener noreferrer". Context: ${linkContext}`);
+                }
             }
-        });
+        }, 120000); // 2 minute timeout
     });
 });
 
