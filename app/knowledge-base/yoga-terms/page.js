@@ -72,7 +72,7 @@ export default function YogaTermsPage() {
                         <p><strong>Meaning:</strong> Regulation or expansion of life force<br /><strong>Components:</strong> <em>Prana</em> (life energy) + <em>Ayama</em> (control or expansion)</p>
                         <p>Pranayama consists of <strong>breathing techniques</strong> that influence the nervous system, metabolism, and mental state. Proper practice enhances vitality and inner balance.</p>
                         <p><strong>Common techniques:</strong><br />- Anulom Vilom<br />- Kapalabhati<br />- Bhramari<br />- Nadi Shodhana</p>
-                        <p><strong>Reference:</strong><br />- Hatha Yoga Pradipika, Chapter 2<br />- <a href="https://www.biharyoga.net" target="_blank" rel="noopener noreferrer">biharyoga.net</a></p>
+                        <p><strong>Reference:</strong><br />- Hatha Yoga Pradipika, Chapter 2<br />- <a href="https://www.satyamyogaprasad.net" target="_blank" rel="noopener noreferrer">biharyoga.net</a></p>
                     </section>
 
                     <hr />
@@ -161,7 +161,7 @@ export default function YogaTermsPage() {
                         <p><strong>Meaning:</strong> Energy lock</p>
                         <p>Bandhas are internal muscular locks used during pranayama and meditation to control the movement of prana.</p>
                         <p><strong>Major Bandhas:</strong><br />- Mula Bandha<br />- Uddiyana Bandha<br />- Jalandhara Bandha</p>
-                        <p><strong>Reference:</strong><br />- Hatha Yoga Pradipika<br />- <a href="https://www.biharyoga.net" target="_blank" rel="noopener noreferrer">biharyoga.net</a></p>
+                        <p><strong>Reference:</strong><br />- Hatha Yoga Pradipika<br />- <a href="https://www.satyamyogaprasad.net" target="_blank" rel="noopener noreferrer">biharyoga.net</a></p>
                     </section>
 
                     <hr />

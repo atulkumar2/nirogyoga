@@ -24,6 +24,7 @@ const PAGES_TO_TEST = [
     '/knowledge-base/breathing-techniques',
     '/knowledge-base/pranayama',
     '/knowledge-base/major-asanas',
+    '/knowledge-base/shirshashana',
     '/knowledge-base/standing-asanas',
     '/knowledge-base/surya-namaskara',
     '/knowledge-base/meditation',

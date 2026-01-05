@@ -10,7 +10,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:links": "jest tests/link-checker.test.js"
+    "test:links": "jest tests/link-checker.test.js",
+    "test:external": "jest tests/external-link-checker.test.js"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",

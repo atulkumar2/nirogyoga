@@ -47,7 +47,7 @@ export default function Resources() {
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.biharyoga.net/" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
+                            <a href="https://www.satyamyogaprasad.net/" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
                                 <span className={styles.linkTitle}>Bihar School of Yoga</span>
                                 <span className={styles.linkDesc}>A modern school of yoga founded by Swami Satyananda Saraswati, integrating traditional wisdom.</span>
                             </a>
