@@ -36,12 +36,7 @@
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-light: #1a2f38; /* Switch for dark mode preference if needed, but we might enforce a theme */
-    /* For now, let's stick to a light-themed wellness vibe as default, but support dark mode variables */
-  }
-}
+
 
 * {
   box-sizing: border-box;
