@@ -179,8 +179,8 @@ export default function Shirshashana() {
                 </a>
               </li>
               <li>
-                <a href="https://www.yogajournal.com/poses/types/inversions/supported-Head stand/" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
-                  📄 <strong>Supported Head stand (Salamba Sirsasana)</strong> - <em>Yoga Journal</em>
+                <a href="https://www.yogajournal.com/poses/types/inversions/supported-headstand/" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
+                  📄 <strong>Supported Headstand (Salamba Sirsasana)</strong> - <em>Yoga Journal</em>
                 </a>
               </li>
             </ul>

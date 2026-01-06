@@ -21,6 +21,8 @@ const PAGES_TO_TEST = [
     '/knowledge-base',
     '/knowledge-base/major-asanas',
     '/knowledge-base/shirshashana',
+    '/knowledge-base/sarvangasana',
+    '/knowledge-base/halasana',
     '/knowledge-base/standing-asanas',
     '/knowledge-base/surya-namaskara',
     '/yoga-healing',
