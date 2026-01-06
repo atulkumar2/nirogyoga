@@ -127,7 +127,7 @@ export default function SafetyGuidelines() {
               <span className={styles.ruleNumber}>8</span> Never Force Inversions or Backbends
             </h2>
             <ul className={styles.list}>
-              <li>Headstand, shoulder stand, deep backbends need supervision.</li>
+              <li>Head stand, shoulder stand, deep backbends need supervision.</li>
               <li>Avoid if you have neck issues, glaucoma, or high BP.</li>
             </ul>
           </div>

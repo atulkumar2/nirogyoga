@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 import styles from "./shirshashana.module.css";
 
 export const metadata = {
-  title: "Shirshashana (Headstand) | Nirog Yoga",
+  title: "Shirshashana (Head stand) | Nirog Yoga",
   description:
-    "Master the King of Asanas: clear steps, benefits, contraindications, and variations for Shirshashana (Headstand).",
+    "Master the King of Asanas: clear steps, benefits, contraindications, and variations for Shirshashana (Head stand).",
 };
 
 export default function Shirshashana() {
@@ -20,7 +20,7 @@ export default function Shirshashana() {
         <header className={styles.header}>
           <h1 className={styles.title}>Śīrṣāsana (Shirshashana)</h1>
           <p className={styles.subtitle}>
-            Known as the "King of Asanas," the Headstand is a powerful inversion
+            Known as the "King of Asanas," the Head stand is a powerful inversion
             that revitalizes the entire body and mind.
           </p>
         </header>
@@ -28,7 +28,7 @@ export default function Shirshashana() {
         <div className={styles.imageContainer}>
           <Image
             src="/shirshashana-pose.png" // Updated image path
-            alt="Practitioner performing Shirshashana (Headstand) with perfect alignment"
+            alt="Practitioner performing Shirshashana (Head stand) with perfect alignment"
             width={800}
             height={500}
             style={{
@@ -46,7 +46,7 @@ export default function Shirshashana() {
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Introduction</h2>
             <p className={styles.description}>
-              Śīrṣāsana (Headstand) is one of the most revered postures in Hatha
+              Śīrṣāsana (Head stand) is one of the most revered postures in Hatha
               Yoga. The name comes from the Sanskrit words <em>śīrṣa</em>{" "}
               meaning "head" and <em>āsana</em> meaning "posture". It requires
               balance, core strength, and focus. By reversing gravity's effect
@@ -165,7 +165,7 @@ export default function Shirshashana() {
             <ul className={styles.resourceList}>
               <li>
                 <a href="https://www.youtube.com/watch?v=MwBpxrM2U_M" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
-                  🎥 <strong>Headstand for Beginners | Shirshasana | 6 steps to achieve Headstand</strong> - <em>Youtube, Hindi</em>
+                  🎥 <strong>Head stand for Beginners | Shirshasana | 6 steps to achieve Head stand</strong> - <em>Youtube, Hindi</em>
                 </a>
               </li>
               <li>
@@ -179,11 +179,24 @@ export default function Shirshashana() {
                 </a>
               </li>
               <li>
-                <a href="https://www.yogajournal.com/poses/types/inversions/supported-headstand/" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
-                  📄 <strong>Supported Headstand (Salamba Sirsasana)</strong> - <em>Yoga Journal</em>
+                <a href="https://www.yogajournal.com/poses/types/inversions/supported-Head stand/" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
+                  📄 <strong>Supported Head stand (Salamba Sirsasana)</strong> - <em>Yoga Journal</em>
                 </a>
               </li>
             </ul>
+          </section>
+
+          {/* Related Inversions */}
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Related Inversions</h2>
+             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                 <Link href="/knowledge-base/sarvangasana" className={styles.backLink}>
+                    Sarvāṅgāsana (Shoulder stand)
+                </Link>
+                <Link href="/knowledge-base/halasana" className={styles.backLink}>
+                    Halāsana (Plow Pose)
+                </Link>
+            </div>
           </section>
         </div>
 

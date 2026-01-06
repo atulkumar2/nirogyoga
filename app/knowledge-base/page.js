@@ -52,7 +52,7 @@ export default function KnowledgeBase() {
                             <li><a href="/knowledge-base/pranayama" className={styles.link}>Pranayama (Breath Regulation)</a></li>
                             <li><a href="/knowledge-base/breathing-techniques" className={styles.link}>Breathing Control Techniques</a></li>
                             <li><a href="/knowledge-base/curriculum" className={styles.link}>Practice Curriculum (8 Weeks → 1 Year)</a></li>
-                            <li><a href="/knowledge-base/shirshashana" className={styles.link}>Śīrṣāsana (Headstand) - <strong>New!</strong></a></li>
+                            <li><a href="/knowledge-base/shirshashana" className={styles.link}>Śīrṣāsana (Head stand) - <strong>New!</strong></a></li>
                         </ul>
                     </section>
                 </div>
