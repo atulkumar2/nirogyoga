@@ -1,100 +1,194 @@
 .container {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
 }
-.header {
-  margin-bottom: 2rem;
+
+.heroSection {
+  background: linear-gradient(135deg, #2c5f2d 0%, #1a2f38 100%);
+  padding: 6rem 1rem 8rem;
+  margin-bottom: -4rem;
   text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
+
+.heroSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at top right,
+      rgba(151, 188, 98, 0.2),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(212, 163, 115, 0.2),
+      transparent 40%
+    );
+  pointer-events: none;
+}
+
+.header {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
 .title {
-  font-size: 2.5rem;
-  margin: 0 0 0.5rem 0;
-  color: #2d5016;
+  font-size: 3.5rem;
+  margin: 0 0 1rem 0;
+  color: #fff;
   font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
+
 .subtitle {
   margin: 0;
-  color: #666;
-  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 .cardsContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
   margin-top: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .card {
-  background: #f5f5f0;
-  border: 2px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s, box-shadow 0.2s;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--primary-light);
 }
 
 .cardTitle {
-  font-size: 1.5rem;
-  margin: 0 0 0.5rem 0;
-  color: #2d5016;
-  font-weight: 600;
+  font-size: 1.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--primary-color);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cardTitle::before {
+  content: "✦";
+  color: var(--secondary-color);
+  font-size: 1.25rem;
 }
 
 .cardDescription {
-  color: #666;
-  font-style: italic;
-  margin: 0 0 1.5rem 0;
+  color: #4a5568;
+  margin: 0 0 2rem 0;
   line-height: 1.6;
+  font-size: 1.05rem;
 }
 
 .linkList {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
 }
 
-.linkList li {
-  margin: 0.75rem 0;
+.linkItem {
+  transition: transform 0.2s ease;
+}
+
+.linkItem:hover {
+  transform: translateX(4px);
 }
 
 .link {
-  color: #2d5016;
+  color: #2d3748;
   text-decoration: none;
-  padding-left: 1rem;
-  position: relative;
-  display: block;
-  transition: color 0.2s;
-}
-
-.link:before {
-  content: "▸";
-  position: absolute;
-  left: 0;
-  color: #8b9e5d;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+  background: rgba(244, 241, 222, 0.4);
+  border: 1px solid transparent;
 }
 
 .link:hover {
-  color: #1a3009;
-  text-decoration: underline;
+  background: white;
+  color: var(--primary-color);
+  border-color: rgba(44, 95, 45, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.link::after {
+  content: "→";
+  margin-left: auto;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.link:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.newBadge {
+  background: var(--accent-color);
+  color: var(--primary-dark);
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+  box-shadow: 0 2px 4px rgba(233, 196, 106, 0.3);
 }
 
 @media (max-width: 768px) {
-  .cardsContainer {
-    grid-template-columns: 1fr;
+  .heroSection {
+    padding: 4rem 1rem 6rem;
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
-  .cardTitle {
-    font-size: 1.25rem;
+  .cardsContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.75rem;
   }
 }
