@@ -2,12 +2,33 @@
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './testimonials.module.css';
 
 
 export default function Testimonials() {
     const [activeForm, setActiveForm] = useState('interest');
+
+    useEffect(() => {
+        // Function to handle hash changes
+        const handleHashChange = () => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash && ['interest', 'review', 'feedback'].includes(hash)) {
+                setActiveForm(hash);
+            }
+        };
+
+        // Check initial hash on mount
+        handleHashChange();
+
+        // Listen for hash changes
+        window.addEventListener('hashchange', handleHashChange);
+
+        // Cleanup listener on unmount
+        return () => {
+            window.removeEventListener('hashchange', handleHashChange);
+        };
+    }, []);
 
     const forms = {
         interest: {
