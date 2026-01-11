@@ -28,6 +28,18 @@ export default function YogaHealing() {
                         to address specific health conditions.
                     </p>
 
+                    <div className={styles.buttonGroup} style={{ marginTop: '0', marginBottom: '40px' }}>
+                        <a href="/enrollment-payment" className={styles.mainEnrollButton}>
+                            Enroll Now
+                        </a>
+                        <a href="/testimonials#interest" className={styles.mainRegisterButton}>
+                            Register Interest
+                        </a>
+                        <a href="/payment" className={styles.mainPayButton}>
+                            Pay Now
+                        </a>
+                    </div>
+
                     {/* Need based Banner */}
                     <div className={styles.cardBanner}>
                         <span className={styles.cardBannerIcon}>🎁</span>
@@ -36,6 +48,20 @@ export default function YogaHealing() {
 
                     {/* Reusing the existing TherapyList component */}
                     <TherapyList />
+
+                    <section className={styles.ctaSection}>
+                        <div className={styles.buttonGroup}>
+                            <a href="/enrollment-payment" className={styles.mainEnrollButton}>
+                                Enroll Now
+                            </a>
+                            <a href="/testimonials#interest" className={styles.mainRegisterButton}>
+                                Register Interest
+                            </a>
+                            <a href="/payment" className={styles.mainPayButton}>
+                                Pay Now
+                            </a>
+                        </div>
+                    </section>
                 </div>
             </div>
 
