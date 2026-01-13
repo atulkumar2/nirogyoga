@@ -26,8 +26,8 @@ export default function Sarvangasana() {
 
         <div className={styles.imageContainer}>
           <Image
-            src="/sarvangasana.svg"
-            alt="Practitioner performing Sarvangasana (Shoulder stand)"
+            src="/sarvangasana-pose.png"
+            alt="Practitioner performing Sarvangasana (Shoulder stand) with perfect alignment"
             width={800}
             height={500}
             style={{
