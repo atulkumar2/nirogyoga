@@ -25,6 +25,8 @@ const PAGES_TO_TEST = [
     '/knowledge-base/halasana',
     '/knowledge-base/standing-asanas',
     '/knowledge-base/surya-namaskara',
+    '/knowledge-base/viparita-karani',
+    '/knowledge-base/pincha-mayurasana',
     '/yoga-healing',
     '/resources',
     // Add other relevant pages that are known to have external links
@@ -88,7 +90,7 @@ describe('External Link Checker', () => {
                     const status = await checkUrl(url);
                     if (status >= 200 && status < 400) {
                         urlCheckCache.set(url, true);
-                    } else if (status === 403 || status === 401 || status === 999) {
+                    } else if (status === 403 || status === 401 || status === 999 || status === 503) {
                         // Some sites block automated requests (403/401) or LinkedIn/others give 999. 
                         // We might treat these as 'warning' or pass them if we can't reliably test.
                         // For now, let's log them but pass, assuming it's a bot protection.

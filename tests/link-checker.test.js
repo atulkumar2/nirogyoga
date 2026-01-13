@@ -108,6 +108,13 @@ const EXPECTED_LINKS = {
         '/knowledge-base/safety-guidelines',
         '/knowledge-base/yoga-terms',
     ],
+    '/knowledge-base/major-asanas': [
+        '/knowledge-base/shirshashana',
+        '/knowledge-base/sarvangasana',
+        '/knowledge-base/halasana',
+        '/knowledge-base/viparita-karani',
+        '/knowledge-base/pincha-mayurasana',
+    ],
 };
 
 // Navbar links (should be on every page)

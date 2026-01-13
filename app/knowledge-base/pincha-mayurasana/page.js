@@ -140,8 +140,8 @@ export default function PinchaMayurasana() {
                 </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/watch?v=NnO-Uq6m5nU" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
-                  🎥 <strong>Pincha Mayurasana | Forearm Stand Tutorial</strong> - <em>Youtube, Yoga with Adriene</em>
+                <a href="https://www.youtube.com/watch?v=CIYUtNw5LaI" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
+                  🎥 <strong>Pincha Mayurasana | Forearm Stand Tutorial</strong> - <em>Youtube, Kautilya Verma</em>
                 </a>
               </li>
             </ul>
