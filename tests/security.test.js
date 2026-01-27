@@ -89,60 +89,58 @@ function checkHttpsUsage(html) {
     expect(insecureResources.length).toBe(0);
 }
 
+const htmlCache = new Map();
+
+async function getPageHtml(page) {
+    const url = `${SITE_URL}${page}`;
+    if (!htmlCache.has(url)) {
+        htmlCache.set(url, fetch(url).then(res => {
+            if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+            return res.text();
+        }));
+    }
+    return htmlCache.get(url);
+}
+
 describe('Security Tests', () => {
     beforeAll(async () => {
         await assertSiteReachable();
     });
 
     describe('Per-Page Security Checks', () => {
-        PAGES_TO_TEST.forEach(page => {
-            describe(`Page: ${page}`, () => {
-                let html;
+        test.concurrent.each(PAGES_TO_TEST)('%s security checks', async (page) => {
+            const html = await getPageHtml(page);
 
-                beforeAll(async () => {
-                    const response = await fetch(`${SITE_URL}${page}`);
-                    html = await response.text();
-                });
+            // External links should have rel="noopener noreferrer"
+            checkExternalLinksSecurity(html);
 
-                test('external links should have rel="noopener noreferrer"', () => {
-                    checkExternalLinksSecurity(html);
-                });
+            // Should minimize inline JavaScript
+            expect(html).not.toMatch(/onclick=["'][^"']*["']/i);
+            expect(html).not.toMatch(/onerror=["'][^"']*["']/i);
+            expect(html).not.toMatch(/onload=["'][^"']*["']/i);
 
-                test('should minimize inline JavaScript', () => {
-                    expect(html).not.toMatch(/onclick=["'][^"']*["']/i);
-                    expect(html).not.toMatch(/onerror=["'][^"']*["']/i);
-                    expect(html).not.toMatch(/onload=["'][^"']*["']/i);
-                });
+            // Should not expose API keys or secrets
+            expect(html).not.toMatch(/api[_-]?key["']?\s*[:=]\s*["'][^"']{20,}/i);
+            expect(html).not.toMatch(/secret["']?\s*[:=]\s*["'][^"']{20,}/i);
+            expect(html).not.toMatch(/password["']?\s*[:=]\s*["'][^"']+/i);
+            expect(html).not.toMatch(/token["']?\s*[:=]\s*["'][^"']{20,}/i);
 
-                test('should not expose API keys or secrets', () => {
-                    expect(html).not.toMatch(/api[_-]?key["']?\s*[:=]\s*["'][^"']{20,}/i);
-                    expect(html).not.toMatch(/secret["']?\s*[:=]\s*["'][^"']{20,}/i);
-                    expect(html).not.toMatch(/password["']?\s*[:=]\s*["'][^"']+/i);
-                    expect(html).not.toMatch(/token["']?\s*[:=]\s*["'][^"']{20,}/i);
-                });
+            // Should not have SQL injection vulnerabilities in URLs
+            expect(html).not.toMatch(/href=["'][^"']*SELECT[^"']*FROM/i);
+            expect(html).not.toMatch(/href=["'][^"']*DROP[^"']*TABLE/i);
+            expect(html).not.toMatch(/href=["'][^"']*UNION[^"']*SELECT/i);
 
-                test('should not have SQL injection vulnerabilities in URLs', () => {
-                    expect(html).not.toMatch(/href=["'][^"']*SELECT[^"']*FROM/i);
-                    expect(html).not.toMatch(/href=["'][^"']*DROP[^"']*TABLE/i);
-                    expect(html).not.toMatch(/href=["'][^"']*UNION[^"']*SELECT/i);
-                });
+            // External resources should use HTTPS
+            checkHttpsUsage(html);
 
-                test('external resources should use HTTPS', () => {
-                    checkHttpsUsage(html);
-                });
-
-                test('iframes should be from trusted sources', () => {
-                    checkIframeSecurity(html);
-                });
-            });
+            // Iframes should be from trusted sources
+            checkIframeSecurity(html);
         });
     });
 
-    describe('Form Security', () => {
+    describe('Global Security', () => {
         test('Forms should not submit sensitive data insecurely', async () => {
-            const response = await fetch(`${SITE_URL}/contact`);
-            const html = await response.text();
-
+            const html = await getPageHtml('/contact');
             const forms = html.match(/<form[^>]*>/gi) || [];
             forms.forEach(form => {
                 if (form.includes('password') || form.includes('email')) {
@@ -150,23 +148,16 @@ describe('Security Tests', () => {
                 }
             });
         });
-    });
 
-    describe('Input Validation', () => {
         test('Contact page should have proper input types if forms exist', async () => {
-            const response = await fetch(`${SITE_URL}/contact`);
-            const html = await response.text();
-
+            const html = await getPageHtml('/contact');
             const hasInputs = html.match(/<input[^>]*>/gi) || [];
             expect(hasInputs.length).toBeGreaterThanOrEqual(0);
         });
-    });
 
-    describe('Cookie Security', () => {
         test('Should not set insecure cookies', async () => {
             const response = await fetch(`${SITE_URL}/`);
             const headers = response.headers;
-
             const setCookie = headers.get('set-cookie');
             if (setCookie) {
                 expect(setCookie).toMatch(/secure/i);

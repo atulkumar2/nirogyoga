@@ -54,12 +54,22 @@ const PAGES_TO_TEST = [
     '/resources',
 ];
 
-function checkImageAltAttributes(html) {
-    // Find all img tags
-    const imgTags = html.match(/<img[^>]*>/gi) || [];
+const htmlCache = new Map();
 
+async function getPageHtml(page) {
+    const url = `${SITE_URL}${page}`;
+    if (!htmlCache.has(url)) {
+        htmlCache.set(url, fetch(url).then(res => {
+            if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+            return res.text();
+        }));
+    }
+    return htmlCache.get(url);
+}
+
+function checkImageAltAttributes(html) {
+    const imgTags = html.match(/<img[^>]*>/gi) || [];
     imgTags.forEach(imgTag => {
-        // Check if it has alt attribute (even if empty)
         expect(imgTag).toMatch(/alt=/i);
     });
 }
@@ -69,94 +79,51 @@ describe('Accessibility Tests', () => {
         await assertSiteReachable();
     });
 
-    describe('Images', () => {
-        PAGES_TO_TEST.forEach(page => {
-            test(`${page} - all images should have alt attributes`, async () => {
-                const response = await fetch(`${SITE_URL}${page}`);
-                const html = await response.text();
+    describe('Page Content Checks', () => {
+        test.concurrent.each(PAGES_TO_TEST)('%s accessibility checks', async (page) => {
+            const html = await getPageHtml(page);
 
-                checkImageAltAttributes(html);
-            });
+            // Images
+            checkImageAltAttributes(html);
+
+            // Heading Hierarchy
+            const h1Count = (html.match(/<h1[^>]*>/gi) || []).length;
+            expect(h1Count).toBe(1);
+
+            const h1Index = html.indexOf('<h1');
+            const h2Index = html.indexOf('<h2');
+            const h3Index = html.indexOf('<h3');
+
+            if (h2Index > -1) {
+                expect(h2Index).toBeGreaterThan(h1Index);
+            }
+            if (h3Index > -1 && h2Index > -1) {
+                expect(h3Index).toBeGreaterThan(h2Index);
+            }
+
+            // Links
+            expect(html).not.toMatch(/<a[^>]*>click here<\/a>/i);
+            expect(html).not.toMatch(/<a[^>]*>read more<\/a>/i);
+            expect(html).not.toMatch(/<a[^>]*>here<\/a>/i);
+
+            // Language
+            expect(html).toMatch(/<html[^>]*lang=/i);
         });
     });
 
-    describe('Heading Hierarchy', () => {
-        PAGES_TO_TEST.forEach(page => {
-            test(`${page} - should have exactly one h1`, async () => {
-                const response = await fetch(`${SITE_URL}${page}`);
-                const html = await response.text();
-
-                const h1Count = (html.match(/<h1[^>]*>/gi) || []).length;
-                expect(h1Count).toBe(1);
-            });
-
-            test(`${page} - should have proper heading hierarchy`, async () => {
-                const response = await fetch(`${SITE_URL}${page}`);
-                const html = await response.text();
-
-                // Check that h2 comes before h3, h3 before h4, etc.
-                const h1Index = html.indexOf('<h1');
-                const h2Index = html.indexOf('<h2');
-                const h3Index = html.indexOf('<h3');
-
-                if (h2Index > -1) {
-                    expect(h2Index).toBeGreaterThan(h1Index);
-                }
-                if (h3Index > -1 && h2Index > -1) {
-                    expect(h3Index).toBeGreaterThan(h2Index);
-                }
-            });
-        });
-    });
-
-    describe('Links', () => {
-        PAGES_TO_TEST.forEach(page => {
-            test(`${page} - links should have descriptive text`, async () => {
-                const response = await fetch(`${SITE_URL}${page}`);
-                const html = await response.text();
-
-                // Check for generic link text
-                expect(html).not.toMatch(/<a[^>]*>click here<\/a>/i);
-                expect(html).not.toMatch(/<a[^>]*>read more<\/a>/i);
-                expect(html).not.toMatch(/<a[^>]*>here<\/a>/i);
-            });
-        });
-    });
-
-    describe('Language', () => {
-        PAGES_TO_TEST.forEach(page => {
-            test(`${page} - should have lang attribute on html tag`, async () => {
-                const response = await fetch(`${SITE_URL}${page}`);
-                const html = await response.text();
-
-                expect(html).toMatch(/<html[^>]*lang=/i);
-            });
-        });
-    });
-
-    describe('ARIA', () => {
+    describe('Global Accessibility', () => {
         test('Navigation should have proper ARIA labels', async () => {
-            const response = await fetch(`${SITE_URL}/`);
-            const html = await response.text();
-
-            // Check for nav element or role="navigation"
+            const html = await getPageHtml('/');
             const hasNav = html.includes('<nav') || html.includes('role="navigation"');
             expect(hasNav).toBe(true);
         });
-    });
 
-    describe('Form Accessibility', () => {
         test('Contact page should have accessible forms', async () => {
-            const response = await fetch(`${SITE_URL}/contact`);
-            const html = await response.text();
-
-            // If there are input fields, they should have labels or aria-label
+            const html = await getPageHtml('/contact');
             const inputs = html.match(/<input[^>]*>/gi) || [];
             inputs.forEach(input => {
                 const hasLabel = input.includes('aria-label') || input.includes('id=');
-                // If it has an id, there should be a corresponding label
                 if (!hasLabel) {
-                    // This is acceptable if it's a submit button
                     const isButton = input.includes('type="submit"') || input.includes('type="button"');
                     expect(isButton).toBe(true);
                 }

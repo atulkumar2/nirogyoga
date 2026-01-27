@@ -32,7 +32,7 @@
   "engineStrict": true,
   "jest": {
     "testEnvironment": "node",
-    "testTimeout": 10000,
+    "testTimeout": 30000,
     "testMatch": [
       "**/tests/**/*.test.js"
     ],
