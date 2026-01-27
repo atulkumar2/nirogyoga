@@ -38,6 +38,7 @@ const PAGES_TO_TEST = [
     '/knowledge-base/curriculum',
     '/knowledge-base/safety-guidelines',
     '/knowledge-base/yoga-terms',
+    '/knowledge-base/body-control-methods',
     '/yoga-healing',
     '/yoga-healing/ptsd',
     '/yoga-healing/anxiety-depression',

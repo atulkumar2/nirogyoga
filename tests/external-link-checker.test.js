@@ -27,6 +27,7 @@ const PAGES_TO_TEST = [
     '/knowledge-base/surya-namaskara',
     '/knowledge-base/viparita-karani',
     '/knowledge-base/pincha-mayurasana',
+    '/knowledge-base/body-control-methods',
     '/yoga-healing',
     '/resources',
     // Add other relevant pages that are known to have external links
