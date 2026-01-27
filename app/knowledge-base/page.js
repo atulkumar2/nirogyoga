@@ -38,6 +38,7 @@ export default function KnowledgeBase() {
                             <li className={styles.linkItem}><a href="/knowledge-base/learning-paths" className={styles.link}>Yoga Learning Paths</a></li>
                             <li className={styles.linkItem}><a href="/knowledge-base/yoga-books" className={styles.link}>Essential Yoga Books</a></li>
                             <li className={styles.linkItem}><a href="/knowledge-base/yoga-terms" className={styles.link}>Basic Terms & Meanings</a></li>
+                            <li className={styles.linkItem}><a href="/knowledge-base/body-control-methods" className={styles.link}>Body Control Methods <span className={styles.newBadge}>New!</span></a></li>
                             <li className={styles.linkItem}><a href="/saatvic-literature" className={styles.link}>Saatvic Literature</a></li>
                         </ul>
                     </section>
@@ -64,6 +65,34 @@ export default function KnowledgeBase() {
                         </ul>
                     </section>
                 </div>
+
+                {/* Ancient Wisdom Tips Section */}
+                <section className={styles.tipsSection}>
+                    <h2 className={styles.sectionTitle}>Ancient Wisdom: Quick Body Controls</h2>
+                    <div className={styles.tipsGrid}>
+                        <div className={styles.tipItem}>
+                            <h3>Sleeplessness?</h3>
+                            <p>Blink for 60 seconds to signal your brain for sleep.</p>
+                        </div>
+                        <div className={styles.tipItem}>
+                            <h3>Morning Laziness?</h3>
+                            <p>Try reverse humming to activate your system instantly.</p>
+                        </div>
+                        <div className={styles.tipItem}>
+                            <h3>Low Energy?</h3>
+                            <p>Splash cold water to trigger an immediate energy boost.</p>
+                        </div>
+                        <div className={styles.tipItem}>
+                            <h3>Lack of Focus?</h3>
+                            <p>Focus on your breath for just 10 seconds to reset.</p>
+                        </div>
+                    </div>
+                    <div className={styles.viewMoreContainer}>
+                        <a href="/knowledge-base/body-control-methods" className={styles.viewMoreLink}>
+                            Learn all 6 Ancient Methods →
+                        </a>
+                    </div>
+                </section>
             </div>
 
             <Footer />
