@@ -47,8 +47,21 @@ const PAGES_TO_TEST = [
     '/knowledge-base/backbends/salabhasana',
     '/knowledge-base/backbends/setu-bandha-sarvangasana',
     '/knowledge-base/twisting-asanas/ardha-matsyendrasana',
-    '/knowledge-base/twisting-asanas/bharadvajasana',
-    '/knowledge-base/twisting-asanas/marichyasana',
+    '/knowledge-base/twisting-asanas/bharadvajasana',    '/knowledge-base/twisting-asanas/marichyasana',
+    '/knowledge-base/balancing-asanas/vrikshasana',
+    '/knowledge-base/balancing-asanas/garudasana',
+    '/knowledge-base/balancing-asanas/natarajasana',
+    '/knowledge-base/balancing-asanas/bakasana',    '/knowledge-base/balancing-asanas/kakasana',
+    '/knowledge-base/hip-opening-asanas/baddha-konasana',
+    '/knowledge-base/hip-opening-asanas/upavista-konasana',
+    '/knowledge-base/hip-opening-asanas/eka-pada-raja-kapotasana',    '/knowledge-base/hip-opening-asanas/mandukasana',
+    '/knowledge-base/core-strength-asanas/navasana',
+    '/knowledge-base/core-strength-asanas/phalakasana',
+    '/knowledge-base/core-strength-asanas/chaturanga-dandasana',
+    '/knowledge-base/restorative-asanas/savasana',
+    '/knowledge-base/restorative-asanas/sukhasana',
+    '/knowledge-base/restorative-asanas/vajrasana',
+    '/knowledge-base/restorative-asanas/padmasana',
     '/knowledge-base/surya-namaskara',
     '/knowledge-base/viparita-karani',
     '/knowledge-base/pincha-mayurasana',
@@ -192,4 +205,7 @@ function normalizeUrl(url) {
     if (!url) return url;
     return url.endsWith('/') ? url : `${url}/`;
 }
+
+
+
 
