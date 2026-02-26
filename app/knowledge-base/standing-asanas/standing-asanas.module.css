@@ -65,6 +65,35 @@
   margin-bottom: 3rem;
 }
 
+.asanaLinkSection {
+  margin-bottom: 1.5rem;
+}
+
+.asanaLinkGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.asanaQuickLink {
+  display: block;
+  text-decoration: none;
+  color: var(--primary-color);
+  border: 1px solid #e5e5e5;
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+  background: #fff;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.asanaQuickLink:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
 .asanaCard {
   background: white;
   padding: 2rem;

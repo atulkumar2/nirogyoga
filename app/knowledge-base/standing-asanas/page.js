@@ -9,6 +9,18 @@ export const metadata = {
   description: "Explore the foundation of yoga practice with our guide to Standing Asanas. Learn about alignment, strength, and stability.",
 };
 
+const standingAsanaLinks = [
+  { href: "/knowledge-base/standing-asanas/tadasana", label: "Tadasana (Mountain Pose)" },
+  { href: "/knowledge-base/standing-asanas/virabhadrasana-1", label: "Virabhadrasana I (Warrior I)" },
+  { href: "/knowledge-base/standing-asanas/virabhadrasana-2", label: "Virabhadrasana II (Warrior II)" },
+  { href: "/knowledge-base/standing-asanas/virabhadrasana-3", label: "Virabhadrasana III (Warrior III)" },
+  { href: "/knowledge-base/standing-asanas/utthita-trikonasana", label: "Utthita Trikonasana (Triangle)" },
+  { href: "/knowledge-base/standing-asanas/utthita-parsvakonasana", label: "Utthita Parsvakonasana (Side Angle)" },
+  { href: "/knowledge-base/standing-asanas/ardha-chandrasana", label: "Ardha Chandrasana (Half Moon)" },
+  { href: "/knowledge-base/standing-asanas/parsvottanasana", label: "Parsvottanasana (Pyramid Pose)" },
+  { href: "/knowledge-base/standing-asanas/vrikshasana", label: "Vrikshasana (Tree Pose)" },
+];
+
 export default function StandingAsanas() {
   return (
     <main>
@@ -66,6 +78,19 @@ export default function StandingAsanas() {
         </section>
 
         <h2 className={styles.sectionTitle}>Major Standing Asanas Taught at Nirog Yoga University</h2>
+
+        <section className={styles.asanaLinkSection}>
+          <p className={styles.text}>
+            Open individual asana pages for focused guidance:
+          </p>
+          <div className={styles.asanaLinkGrid}>
+            {standingAsanaLinks.map((asana) => (
+              <Link key={asana.href} href={asana.href} className={styles.asanaQuickLink}>
+                {asana.label} →
+              </Link>
+            ))}
+          </div>
+        </section>
 
         <div className={styles.asanasGrid}>
           {/* 1. Tadasana */}
