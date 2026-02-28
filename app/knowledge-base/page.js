@@ -34,6 +34,7 @@ export default function KnowledgeBase() {
                             <li className={styles.linkItem}><Link href="/knowledge-base/why-yoga" className={styles.link}>Why Yoga?</Link></li>
                             <li className={styles.linkItem}><Link href="/knowledge-base/introduction" className={styles.link}>Introduction to Yoga</Link></li>
                             <li className={styles.linkItem}><Link href="/knowledge-base/historical-references" className={styles.link}>Historical References in Shastras</Link></li>
+                            <li className={styles.linkItem}><Link href="/knowledge-base/yoga-and-telomere-health" className={styles.link}>Scientific references about yoga <span className={styles.newBadge}>New!</span></Link></li>
                             <li className={styles.linkItem}><Link href="/knowledge-base/patanjali-sutras" className={styles.link}>Patanjali Yoga Sutras Summary</Link></li>
                             <li className={styles.linkItem}><Link href="/knowledge-base/meditation" className={styles.link}>Meditation (Dhyāna)</Link></li>
                             <li className={styles.linkItem}><Link href="/knowledge-base/learning-paths" className={styles.link}>Yoga Learning Paths</Link></li>
