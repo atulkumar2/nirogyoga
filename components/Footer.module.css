@@ -25,6 +25,23 @@
     display: block;
 }
 
+.contactRow {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.inlineLink {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.inlineLink:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
 .tagline {
     color: var(--secondary-color);
     font-size: 0.9rem;

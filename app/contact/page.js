@@ -24,7 +24,18 @@ export default function Contact() {
                     {/* Contact Info */}
                     <div className={styles.card}>
                         <h2 className={styles.cardTitle}>Get in Touch</h2>
-                        <span className={styles.text}>Phone: +91-8792873242 / +91-8123690515</span>
+                        <div className={styles.text}>
+                            <span>Phone: </span>
+                            <a href="tel:+918792873242" className={styles.link}>+91-8792873242</a>
+                            <span> / </span>
+                            <a href="tel:+918123690515" className={styles.link}>+91-8123690515</a>
+                        </div>
+                        <div className={styles.text}>
+                            <span>WhatsApp: </span>
+                            <a href="https://wa.me/918792873242?text=Hello%20Nirog%20Yoga,%20I%20am%20interested%20in%20your%20classes%20and%20therapy." target="_blank" rel="noopener noreferrer" className={styles.link}>+91-8792873242</a>
+                            <span> / </span>
+                            <a href="https://wa.me/918123690515?text=Hello%20Nirog%20Yoga,%20I%20am%20interested%20in%20your%20classes%20and%20therapy." target="_blank" rel="noopener noreferrer" className={styles.link}>+91-8123690515</a>
+                        </div>
                         <span className={styles.text}>Email: nirogyoga@outlook.com</span>
 
                         <div className={styles.socials}>
