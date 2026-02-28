@@ -67,6 +67,16 @@ const PAGES_TO_TEST = [
     '/knowledge-base/pincha-mayurasana',
     '/knowledge-base/body-control-methods',
     '/yoga-healing',
+    '/yoga-healing/migraine-chronic-headaches',
+    '/yoga-healing/cerebral-cortex-thickening',
+    '/yoga-healing/acid-peptic-diseases',
+    '/yoga-healing/lipid-liver-disorders',
+    '/yoga-healing/ibs',
+    '/yoga-healing/coronary-artery-disease',
+    '/yoga-healing/obesity-metabolic-syndrome',
+    '/yoga-healing/endocrine-dysregulation',
+    '/yoga-healing/menstrual-menopausal-symptoms',
+    '/yoga-healing/age-related-changes',
     '/resources',
     // Add other relevant pages that are known to have external links
 ];
@@ -205,6 +215,7 @@ function normalizeUrl(url) {
     if (!url) return url;
     return url.endsWith('/') ? url : `${url}/`;
 }
+
 
 
 

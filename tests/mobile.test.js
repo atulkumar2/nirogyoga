@@ -83,8 +83,17 @@ const PAGES_TO_TEST = [
     '/yoga-healing/diabetes',
     '/yoga-healing/hypertension',
     '/yoga-healing/insomnia',
-    '/yoga-healing/mobility-balance',
-    '/yoga-healing/pcos',
+    '/yoga-healing/mobility-balance',    '/yoga-healing/pcos',
+    '/yoga-healing/migraine-chronic-headaches',
+    '/yoga-healing/cerebral-cortex-thickening',
+    '/yoga-healing/acid-peptic-diseases',
+    '/yoga-healing/lipid-liver-disorders',
+    '/yoga-healing/ibs',
+    '/yoga-healing/coronary-artery-disease',
+    '/yoga-healing/obesity-metabolic-syndrome',
+    '/yoga-healing/endocrine-dysregulation',
+    '/yoga-healing/menstrual-menopausal-symptoms',
+    '/yoga-healing/age-related-changes',
     '/saatvic-literature',
     '/resources',
 ];
@@ -169,6 +178,7 @@ describe('Mobile Responsiveness Tests', () => {
         });
     });
 });
+
 
 
 

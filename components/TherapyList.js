@@ -7,21 +7,21 @@ const conditions = [
     { name: "Chronic Low Back Pain", link: "/yoga-healing/chronic-pain" },
     { name: "Fibromyalgia & Arthritis", link: "/yoga-healing/arthritis" },
     { name: "Mobility & Balance issues (including Parkinson's)", link: "/yoga-healing/mobility-balance" },
-    { name: "Migraine & Chronic Headaches", link: "https://en.wikipedia.org/wiki/Migraine" },
+    { name: "Migraine & Chronic Headaches", link: "/yoga-healing/migraine-chronic-headaches" },
     { name: "Insomnia & Sleep Disorders", link: "/yoga-healing/insomnia" },
-    { name: "Thickening of cerebral cortex", link: "https://en.wikipedia.org/wiki/Cerebral_cortex" },
-    { name: "Acid-peptic diseases", link: "https://en.wikipedia.org/wiki/Peptic_ulcer_disease" },
-    { name: "Lipid & Liver disorders", link: "https://en.wikipedia.org/wiki/Dyslipidemia" },
-    { name: "Irritable Bowel Syndrome (IBS)", link: "https://en.wikipedia.org/wiki/Irritable_bowel_syndrome" },
+    { name: "Thickening of cerebral cortex", link: "/yoga-healing/cerebral-cortex-thickening" },
+    { name: "Acid-peptic diseases", link: "/yoga-healing/acid-peptic-diseases" },
+    { name: "Lipid & Liver disorders", link: "/yoga-healing/lipid-liver-disorders" },
+    { name: "Irritable Bowel Syndrome (IBS)", link: "/yoga-healing/ibs" },
     { name: "Blood Pressure disorders", link: "/yoga-healing/hypertension" },
-    { name: "Coronary Artery Disease", link: "https://en.wikipedia.org/wiki/Coronary_artery_disease" },
+    { name: "Coronary Artery Disease", link: "/yoga-healing/coronary-artery-disease" },
     { name: "Type 2 Diabetes Mellitus", link: "/yoga-healing/diabetes" },
-    { name: "Obesity & Metabolic Syndrome", link: "https://en.wikipedia.org/wiki/Metabolic_syndrome" },
+    { name: "Obesity & Metabolic Syndrome", link: "/yoga-healing/obesity-metabolic-syndrome" },
     { name: "Asthma & COPD (mild to moderate)", link: "/yoga-healing/asthma" },
-    { name: "Endocrine Dysregulation", link: "https://en.wikipedia.org/wiki/Endocrine_disease" },
+    { name: "Endocrine Dysregulation", link: "/yoga-healing/endocrine-dysregulation" },
     { name: "PCOS (Polycystic Ovary Syndrome)", link: "/yoga-healing/pcos" },
-    { name: "Menstrual & Menopausal symptoms", link: "https://en.wikipedia.org/wiki/Menopause" },
-    { name: "Reversal of age-related changes", link: "https://en.wikipedia.org/wiki/Ageing" }
+    { name: "Menstrual & Menopausal symptoms", link: "/yoga-healing/menstrual-menopausal-symptoms" },
+    { name: "Reversal of age-related changes", link: "/yoga-healing/age-related-changes" }
 ];
 
 const TherapyList = () => {
