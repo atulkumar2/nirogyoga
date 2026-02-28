@@ -21,6 +21,7 @@ const PAGES_TO_TEST = [
     '/knowledge-base/introduction',
     '/knowledge-base/why-yoga',
     '/knowledge-base/historical-references',
+    '/knowledge-base/yoga-and-telomere-health',
     '/knowledge-base/breathing-techniques',
     '/knowledge-base/pranayama',
     '/knowledge-base/major-asanas',
@@ -145,6 +146,7 @@ const EXPECTED_LINKS = {
         '/knowledge-base/introduction',
         '/knowledge-base/why-yoga',
         '/knowledge-base/historical-references',
+        '/knowledge-base/yoga-and-telomere-health',
         '/knowledge-base/breathing-techniques',
         '/knowledge-base/pranayama',
         '/knowledge-base/major-asanas',
@@ -157,6 +159,7 @@ const EXPECTED_LINKS = {
         '/knowledge-base/curriculum',
         '/knowledge-base/safety-guidelines',
         '/knowledge-base/yoga-terms',
+        '/knowledge-base/body-control-methods',
     ],
     '/knowledge-base/major-asanas': [
         '/knowledge-base/standing-asanas/tadasana',
@@ -278,14 +281,14 @@ describe('Internal Link Checker', () => {
     });
 
     describe('Page Accessibility', () => {
-        test.concurrent.each(PAGES_TO_TEST)('%s should be accessible', async (page) => {
+        test.each(PAGES_TO_TEST)('%s should be accessible', async (page) => {
             const response = await fetch(`${SITE_URL}${page}`);
             expect(response.status).toBe(200);
         });
     });
 
     describe('Navbar and Footer Links', () => {
-        test.concurrent.each(PAGES_TO_TEST)('%s should have all navbar and footer links', async (page) => {
+        test.each(PAGES_TO_TEST)('%s should have all navbar and footer links', async (page) => {
             const html = await getPageHtml(page);
             const escapedSlash = String.raw`\/`;
 
@@ -306,7 +309,7 @@ describe('Internal Link Checker', () => {
     });
 
     describe('Page-Specific Links', () => {
-        test.concurrent.each(Object.entries(EXPECTED_LINKS))('%s should have expected internal links', async (page, links) => {
+        test.each(Object.entries(EXPECTED_LINKS))('%s should have expected internal links', async (page, links) => {
             const html = await getPageHtml(page);
             const escapedSlash = String.raw`\/`;
 
@@ -320,7 +323,7 @@ describe('Internal Link Checker', () => {
     });
 
     describe('Enrollment Links', () => {
-        test.concurrent.each(PAGES_TO_TEST)('%s enrollment link checks', async (page) => {
+        test.each(PAGES_TO_TEST)('%s enrollment link checks', async (page) => {
             const html = await getPageHtml(page);
 
             // Deprecated links
@@ -351,7 +354,7 @@ describe('Internal Link Checker', () => {
     });
 
     describe('Programs/Events and Payment Links', () => {
-        test.concurrent.each(PAGES_TO_TEST)('%s programs/events and payment checks', async (page) => {
+        test.each(PAGES_TO_TEST)('%s programs/events and payment checks', async (page) => {
             const html = await getPageHtml(page);
 
             // Programs/Events

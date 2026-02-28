@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Scientific references about yoga | Nirog Yoga",
-  description: "Yoga and meditation, particularly practices like Sudarshan Kriya Yoga (SKY), heartfulness meditation, mindfulness, have been shown in studies to potentially slow down cellular aging.",
+  description: "Scientific references on yoga, meditation, and telomere health, including studies on stress reduction, telomerase activity, and healthy aging.",
 };
 
 export default function ScientificReferences() {
@@ -34,7 +34,6 @@ export default function ScientificReferences() {
               className={styles.heroImage}
               width={1024}
               height={683}
-              layout="responsive"
             />
             <div className={styles.imageCaption}>
               Illustration of Yoga & Meditation extending Telomere length and cellular longevity.
@@ -113,8 +112,8 @@ export default function ScientificReferences() {
               <div className={styles.referenceSummary}>Explores how yoga practices protect chromosomal ends by reducing oxidative damage and stress levels.</div>
             </li>
             <li className={styles.referenceItem}>
-              <a href="https://www.sciencedirect.com/science/article/pii/S0889159118300473" target="_blank" rel="noopener noreferrer">Yoga, Meditation and Mind-body Health (ScienceDirect)</a>
-              <div className={styles.referenceSummary}>Detailed study on the effects of long-term yoga interventions on maintaining telomerase activity.</div>
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10380951/" target="_blank" rel="noopener noreferrer">Mindfulness and Telomere Maintenance (PMC)</a>
+              <div className={styles.referenceSummary}>Open-access evidence on how mindfulness practices relate to telomere maintenance and stress biology.</div>
             </li>
             <li className={styles.referenceItem}>
               <a href="https://pubmed.ncbi.nlm.nih.gov/39735156/" target="_blank" rel="noopener noreferrer">PubMed: Yoga Practice and Telomere Length</a>

@@ -213,7 +213,7 @@ export default function YogaTermsPage() {
                             <h3 className={styles.referencesTitle}>References & Further Reading</h3>
                             <ul className={styles.referencesList}>
                                 <li><a href="https://www.yogasutra.org" target="_blank" rel="noopener noreferrer">Patanjali Yoga Sutras — translation &amp; commentary</a></li>
-                                <li><a href="https://www.sivananda.org/what-is-hatha-yoga/" target="_blank" rel="noopener noreferrer">Hatha Yoga Pradipika — selected translations</a></li>
+                                <li><a href="https://en.wikipedia.org/wiki/Hatha_Yoga_Pradipika" target="_blank" rel="noopener noreferrer">Hatha Yoga Pradipika — selected translations</a></li>
                                 <li><a href="https://www.vedabase.io/en/library/bg/" target="_blank" rel="noopener noreferrer">Bhagavad Gita — translations</a></li>
                                 <li><a href="https://www.vedabase.io/en/library/" target="_blank" rel="noopener noreferrer">Principal Upanishads — selected translations</a></li>
                             </ul>

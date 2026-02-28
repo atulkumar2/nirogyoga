@@ -21,6 +21,7 @@ const PAGES_TO_TEST = [
     '/knowledge-base/introduction',
     '/knowledge-base/why-yoga',
     '/knowledge-base/historical-references',
+    '/knowledge-base/yoga-and-telomere-health',
     '/knowledge-base/breathing-techniques',
     '/knowledge-base/pranayama',
     '/knowledge-base/major-asanas',    '/knowledge-base/standing-asanas',
@@ -67,6 +68,7 @@ const PAGES_TO_TEST = [
     '/knowledge-base/yoga-books',
     '/knowledge-base/curriculum',
     '/knowledge-base/safety-guidelines',
+    '/knowledge-base/yoga-terms',
     '/knowledge-base/body-control-methods',
     '/yoga-healing',
     '/yoga-healing/ptsd',
@@ -152,7 +154,7 @@ describe('Security Tests', () => {
     });
 
     describe('Per-Page Security Checks', () => {
-        test.concurrent.each(PAGES_TO_TEST)('%s security checks', async (page) => {
+        test.each(PAGES_TO_TEST)('%s security checks', async (page) => {
             const html = await getPageHtml(page);
 
             // External links should have rel="noopener noreferrer"

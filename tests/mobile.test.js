@@ -21,6 +21,7 @@ const PAGES_TO_TEST = [
     '/knowledge-base/introduction',
     '/knowledge-base/why-yoga',
     '/knowledge-base/historical-references',
+    '/knowledge-base/yoga-and-telomere-health',
     '/knowledge-base/breathing-techniques',
     '/knowledge-base/pranayama',
     '/knowledge-base/major-asanas',
@@ -72,6 +73,7 @@ const PAGES_TO_TEST = [
     '/knowledge-base/yoga-books',
     '/knowledge-base/curriculum',
     '/knowledge-base/safety-guidelines',
+    '/knowledge-base/yoga-terms',
     '/knowledge-base/body-control-methods',
     '/yoga-healing',
     '/yoga-healing/ptsd',
@@ -134,7 +136,7 @@ describe('Mobile Responsiveness Tests', () => {
     });
 
     describe('Per-Page Responsiveness Checks', () => {
-        test.concurrent.each(PAGES_TO_TEST)('%s mobile checks', async (page) => {
+        test.each(PAGES_TO_TEST)('%s mobile checks', async (page) => {
             const html = await getPageHtml(page);
 
             // Viewport
