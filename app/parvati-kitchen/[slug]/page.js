@@ -39,10 +39,12 @@ export default async function KitchenItemPage({ params }) {
     notFound();
   }
 
-  const message = encodeURIComponent(`Hello Parvati Katyayan, I am interested in ordering ${item.name}.`);
+  const itemUrl = `https://nirogyoga.in/parvati-kitchen/${item.slug}`;
+  const message = encodeURIComponent(
+    `Hello Parvati Katyayan, I am interested in ordering ${item.name}.\nItem page: ${itemUrl}`
+  );
   const kitchenContacts = [
     { label: "+91 81236 90515", whatsapp: "918123690515" },
-    { label: "+91 80738 83815", whatsapp: "918073883815" },
   ];
 
   return (
