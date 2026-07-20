@@ -17,6 +17,16 @@ const PAGES_TO_TEST = [
     '/payment',
     '/contact',
     '/testimonials',
+    '/parvatis-kitchen',
+    '/parvatis-kitchen/multigrain-choco-chip-cookies',
+    '/parvatis-kitchen/multigrain-cupcakes',
+    '/parvatis-kitchen/dates-cake-multigrain',
+    '/parvatis-kitchen/cashew-caramel-icecream',
+    '/parvatis-kitchen/almond-butter',
+    '/parvatis-kitchen/tiramisu',
+    '/parvatis-kitchen/multigrain-jaggery-chocolate-cake',
+    '/parvatis-kitchen/mango-multigrain-jaggery-cake',
+    '/parvatis-kitchen/korean-cream-cheese-buns',
     '/knowledge-base',
     '/knowledge-base/introduction',
     '/knowledge-base/why-yoga',
@@ -142,6 +152,20 @@ const EXPECTED_LINKS = {
     '/contact': [
         '/testimonials#interest',
     ],
+    '/parvatis-kitchen': [
+        '/parvatis-kitchen/multigrain-choco-chip-cookies',
+        '/parvatis-kitchen/multigrain-cupcakes',
+        '/parvatis-kitchen/dates-cake-multigrain',
+        '/parvatis-kitchen/cashew-caramel-icecream',
+        '/parvatis-kitchen/almond-butter',
+        '/parvatis-kitchen/tiramisu',
+        '/parvatis-kitchen/multigrain-jaggery-chocolate-cake',
+        '/parvatis-kitchen/mango-multigrain-jaggery-cake',
+        '/parvatis-kitchen/korean-cream-cheese-buns',
+    ],
+    '/parvatis-kitchen/multigrain-choco-chip-cookies': [
+        '/parvatis-kitchen',
+    ],
     '/knowledge-base': [
         '/knowledge-base/introduction',
         '/knowledge-base/why-yoga',
@@ -238,6 +262,7 @@ const NAVBAR_LINKS = [
     '/instructors',
     '/programs-events',
     '/testimonials',
+    '/parvatis-kitchen',
     '/knowledge-base',
     '/yoga-healing',
     '/saatvic-literature',
@@ -260,6 +285,7 @@ const FOOTER_LINKS = [
     '/payment',
     '/enrollment-payment',
     '/resources',
+    '/parvatis-kitchen',
 ];
 
 const htmlCache = new Map();

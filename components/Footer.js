@@ -99,6 +99,7 @@ const Footer = () => {
                             <Link href="/yoga-healing" className={styles.link}>Yoga Healing</Link>
                             <Link href="/resources" className={styles.link}>Resources</Link>
                             <Link href="/saatvic-literature" className={styles.link}>Saatvic Literature</Link>
+                            <Link href="/parvatis-kitchen" className={styles.link}>Parvati&apos;s Kitchen</Link>
                         </div>
                         <div className={styles.linkColumn}>
                             <h4 className={styles.linkColumnTitle}>Take Action</h4>

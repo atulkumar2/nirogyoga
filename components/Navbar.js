@@ -51,6 +51,7 @@ const Navbar = () => {
                 <Link href="/about" className={styles.link} onClick={closeMenu}>About</Link>
                 <Link href="/instructors" className={styles.link} onClick={closeMenu}>Instructors</Link>
                 <Link href="/programs-events" className={styles.link} onClick={closeMenu}>Programs / Events</Link>
+                <Link href="/parvatis-kitchen" className={styles.link} onClick={closeMenu}>Parvati&apos;s Kitchen</Link>
                 <div 
                     className={styles.dropdownContainer}
                     onMouseEnter={() => setIsTestimonialsOpen(true)}
