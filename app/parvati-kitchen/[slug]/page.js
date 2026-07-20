@@ -50,7 +50,7 @@ export default async function KitchenItemPage({ params }) {
       <Navbar />
 
       <div className={styles.container}>
-        <Link href="/parvatis-kitchen" className={styles.backLink}>Back to Parvati&apos;s Kitchen</Link>
+        <Link href="/parvati-kitchen" className={styles.backLink}>Back to Parvati&apos;s Kitchen</Link>
 
         <article className={styles.detail}>
           <div className={styles.imageWrap}>

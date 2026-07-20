@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { kitchenItems } from "./menuData";
-import styles from "./parvatis-kitchen.module.css";
+import styles from "./parvati-kitchen.module.css";
 
 export const metadata = {
   title: "Parvati's Kitchen Menu | Nirog Yoga",
@@ -88,7 +88,7 @@ export default function ParvatisKitchenPage() {
           <h2 id="menu-heading" className={styles.sectionHeading}>Menu</h2>
           <div className={styles.menuGrid}>
             {kitchenItems.map((item) => (
-              <Link key={item.slug} href={`/parvatis-kitchen/${item.slug}`} className={styles.card}>
+              <Link key={item.slug} href={`/parvati-kitchen/${item.slug}`} className={styles.card}>
                 <div className={styles.imageWrap}>
                   {item.image ? (
                     <Image
