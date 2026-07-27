@@ -63,6 +63,8 @@ export default function ParvatisKitchenPage() {
           </div>
         </section>
 
+        <KitchenMenuView items={kitchenItems} />
+
         <section className={styles.locationSection} aria-labelledby="location-heading">
           <div>
             <p className={styles.eyebrow}>Kitchen location</p>
@@ -83,8 +85,6 @@ export default function ParvatisKitchenPage() {
             Open in Google Maps
           </a>
         </section>
-
-        <KitchenMenuView items={kitchenItems} />
       </div>
 
       <Footer />

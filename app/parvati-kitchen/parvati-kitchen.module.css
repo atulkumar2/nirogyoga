@@ -7,7 +7,7 @@
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
   gap: 36px;
   align-items: center;
   margin-bottom: 56px;
@@ -41,6 +41,9 @@
   aspect-ratio: 4 / 3;
   border-radius: var(--radius-sm);
   overflow: hidden;
+  justify-self: end;
+  max-width: 320px;
+  width: 100%;
   box-shadow: var(--shadow-lg);
   background: #f6eadc;
 }
@@ -96,7 +99,7 @@
   display: flex;
   gap: 24px;
   justify-content: space-between;
-  margin-bottom: 52px;
+  margin-top: 52px;
   padding: 24px;
 }
 
@@ -359,6 +362,11 @@
     margin-bottom: 42px;
   }
 
+  .heroImageWrap {
+    justify-self: start;
+    max-width: 280px;
+  }
+
   .title {
     font-size: 2.4rem;
   }
@@ -376,7 +384,7 @@
   .locationSection {
     align-items: flex-start;
     flex-direction: column;
-    margin-bottom: 42px;
+    margin-top: 42px;
   }
 
   .mapLink {
@@ -394,20 +402,22 @@
 
   .menuRow {
     align-items: start;
-    grid-template-columns: 52px 1fr auto;
+    grid-template-columns: 52px minmax(0, 1fr);
   }
 
   .menuCategory {
     padding: 18px;
   }
 
+  .menuItemName,
+  .menuItemPrice,
   .menuItemSummary,
   .menuItemServing {
     grid-column: 2 / -1;
   }
 
   .menuItemPrice {
-    justify-self: end;
+    justify-self: start;
   }
 
   .menuThumbWrap {
