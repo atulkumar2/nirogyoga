@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import Link from "next/link";
+import KitchenMenuView from "./KitchenMenuView";
 import { kitchenItems } from "./menuData";
 import styles from "./parvati-kitchen.module.css";
 
@@ -84,37 +84,7 @@ export default function ParvatisKitchenPage() {
           </a>
         </section>
 
-        <section aria-labelledby="menu-heading">
-          <h2 id="menu-heading" className={styles.sectionHeading}>Menu</h2>
-          <div className={styles.menuGrid}>
-            {kitchenItems.map((item) => (
-              <Link key={item.slug} href={`/parvati-kitchen/${item.slug}`} className={styles.card}>
-                <div className={styles.imageWrap}>
-                  {item.image ? (
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className={styles.image}
-                    />
-                  ) : (
-                    <div className={styles.placeholder}>{item.name}</div>
-                  )}
-                </div>
-                <div className={styles.cardBody}>
-                  <h3 className={styles.itemTitle}>{item.name}</h3>
-                  <p className={styles.summary}>{item.summary}</p>
-                  <div className={styles.meta}>
-                    <span className={styles.price}>{item.price}</span>
-                    <span className={styles.serving}>{item.serving}</span>
-                  </div>
-                  <span className={styles.link}>View item</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
+        <KitchenMenuView items={kitchenItems} />
       </div>
 
       <Footer />

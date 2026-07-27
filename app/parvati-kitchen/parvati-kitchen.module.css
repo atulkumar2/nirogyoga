@@ -131,7 +131,124 @@
 .sectionHeading {
   color: var(--primary-color);
   font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.menuHeader {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
   margin-bottom: 22px;
+}
+
+.viewToggle {
+  background: var(--primary-color);
+  border: 0;
+  border-radius: var(--radius-full);
+  color: #fff;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 11px 18px;
+  text-align: center;
+}
+
+.viewToggle:hover {
+  background: var(--primary-hover);
+}
+
+.conciseMenu {
+  background: #fff;
+  border: 1px solid rgba(44, 95, 45, 0.13);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.menuCategory {
+  padding: 20px 22px 22px;
+}
+
+.menuCategory + .menuCategory {
+  border-top: 1px solid rgba(138, 90, 48, 0.16);
+}
+
+.menuCategoryTitle {
+  color: #8a5a30;
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.menuCategoryItems {
+  border-top: 1px solid rgba(44, 95, 45, 0.1);
+}
+
+.menuRow {
+  align-items: center;
+  color: var(--text-dark);
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 56px minmax(170px, 1.3fr) minmax(220px, 2fr) minmax(90px, auto) minmax(100px, auto);
+  padding: 13px 0;
+  text-decoration: none;
+}
+
+.menuRow + .menuRow {
+  border-top: 1px solid rgba(44, 95, 45, 0.1);
+}
+
+.menuRow:hover {
+  color: var(--primary-color);
+}
+
+.menuThumbWrap {
+  aspect-ratio: 1;
+  background: #f6eadc;
+  border-radius: var(--radius-sm);
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 56px;
+}
+
+.menuThumb {
+  object-fit: cover;
+}
+
+.menuThumbPlaceholder {
+  background: linear-gradient(135deg, #f7efe4 0%, #eaf3df 100%);
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.menuItemName {
+  color: var(--primary-dark);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.menuItemSummary {
+  color: #536168;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.menuItemPrice {
+  color: #8a5a30;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.menuItemServing {
+  color: #6b7280;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .menuGrid {
@@ -264,6 +381,37 @@
 
   .mapLink {
     width: 100%;
+  }
+
+  .menuHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .viewToggle {
+    width: 100%;
+  }
+
+  .menuRow {
+    align-items: start;
+    grid-template-columns: 52px 1fr auto;
+  }
+
+  .menuCategory {
+    padding: 18px;
+  }
+
+  .menuItemSummary,
+  .menuItemServing {
+    grid-column: 2 / -1;
+  }
+
+  .menuItemPrice {
+    justify-self: end;
+  }
+
+  .menuThumbWrap {
+    width: 52px;
   }
 }
 

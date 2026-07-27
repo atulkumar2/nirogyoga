@@ -1,6 +1,7 @@
 export const kitchenItems = [
   {
     slug: "multigrain-choco-chip-cookies",
+    category: "Cookies & Bakes",
     name: "Multigrain Choco Chip Cookies",
     price: "Rs. 75",
     serving: "per piece",
@@ -12,6 +13,7 @@ export const kitchenItems = [
   },
   {
     slug: "multigrain-cupcakes",
+    category: "Cookies & Bakes",
     name: "Multigrain Cupcakes",
     price: "Rs. 85",
     serving: "for 1 piece",
@@ -23,6 +25,7 @@ export const kitchenItems = [
   },
   {
     slug: "dates-cake-multigrain",
+    category: "Cakes",
     name: "Dates Cake Multigrain",
     price: "Rs. 1300",
     serving: "for 600 gm",
@@ -34,6 +37,7 @@ export const kitchenItems = [
   },
   {
     slug: "cashew-caramel-icecream",
+    category: "Desserts & Spreads",
     name: "Cashew Caramel Ice Cream",
     price: "Rs. 400-450",
     serving: "for 500 gm",
@@ -45,6 +49,7 @@ export const kitchenItems = [
   },
   {
     slug: "almond-butter",
+    category: "Desserts & Spreads",
     name: "Almond Butter",
     price: "Rs. 500",
     serving: "for 250 gm",
@@ -56,6 +61,7 @@ export const kitchenItems = [
   },
   {
     slug: "tiramisu",
+    category: "Desserts & Spreads",
     name: "Tiramisu",
     price: "Rs. 1250",
     serving: "for 500 gm",
@@ -67,6 +73,7 @@ export const kitchenItems = [
   },
   {
     slug: "multigrain-jaggery-chocolate-cake",
+    category: "Cakes",
     name: "Multigrain Jaggery Chocolate Cake",
     price: "Rs. 1300",
     serving: "for 600 gm",
@@ -78,6 +85,7 @@ export const kitchenItems = [
   },
   {
     slug: "mango-multigrain-jaggery-cake",
+    category: "Cakes",
     name: "Mango Multigrain Jaggery Cake",
     price: "Rs. 1300",
     serving: "for 600 gm",
@@ -89,6 +97,7 @@ export const kitchenItems = [
   },
   {
     slug: "korean-cream-cheese-buns",
+    category: "Cookies & Bakes",
     name: "Korean Cream Cheese Buns",
     price: "Rs. 150",
     serving: "for 1 piece",
