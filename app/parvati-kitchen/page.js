@@ -8,6 +8,28 @@ export const metadata = {
   title: "Parvati's Kitchen | Nirog Yoga",
   description:
     "Explore Parvati's Kitchen menu of homemade multigrain cakes, cookies, cupcakes, ice cream, almond butter, tiramisu, and fresh cream cheese buns.",
+  openGraph: {
+    title: "Parvati's Kitchen | Nirog Yoga",
+    description:
+      "Homemade multigrain cakes, cookies, cupcakes, desserts, and nourishing spreads prepared fresh in Mangaluru.",
+    url: "https://nirogyoga.in/parvati-kitchen",
+    siteName: "Nirog Yoga",
+    images: [
+      {
+        url: "/parvati-kitchen-preview.jpeg",
+        alt: "Parvati's Kitchen homemade multigrain cake",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Parvati's Kitchen | Nirog Yoga",
+    description:
+      "Homemade multigrain cakes, cookies, cupcakes, desserts, and nourishing spreads prepared fresh in Mangaluru.",
+    images: ["/parvati-kitchen-preview.jpeg"],
+  },
 };
 
 const formatServing = (serving) => serving.replace(/^for\s+/i, "").replace(/^per\s+/i, "");

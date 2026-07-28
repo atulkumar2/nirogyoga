@@ -16,9 +16,9 @@
   box-shadow: 0 0 0 24px #fff8ec inset, 0 0 0 26px #d79720 inset;
   font-family: Georgia, "Times New Roman", serif;
   margin: 0 auto;
-  max-width: 636px;
+  max-width: 720px;
   min-height: calc(100vh - 20px);
-  padding: 66px 60px 58px;
+  padding: 66px 68px 58px;
   position: relative;
 }
 
@@ -282,8 +282,10 @@
 
 .productGrid {
   display: grid;
-  gap: 9px;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 12px 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0 auto;
+  max-width: 450px;
 }
 
 .product {
@@ -495,7 +497,7 @@
   }
 
   .productGrid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .orderGrid {
@@ -535,6 +537,6 @@
   }
 
   .productGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
