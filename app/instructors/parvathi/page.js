@@ -2,10 +2,11 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import styles from './parvathi.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata = {
     title: "Parvathi Katyayan | Nirog Yoga",
-    description: "Parvathi Katyayan, Yoga Instructor & Therapist, specializing in diabetes reversal and holistic healing.",
+    description: "Parvathi Katyayan, Yoga Instructor, Therapist, and the maker behind Parvati's Kitchen.",
 };
 
 export default function Parvathi() {
@@ -73,6 +74,18 @@ export default function Parvathi() {
                     <p className={styles.text}>
                         Beyond yoga, she is a passionate cook and home baker, known for preparing over a hundred offerings (bhoga) annually for Lord Jagannath during Sri Krishna Janmashtami. She creates healthy, delectable dishes for her family and health-conscious clients.
                     </p>
+                </section>
+
+                <section className={`${styles.section} ${styles.kitchenSection}`}>
+                    <div>
+                        <h3 className={styles.sectionTitle}>Parvati&apos;s Kitchen</h3>
+                        <p className={styles.text}>
+                            Parvathi&apos;s love for wholesome homemade food now has a dedicated menu through Parvati&apos;s Kitchen. Her small-batch offerings include multigrain cakes, jaggery-sweetened bakes, fresh desserts, and nourishing spreads prepared with the same care she brings to yoga and holistic living.
+                        </p>
+                    </div>
+                    <Link href="/parvati-kitchen" className={styles.kitchenLink}>
+                        View Kitchen Menu
+                    </Link>
                 </section>
             </div>
 

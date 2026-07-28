@@ -23,6 +23,73 @@
   line-height: 1.8;
 }
 
+.kitchenBanner {
+  align-items: center;
+  background: #fff8ec;
+  border: 1px solid rgba(218, 165, 32, 0.35);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  gap: 34px;
+  grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
+  margin: var(--spacing-lg) auto;
+  max-width: 1120px;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.kitchenImageWrap {
+  aspect-ratio: 16 / 10;
+  background: #ead7b8;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  position: relative;
+}
+
+.kitchenImage {
+  object-fit: cover;
+}
+
+.kitchenContent {
+  padding: 10px 10px 10px 0;
+}
+
+.kitchenEyebrow {
+  color: #8a5a30;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.kitchenTitle {
+  color: var(--primary-color);
+  font-size: 2.25rem;
+  margin-bottom: 12px;
+}
+
+.kitchenText {
+  color: #555;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-bottom: 22px;
+  max-width: 610px;
+}
+
+.kitchenLink {
+  background: var(--primary-color);
+  border-radius: var(--radius-full);
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  padding: 12px 20px;
+}
+
+.kitchenLink:hover {
+  background: var(--primary-hover);
+}
+
 @media (max-width: 768px) {
   .philosophySection {
     padding: var(--spacing-md);
@@ -37,5 +104,29 @@
 
   .text {
     font-size: 1rem;
+  }
+
+  .kitchenBanner {
+    gap: 20px;
+    grid-template-columns: 1fr;
+    margin: var(--spacing-md) auto;
+    padding: 18px;
+  }
+
+  .kitchenContent {
+    padding: 0;
+  }
+
+  .kitchenTitle {
+    font-size: 1.9rem;
+  }
+
+  .kitchenText {
+    font-size: 1rem;
+  }
+
+  .kitchenLink {
+    text-align: center;
+    width: 100%;
   }
 }

@@ -97,6 +97,33 @@
     font-size: 1.2em;
 }
 
+.kitchenSection {
+    align-items: center;
+    background: #fff8ec;
+    border-color: rgba(218, 165, 32, 0.35);
+    display: flex;
+    gap: 28px;
+    justify-content: space-between;
+}
+
+.kitchenSection .sectionTitle {
+    border-bottom-color: rgba(218, 165, 32, 0.3);
+}
+
+.kitchenLink {
+    background: var(--primary-color);
+    border-radius: var(--radius-full);
+    color: #fff;
+    flex: 0 0 auto;
+    font-weight: 700;
+    padding: 12px 20px;
+    text-align: center;
+}
+
+.kitchenLink:hover {
+    background: var(--primary-hover);
+}
+
 @media (max-width: 768px) {
     .profileHeader {
         flex-direction: column;
@@ -114,5 +141,15 @@
 
     .section {
         padding: 20px;
+    }
+
+    .kitchenSection {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .kitchenLink {
+        width: 100%;
     }
 }
