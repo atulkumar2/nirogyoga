@@ -1,93 +1,184 @@
-import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import KitchenMenuView from "./KitchenMenuView";
+import Link from "next/link";
 import { kitchenItems } from "./menuData";
 import styles from "./parvati-kitchen.module.css";
 
 export const metadata = {
-  title: "Parvati's Kitchen Menu | Nirog Yoga",
+  title: "Parvati's Kitchen | Nirog Yoga",
   description:
     "Explore Parvati's Kitchen menu of homemade multigrain cakes, cookies, cupcakes, ice cream, almond butter, tiramisu, and fresh cream cheese buns.",
 };
 
+const formatServing = (serving) => serving.replace(/^for\s+/i, "").replace(/^per\s+/i, "");
+
+const categoryIcon = {
+  Cakes: "C",
+  "Cookies & Bakes": "B",
+  "Desserts & Spreads": "D",
+};
+
+const sectionOrder = ["Cakes", "Cookies & Bakes", "Desserts & Spreads"];
+
+const menuSections = sectionOrder
+  .map((category) => ({
+    title: category,
+    icon: categoryIcon[category] || "M",
+    wide: category === "Cakes",
+    items: kitchenItems
+      .filter((item) => item.category === category)
+      .map((item) => ({
+        name: item.name,
+        quantity: formatServing(item.serving),
+        price: item.price,
+        slug: item.slug,
+      })),
+  }))
+  .filter((section) => section.items.length > 0);
+
+const kitchenPhoneLabel = "+91 81236 90515";
+const kitchenPhone = "918123690515";
+
 export default function ParvatisKitchenPage() {
-  const featuredItem = kitchenItems.find((item) => item.slug === "mango-multigrain-jaggery-cake");
-
   return (
-    <main>
+    <>
       <Navbar />
+      <main className={styles.page}>
+        <article className={styles.flyer} aria-labelledby="kitchen-title">
+        <span className={`${styles.corner} ${styles.cornerTopLeft}`} aria-hidden="true" />
+        <span className={`${styles.corner} ${styles.cornerTopRight}`} aria-hidden="true" />
+        <span className={`${styles.corner} ${styles.cornerBottomLeft}`} aria-hidden="true" />
+        <span className={`${styles.corner} ${styles.cornerBottomRight}`} aria-hidden="true" />
 
-      <div className={styles.container}>
-        <header className={styles.hero}>
-          <div>
-            <p className={styles.eyebrow}>Homemade sweets and bakes</p>
-            <h1 className={styles.title}>Parvati&apos;s Kitchen</h1>
-            <p className={styles.subtitle}>
-              A small-batch menu of multigrain cakes, jaggery-sweetened bakes,
-              fresh desserts, and nourishing homemade spreads prepared with care.
-            </p>
+        <header className={styles.header}>
+          <div className={styles.diamonds} aria-hidden="true">
+            <span />
+            <span />
+            <span />
           </div>
-          {featuredItem?.image && (
-            <div className={styles.heroImageWrap}>
-              <Image
-                src={featuredItem.image}
-                alt={featuredItem.name}
-                fill
-                sizes="(max-width: 820px) 100vw, 420px"
-                className={styles.heroImage}
-                priority
-              />
-            </div>
-          )}
+          <h1 id="kitchen-title" className={styles.title}>
+            PARVATI&apos;S KITCHEN
+          </h1>
+          <p className={styles.tagline}>
+            Pure Homemade <span>|</span> Freshly Prepared <span>|</span> Pure Vegetarian
+          </p>
+          <div className={styles.rule} />
         </header>
 
-        <section className={styles.makerSection} aria-labelledby="maker-heading">
-          <div className={styles.makerImageWrap}>
-            <Image
-              src="/parvathi.jpg"
-              alt="Parvathi Katyayan"
-              fill
-              sizes="(max-width: 760px) 180px, 220px"
-              className={styles.makerImage}
-            />
-          </div>
-          <div>
-            <p className={styles.eyebrow}>Prepared by Parvathi Katyayan</p>
-            <h2 id="maker-heading" className={styles.makerTitle}>Homemade with a sattvic touch</h2>
-            <p className={styles.makerText}>
-              Parvathi brings the same care from her yoga and holistic living practice into her kitchen:
-              fresh batches, thoughtful ingredients, and sweets made for families who want warmth without
-              unnecessary additives.
-            </p>
+        <div className={styles.divider} aria-hidden="true">
+          <span />
+        </div>
+
+        <section className={styles.menuGrid} aria-label="Menu">
+          {menuSections.map((section) => (
+            <div
+              className={`${styles.menuBox} ${section.wide ? styles.menuBoxWide : ""}`}
+              key={section.title}
+            >
+              <h2 className={styles.menuBoxTitle}>
+                <span className={styles.sectionIcon} aria-hidden="true">
+                  {section.icon}
+                </span>
+                {section.title}
+              </h2>
+              <div className={styles.rows}>
+                {section.items.map((item) => (
+                  <Link
+                    className={styles.menuRow}
+                    href={`/parvati-kitchen/${item.slug}`}
+                    key={item.name}
+                  >
+                    <span className={styles.itemName}>{item.name}</span>
+                    <span className={styles.itemMeta}>
+                      <em>{item.quantity}</em>
+                      <strong>{item.price}</strong>
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+
+        <p className={styles.delivery}>*Delivery charges extra depending on location</p>
+
+        <section className={styles.products} aria-labelledby="products-heading">
+          <h2 id="products-heading" className={styles.stripHeading}>
+            <span aria-hidden="true">+</span> Our Products <span aria-hidden="true">+</span>
+          </h2>
+          <div className={styles.productGrid}>
+            {kitchenItems.map((product) => (
+              <Link
+                className={styles.product}
+                href={`/parvati-kitchen/${product.slug}`}
+                key={product.slug}
+              >
+                <div className={styles.productImageWrap}>
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    sizes="76px"
+                    className={styles.productImage}
+                  />
+                </div>
+                <span className={styles.productCaption}>
+                  <strong>{product.name}</strong>
+                  <span>{product.price} / {formatServing(product.serving)}</span>
+                </span>
+              </Link>
+            ))}
           </div>
         </section>
 
-        <KitchenMenuView items={kitchenItems} />
-
-        <section className={styles.locationSection} aria-labelledby="location-heading">
-          <div>
-            <p className={styles.eyebrow}>Kitchen location</p>
-            <h2 id="location-heading" className={styles.locationTitle}>
-              Parvathi&apos;s Kitchen and Yoga Therapy Centre
-            </h2>
-            <address className={styles.address}>
-              Gopinath Villa Coelho Lane, Falnir Rd,<br />
-              Mangaluru, Karnataka 575001
-            </address>
+        <section className={styles.orderBox} aria-labelledby="order-heading">
+          <h2 id="order-heading" className={styles.menuBoxTitle}>
+            <span className={styles.sectionIcon} aria-hidden="true">
+              O
+            </span>
+            How To Order
+          </h2>
+          <div className={styles.orderGrid}>
+            <div className={styles.orderColumn}>
+              <span className={styles.orderIcon} aria-hidden="true">
+                chat
+              </span>
+              <h3>WhatsApp Us</h3>
+              <a href={`https://wa.me/${kitchenPhone}`}>Chat on WhatsApp</a>
+              <p>{kitchenPhoneLabel}</p>
+            </div>
+            <div className={styles.orderColumn}>
+              <span className={styles.orderIcon} aria-hidden="true">
+                call
+              </span>
+              <h3>Call Us</h3>
+              <a href={`tel:+${kitchenPhone}`}>{kitchenPhoneLabel}</a>
+            </div>
+            <div className={styles.orderColumn}>
+              <span className={styles.orderIcon} aria-hidden="true">
+                time
+              </span>
+              <h3>Lead Time</h3>
+              <p>Made fresh on order</p>
+              <p>24-48 hrs notice for bulk orders</p>
+            </div>
           </div>
-          <a
-            href="https://maps.app.goo.gl/xA936JLUspwp3K6x8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.mapLink}
-          >
-            Open in Google Maps
-          </a>
         </section>
-      </div>
 
-      <Footer />
-    </main>
+        <footer className={styles.footer}>
+          <h2>PARVATI KATYAYAN - HOME FOOD</h2>
+          <address>Near Gopinath Villa, Falnir Road, Mangaluru, Karnataka 575001</address>
+          <div className={styles.footerLinks}>
+            <a href={`tel:+${kitchenPhone}`}>Call</a>
+            <a href={`https://wa.me/${kitchenPhone}`}>WhatsApp</a>
+            <a href="/">Website</a>
+            <a href="https://maps.app.goo.gl/xA936JLUspwp3K6x8">Maps</a>
+          </div>
+          <p>Made with love, served with tradition</p>
+          <p>Pure vegetarian homemade kitchen</p>
+        </footer>
+        </article>
+      </main>
+    </>
   );
 }

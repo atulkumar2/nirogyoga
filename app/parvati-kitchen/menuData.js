@@ -4,7 +4,7 @@ export const kitchenItems = [
     category: "Cookies & Bakes",
     name: "Multigrain Choco Chip Cookies",
     price: "Rs. 75",
-    serving: "per piece",
+    serving: "per 1 piece",
     image: "/cooking/Multigrain cookies.jpeg",
     summary: "Butter-rich multigrain cookies with chocolate chips.",
     description:
